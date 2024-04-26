@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section page</title>
+    <style>
+        .container {
+            margin: auto;
+            margin-top: 100px;
+            width: 60vw;
+            height: 50vh;
+            background-color: rgb(176, 7, 154);
+            color: white;
+            border-radius: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 20px;
+
+        }
+
+        details {
+            background-color: rgb(176, 7, 154);
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        summary {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        summary::after {
+            content: '';
+            background: url(up.svg);
+            background-size: conver;
+            width: 25px;
+            height: 24px;
+            margin-left: .75em;
+            transition: 0.2s;
+        }
+
+        details[open]>summary::after {
+            transform: rotate(180deg);
+            margin-right: -9px;
+        }
+
+        .section {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            height: 100px;
+            width: 100%;
+            margin-left: -20px;
+        }
+
+        .section1 svg {
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <details class="styled">
+            <summary>Section #1</summary>
+            <div class="section">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt velit veniam amet perspiciatis
+                cumque, soluta, odit sapiente accusamus ipsum voluptatem repellendus saepe eos! Sint dolorem magnam
+                numquam eveniet error eos, totam odio dicta voluptatibus nam corrupti ipsa quisquam illum expedita,
+                officiis quis adipisci! Aperiam, est. Sequi explicabo at facere odio.
+            </div>
+        </details>
+        <details class="styled">
+            <summary>Section #2</summary>
+            <div class="section">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt velit veniam amet perspiciatis
+                cumque, soluta, odit sapiente accusamus ipsum voluptatem repellendus saepe eos! Sint dolorem magnam
+                numquam eveniet error eos, totam odio dicta voluptatibus nam corrupti ipsa quisquam illum expedita,
+                officiis quis adipisci! Aperiam, est. Sequi explicabo at facere odio.
+            </div>
+        </details>
+        <details class="styled">
+            <summary>Section #3</summary>
+            <div class="section">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt velit veniam amet perspiciatis
+                cumque, soluta, odit sapiente accusamus ipsum voluptatem repellendus saepe eos! Sint dolorem magnam
+                numquam eveniet error eos, totam odio dicta voluptatibus nam corrupti ipsa quisquam illum expedita,
+                officiis quis adipisci! Aperiam, est. Sequi explicabo at facere odio.
+            </div>
+        </details>
+
+</body>
+
+</html>
