@@ -10,7 +10,7 @@ body{
     width:30vw;
     height: 50vh;
     border-radius: 40px;
-    background-color: rgba(128, 0, 128, 0.84);
+    background-color:purple;
     box-shadow: 1px 1px 80px 20px rgba(255, 192, 203, 0.811);
     display: flex;
     justify-self: center;
