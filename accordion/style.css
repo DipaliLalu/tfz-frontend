@@ -1,26 +1,24 @@
 .container {
     margin: auto;
     margin-top: 100px;
-    width: 60vw;
-    height: 50vh;
-    background-color: rgb(176, 7, 154);
+    width: 50vw;
     color: white;
     border-radius: 15px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 20px;
-
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(176, 7, 154);
 }
 
 details {
-    background-color: rgb(176, 7, 154);
-    font-weight: 800;
-    margin-bottom: 30px;
+     font-weight: 800;
 }
 
 summary {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    padding: 20px;
 }
 
 summary::after {
@@ -41,12 +39,11 @@ details[open]>summary::after {
 .section {
     background-color: white;
     color: black;
-    padding: 20px;
-    height: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 17px;
     width: 100%;
-    margin-left: -20px;
+    background-color:rgb(220, 182, 215) ;
 }
 
-.section1 svg {
-    padding-left: 10px;
-}
+
