@@ -3,15 +3,16 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     color:rgb(243, 188, 228);
+    box-sizing: border-box;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
 .container{
     margin: 100px auto;
-    width:30vw;
+    width:40vw;
     height: 50vh;
     border-radius: 40px;
-    background-color: rgba(128, 0, 128, 0.84);
-    box-shadow: 1px 1px 80px 20px rgba(255, 192, 203, 0.811);
+    background-color:purple;
+    box-shadow: 1px 1px 30px 20px rgba(255, 192, 203, 0.811);
     display: flex;
     justify-self: center;
     flex-direction: column;
@@ -22,16 +23,19 @@ body{
     font-weight: 900;
     text-decoration: underline;
     color:rgb(248, 155, 248);
+   
 }
 .detail{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
+    
 }
 .task-detail{
     font-weight: 500;
     font-size: 30px;
+    margin-top: 30px;
 }
 summary {
     list-style: none;

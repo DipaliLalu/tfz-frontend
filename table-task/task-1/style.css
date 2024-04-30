@@ -1,0 +1,60 @@
+.first {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container {
+    background-color: peru;
+    width: 350px;
+}
+
+.head {
+    background-color: pink;
+}
+
+td,
+th {
+    border: 1.5px solid black;
+    text-align: center;
+    background-color: pink
+}
+
+td {
+    width: 40px;
+}
+
+thead {
+    color: blue;
+}
+
+thead td {
+
+    background-color: pink;
+}
+
+.container td {
+    width: 80px;
+}
+
+.container tbody td {
+    background-color: peru;
+    font-weight: 900;
+}
+
+.container-2 {
+    margin-left: 300px;
+    margin-top: 30px;
+    background-color: peru;
+    width: 550px;
+}
+
+.container-2 td {
+    background-color: peru;
+    width: 140px;
+}
+
+.font {
+    margin-left: 100px;
+    font-family: monospace;
+}
