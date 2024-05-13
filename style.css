@@ -28,9 +28,10 @@ body{
 .detail{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 50%;
-    
+    align-items: flex-start;
+
+    gap:10px;
+    flex-direction: column;
 }
 .task-detail{
     font-weight: 500;
