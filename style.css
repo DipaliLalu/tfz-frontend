@@ -9,7 +9,7 @@ body{
 .container{
     margin: 100px auto;
     width:40vw;
-    height: 50vh;
+    height: 60vh;
     border-radius: 40px;
     background-color:purple;
     box-shadow: 1px 1px 30px 20px rgba(255, 192, 203, 0.811);
@@ -28,9 +28,10 @@ body{
 .detail{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 50%;
-    
+    align-items: flex-start;
+
+    gap:10px;
+    flex-direction: column;
 }
 .task-detail{
     font-weight: 500;
@@ -41,7 +42,7 @@ summary {
     display: flex;
     justify-content: space-between;
     gap:20px;
-   
+   padding-top: 50px;
 }
 summary::after {
     content: '';
@@ -58,9 +59,11 @@ details[open]>summary::after {
     margin-top: 9px;
    margin-right: 40px;
 }
-details[open]>summary{
+details[open]>summary {
     margin-left: 30px;
+    padding-top: 1px;
 }
+
 a{
     text-decoration: none;
     color: rgb(243, 188, 228);
