@@ -22,7 +22,7 @@
             <a href="#" class="company-logo">
                 <img src="./asset/asset 1.png" alt="company logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customer</a></li>
@@ -32,12 +32,15 @@
                     <li><a href="#" class="hover-link primary-button m1">Sign up</a></li>
                 </ul>
             </div>
+            <div class="toggle-btn hover-link" id="toggle-btn">
+                <img src="./asset/hamburger.svg" alt="">
+            </div>
         </div>
     </nav>
     <!-- header -->
     <header>
         <div class="container header-section flex">
-            <div class="header-left">
+            <div class="header-left flex">
                 <h1>Design Confidently</h1>
                 <p>UsabilityHub is a remote user research platform that takes the guesswork out of design decisions by
                     validating them with real users.</p>
@@ -138,7 +141,7 @@
         </div>
     </section>
     <section class="big-feature-section">
-        <div class="container flex big-feature-container-3">
+        <div class="container flex big-feature-container">
             <div class="feature-img">
                 <img src="./asset/asset 24.png" alt="">
             </div>
@@ -179,7 +182,7 @@
         <div class="container flex cta-section-container">
             <h2>Start testing today</h2>
             <p>Take the guesswork out of design decisions</p>
-            <a href="#" class="primary-button btn">Get Started</a>
+            <a href="#" class="primary-button button">Get Started</a>
         </div>
     </section>
 
@@ -230,6 +233,14 @@
    
 
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script>
+        let toggleButton=document.getElementById('toggle-btn');
+        let navLinks=document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click',()=>{
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 
 </html>
