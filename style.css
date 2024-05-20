@@ -23,15 +23,15 @@ body{
     font-weight: 900;
     text-decoration: underline;
     color:rgb(248, 155, 248);
-   
+   box-sizing: border-box;
 }
 .detail{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
     gap:10px;
     flex-direction: column;
+    margin-top: -10px;
 }
 .task-detail{
     font-weight: 500;
