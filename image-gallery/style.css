@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right,#041308,#0b3317);
+    background-repeat:repeat;
+    background-size: 29px;
+    color:white;
+}
+.container{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    gap:20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left-side{
+    flex-basis: 30%;
+    text-align: center;
+    padding: 20px;
+}
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+p{
+    color:#f8f1f1c6;
+}
+/* utility class */
+.row-2{
+    grid-row: span 2;
+}
+.col-2{
+    grid-column: span 2;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: top;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out;
+}
+.box:hover{
+    background-color: #999;
+    background-position: center;
+    box-shadow: 0 0 8px #fff;
+}
+
+.gallery{
+    width:50vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    gap:10px;
+    text-align: center;
+}
+/* set the background image */
+#box-1{
+    background-image: url("./img/mounten.jfif");
+}
+#box-2{
+    background-image: url("./img/sunrise.jfif");
+}
+#box-3{
+    background-image: url("./img/river.jfif");
+}
+#box-4{
+    background-image: url("./img/sunset.jfif");
+}
+#box-5{
+    background-image: url("./img/tree.jfif");
+}
+#box-6{
+    background-image: url("./img/waterfoll.jpg");
+}
+#box-7{
+    background-image: url("./img/pexels-muffin-creatives-2468773.jpg");
+}
+/* media query */
+@media screen and (max-width:479px) {
+   .container {
+        flex-direction: column;
+    }
+    .gallery{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:500px;
+        height: 500px;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+    }
+    /* .box:hover{
+        background-color: #999;
+        background-position: center;
+        box-shadow: 0 0 8px #fff;
+    } */
+    
+}
