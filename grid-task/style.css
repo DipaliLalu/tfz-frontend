@@ -61,7 +61,8 @@
  grid-area: b4;
     padding: 20px;
     box-shadow: none;
-    height: 150px;
+    align-content: center;
+    height: 260px;
 }
 
 
@@ -77,17 +78,19 @@
     border-radius: 10px;
     background: linear-gradient(to top, #e74762c7, #9d9de2ca);
     padding: 10px;
-    height: 193px;
+    height: 300px;
 }
 
 #box-5 {
     grid-area: b5;
     box-shadow: none;
+    align-content: center;
     /* margin-top: 20px; */
 }
 #box-6{
     grid-area: b6;
-    height: 400px;
+    height: 300px;
+    align-content: center;
     /* grid-row: -3 / -1; */
 }
 
