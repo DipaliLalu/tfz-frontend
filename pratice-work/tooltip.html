@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool-tips in css</title> 
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+          }
+        .tooltip:hover .tooltiptext{
+            display: inline-block;
+        }
+        .tooltiptext{
+            display: none;
+          
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -60px;
+        }
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;}
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+    </style>
+</head>
+<body>
+    <h2>Basic Tooltip</h2>
+
+<p>Move the mouse over the text below:</p>
+
+<div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div>
+<!-- <img src="./asset 26.png" alt=""> -->
+
+</body>
+</html>
