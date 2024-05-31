@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturent Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <!-- navbar -->
+        <nav class="flex navbar container main-nav">
+            <div class="logo flex">
+                <img src="./img/F.svg" alt="" class="first-icon" >
+                <img src="./img/oodi.png" alt="" height="20">
+            </div>
+          
+            <div class="menu flex" id="nav-links">
+                <a href="#" class="green">Home</a>
+                <a href="#">Menu  <img src="./img/down-arrow.svg" alt="" height="10" width="13"></a>
+                <a href="#">Services  <img src="./img/down-arrow.svg" alt=""  height="10" width="13"></a>
+                <a href="#">Offers</a>
+                <img src="./img/serch.png" alt="" width="18" height="18" class="other-menu">
+                <img src="./img/bag.png" alt="" width="20" height="20">
+                <a href="#" class="contact flex white"><img src="./img/Vector.png" alt="">Contact</a>
+            
+            </div>
+            <div class="toggle-btn hover-link" id="toggle-btn">
+                <img src="./img/hamburger.svg" alt="">
+            </div>
+        </nav>
+
+        <!-- hero section -->
+        <section class="hero-section flex container">
+            <div class="left-side flex">
+                <h1>Dive into Delights Of Delectable <span class="green">Food</span></h1>
+                <p>Where Each Plate Weaves a Story of Culinary Mastery and Passionate Craftsmanship</p>
+                <div class="btn flex">
+                    <a class="btn-order">
+                        Order Now
+                    </a>
+                    <a class="watch-btn">Watch Video</a>
+                    <a class="play-btn flex">
+                        <img src="./img/Polygon 1.png" alt="" height="20">
+                    </a>
+                </div>
+            </div>
+            <div class="right-side">
+                <img src="./img/Rectangle 9.png" alt="" class="circle" >
+                <img src="./img/girl-image.png" alt="" class="girl-img">
+                <img src="./img/ad1.png" alt="" class="spicy">
+                <div class="ad1 flex">
+                    <img src="./img/Rectangle 22.png" alt="" class="rect">
+                    <img src="./img/ad2.png" alt="" class="food">
+                    <img src="./img/ad3.png" alt="" class="ad">
+                </div>
+                <div class="ad2 flex">
+                    <img src="./img/Rectangle 22.png" alt="" class="rect1">
+                    <img src="./img/ad4.png" alt="" class="food2">
+                    <img src="./img/Vegetarian salad.png" alt="" class="text">
+                    <img src="./img/Group 6.png" alt="" class="star">
+                    <img src="./img/$23.00.png" alt="" class="doller">
+                </div>
+            </div>
+          
+        </section>
+    </header>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <footer></footer>
+    <div style="margin-bottom: 100px;"></div>
+   
+    <script>
+        let toggleButton=document.getElementById('toggle-btn');
+        let navLinks=document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click',()=>{
+            navLinks.classList.toggle('active');
+            console.log("button click");
+        })
+    </script>
+</body>
+</html>

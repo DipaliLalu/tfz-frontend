@@ -1,0 +1,65 @@
+/* media query for tab */
+@media screen and (max-width:997px) {
+    /* .container{
+        overflow: hidden;
+    } */
+    h1{
+        font-size: 1.8rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .toggle-btn{
+        display: block;
+    }   
+    .toggle-btn img{
+        height: 28px;
+        width: 28px;
+    } 
+    .main-nav{
+        overflow: initial;
+    }
+    .menu{
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        left: -100%;
+        background-color: #eeeeee6f;
+        padding-block: var(--padding-inline-section);
+        z-index: 3;
+        /* top:20px; */
+        margin-top: 474px;
+        backdrop-filter: blur(10px);
+    }
+    .other-menu{
+        margin-left: 0;
+    }
+    .menu.active{
+        left:0;
+    }
+
+
+}
+
+/* media query for phone */
+@media screen and (max-width:479px) {
+   
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    .hero-section{
+        flex-direction: column-reverse;
+        gap:100px;
+    }
+    .left-side{
+        padding-left: 61px;
+    }
+   
+}
