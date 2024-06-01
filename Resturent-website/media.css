@@ -1,8 +1,9 @@
 /* media query for tab */
-@media screen and (max-width:997px) {
+@media screen and (max-width:783px) {
     /* .container{
         overflow: hidden;
     } */
+    
     h1{
         font-size: 1.8rem;
     }
@@ -21,6 +22,7 @@
     } 
     .main-nav{
         overflow: initial;
+        margin-top: 0;
     }
     .menu{
         justify-content: flex-start;
@@ -41,8 +43,28 @@
     .menu.active{
         left:0;
     }
-
-
+    .hero-section{
+        flex-direction: column-reverse;
+    }
+    .left-side{
+        text-align: center;
+        padding-left: 0px;
+        margin-top: 130px;
+    }
+    .rect{ left: -6%;}
+    .food{        left: 4%;}
+    .ad{        left: 22%;}
+    .rect1{left: 42%;}
+    .food2{left:52%;}
+    .text{
+        left:70%;
+    }
+    .star{ left:70%;}
+    .doller{ left:70%;}
+    .play-btn{padding: 22px;}
+    .category-card{
+        
+    }
 }
 
 /* media query for phone */
@@ -58,8 +80,31 @@
         flex-direction: column-reverse;
         gap:100px;
     }
-    .left-side{
-        padding-left: 61px;
+   .btn{
+    margin-right: 0;
+   }
+   .left-side{
+    margin-top: 0;
+   }
+   .btn-order{width: 30%;
+    font-size: 12px;
+    padding: 6px;}
+   .watch-btn{width: 24%;
+    font-size: 14px;}
+   .play-btn{width: 47px;
+    height: 45px;
+    padding: 17px;}
+}
+.right-side{
+    margin-top: 0;
+}
+@media screen and (max-width:320px) {
+    .navbar{
+        margin-top:0px;
+        justify-content: space-between;
     }
-   
+    .container{
+        overflow: hidden;
+    }
+
 }
