@@ -62,8 +62,13 @@
     .star{ left:70%;}
     .doller{ left:70%;}
     .play-btn{padding: 22px;}
+    .category-heading{
+        margin-top: 90px;
+    }
     .category-card{
-        
+        /* width:48%;    */
+        flex-basis: 48%;
+        gap:30px;
     }
 }
 
@@ -98,13 +103,25 @@
 .right-side{
     margin-top: 0;
 }
+
 @media screen and (max-width:320px) {
+
     .navbar{
         margin-top:0px;
         justify-content: space-between;
     }
-    .container{
-        overflow: hidden;
+    /* .container{
+    } */
+    .category-heading p{
+        font-size: 13px;
     }
-
+    .category-heading h2{
+        font-size: 25px;
+    }
+    .category-card{
+        flex-direction: column;
+    }
+    .heading{
+        font-size: 20px;
+    }
 }
