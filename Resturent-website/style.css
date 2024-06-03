@@ -279,6 +279,8 @@ header {
     /* flex-direction: column; */
     gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
+    /* position: relative; */
 }
 
 .card {
@@ -321,4 +323,17 @@ header {
 
 .dishes {
     opacity: 0.8;
+}
+
+/* feature section */
+.feature-section{
+    gap:30px;
+    position: relative;
+}
+.left-feature{
+    position: absolute;
+}
+.left-feature:nth-child(1){
+    position: absolute;
+    width:80%;
 }
