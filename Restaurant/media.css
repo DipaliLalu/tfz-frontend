@@ -243,7 +243,7 @@
     .feedback {
         text-align: center;
         align-items: center;
-        margin-left: 19%;
+        margin-left: 22%;
     }
 
     .feed {
@@ -343,7 +343,14 @@ text-align: center;
         text-align: center;
     }
 }
+@media screen and (max-width:379px) {
+    .feedback {
+        text-align: center;
+        align-items: center;
+        margin-left: 19%;
+    }
 
+}
 
 @media screen and (max-width:320px) {
 
