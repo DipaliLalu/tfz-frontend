@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturent Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <!-- navbar -->
+        <nav class="flex navbar container main-nav">
+            <div class="logo flex">
+                <img src="./img/F.svg" alt="" class="first-icon">
+                <img src="./img/oodi.png" alt="" height="20">
+            </div>
+
+            <div class="menu flex" id="nav-links">
+                <a href="#" class="green">Home</a>
+                <a href="#" class="dropdown">Menu <i class="fa-solid fa-chevron-down "></i>
+                    <div class="dropdown-content">
+                        <ul>
+                        <li>Salad</li>
+                        <li>
+                            ice-cream
+                        </li>
+                        <li>pizza</li>
+                        </ul>
+                    </div></a>
+               
+                <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+                <a href="#">Offers</a>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <a href="#" class="contact flex white"><img src="./img/Vector.png" alt="">Contact</a>
+
+            </div>
+            <div class="toggle-btn hover-link" id="toggle-btn">
+                <img src="./img/hamburger.svg" alt="">
+            </div>
+        </nav>
+
+        <!-- hero section -->
+        <section class="hero-section flex container">
+            <div class="left-side flex">
+                <h1>Dive into Delights Of Delectable <span class="green">Food</span></h1>
+                <p>Where Each Plate Weaves a Story of Culinary Mastery and Passionate Craftsmanship</p>
+                <div class="btn flex">
+                    <a class="btn-order">
+                        Order Now
+                    </a>
+                    <a class="watch-btn">Watch Video</a>
+                    <a class="play-btn flex">
+                        <img src="./img/Polygon 1.png" alt="" height="20">
+                    </a>
+                </div>
+            </div>
+            <div class="right-side flex">
+                <img src="./img/Rectangle 9.png" alt="" class="circle">
+                <img src="./img/girl-image.png" alt="" class="girl-img">
+                <img src="./img/ad1.png" alt="" class="spicy">
+
+                <div class="ads flex">
+                    <div class="ad1 flex">
+                        <img src="./img/Rectangle 22.png" alt="" class="rect">
+                        <img src="./img/ad2.png" alt="" class="food">
+                        <img src="./img/ad3.png" alt="" class="ad">
+                    </div>
+                    <div class="ad2 flex">
+                        <img src="./img/Rectangle 22.png" alt="" class="rect1">
+                        <img src="./img/ad4.png" alt="" class="food2">
+                        <img src="./img/Vegetarian salad.png" alt="" class="text">
+                        <img src="./img/Group 6.png" alt="" class="star">
+                        <img src="./img/$23.00.png" alt="" class="doller">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </header>
+
+    <!-- category section -->
+    <section class="category flex">
+
+        <div class="category-heading">
+            <p>Customer Favorites</p>
+            <h2>Popular Catagories</h2>
+        </div>
+        <div class="category-card flex">
+            <div class="card flex">
+                <img src="./img/pngwing 4.png" alt="" width="110" class="img">
+                <p class="heading">Main Dish</p>
+                <p class="dishes">(86 dishes)</p>
+            </div>
+            <div class="card flex card1">
+                <img src="./img/pngwing 6.png" alt="" width="100" class="img">
+                <p class="heading">Break Fast</p>
+                <p class="dishes">(12 break fast)</p>
+            </div>
+            <div class="card flex">
+                <img src="./img/pngwing 3.png" alt="" width="110" class="img">
+                <p class="heading">Dessert</p>
+                <p class="dishes">(48 dessert)</p>
+            </div>
+            <div class="card flex">
+                <img src="./img/pngwing 7.png" alt="" width="110" class="img">
+                <p class="heading">Browse All</p>
+                <p class="dishes">(255 Items)</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--slider section  -->
+    <section>
+        <div class="title container flex">
+            <div class="menu-title flex">
+                <p class="red head">Special Dishes</p>
+                <div class="h3">Standout Dishes From Our Menu</div>
+            </div>
+            <div class="slider-btn flex">
+                <!-- <img src="./img/Group 1.svg" alt="" class="color-chg" id="swiper-button-prev"> -->
+                <i class="fa-solid fa-chevron-left color-chg" id="swiper-button-prev"></i>
+                <i class="fa-solid fa-chevron-right color-chg"  id="swiper-button-next"></i>
+                <!-- <img src="./img/Group 1 (1).svg" alt="" class="color-chg" id="swiper-button-next"> -->
+                <!-- <div class=""></div>
+                <div class="swiper-button-prev"></div> -->
+            </div>
+        </div>
+        <div class=" container swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide flex">
+                    <div class="flex menus">
+                        <div class="menu-card">
+                            <img src="./img/Egg salad.png" alt="" width="200">
+                            <img src="./img/Rectangle 24.png" alt="" class="menu-rect">
+                            <img src="./img/fi-sr-heart.png" alt="" class="heart">
+                            <div class="flex menu-desc">
+                                <h3>Fattoush salad</h3>
+                                <p>Description of the item</p>
+                                <p><span class="green">$</span>24.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="./img/Vegetable salad.png" alt="" width="200">
+                            <img src="./img/Rectangle 24.png" alt="" class="menu-rect">
+                            <img src="./img/fi-br-heart.png" alt="" class="heart">
+                            <div class="flex menu-desc">
+                                <h3>Fattoush salad</h3>
+                                <p>Description of the item</p>
+                                <p><span class="green">$</span>24.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="./img/Fattoush salad.png" alt="" width="200">
+                            <img src="./img/Rectangle 24.png" alt="" class="menu-rect">
+                            <img src="./img/fi-br-heart.png" alt="" class="heart">
+                            <div class="flex menu-desc">
+                                <h3>Fattoush salad</h3>
+                                <p>Description of the item</p>
+                                <p><span class="green">$</span>24.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide flex">
+                    <div class="flex menus">
+                        <div class="menu-card">
+                            <img src="./img/Vegetable salad.png" alt="" width="200">
+                            <img src="./img/Rectangle 24.png" alt="" class="menu-rect">
+                            <img src="./img/fi-br-heart.png" alt="" class="heart">
+                            <div class="flex menu-desc">
+                                <h3>Fattoush salad</h3>
+                                <p>Description of the item</p>
+                                <p><span class="green">$</span>24.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="./img/Fattoush salad.png" alt="" width="200">
+                            <img src="./img/Rectangle 24.png" alt="" class="menu-rect">
+                            <img src="./img/fi-br-heart.png" alt="" class="heart">
+                            <div class="flex menu-desc">
+                                <h3>Fattoush salad</h3>
+                                <p>Description of the item</p>
+                                <p><span class="green">$</span>24.00</p>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <img src="./img/Fattoush salad.png" alt="" width="200">
+                            <img src="./img/Rectangle 24.png" alt="" class="menu-rect">
+                            <img src="./img/fi-br-heart.png" alt="" class="heart">
+                            <div class="flex menu-desc">
+                                <h3>Fattoush salad</h3>
+                                <p>Description of the item</p>
+                                <p><span class="green">$</span>24.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+
+    </section>
+    <!-- feature section -->
+    <section class="feature-section flex container">
+        <div class="left-feature">
+            <img src="./img/Mask group.png" alt="" class="img1">
+            <img src="./img/Rectangle 37.png" alt="" class="innerimg">
+            <img src="./img/😋.png" alt="" class="smiley">
+            <img src="./img/🍕.png" alt="" class="pizza-img">
+            <img src="./img/Rectangle 41.png" alt="" class="rectangle"><span class="text1">Our Best Chef 😁</span>
+        </div>
+        <div class="right-feature flex">
+            <p class="red head">Testimonials</p>
+            <h3 class="h3">What Our Customers Say About Us</h3>
+            <p class="contain">“I had the pleasure of dining at Foodi last night, and I'm still raving about the
+                experience! The attention to detail in presentation and service was impeccable”</p>
+            <div class="feedback flex">
+
+                <img src="./img/Mask group (2).png" alt="" class="i1">
+                <img src="./img/image 10.png" alt="" class="i2">
+                <img src="./img/Mask group (1).png" alt="" class="i3">
+            </div>
+            <div class="feed">
+                <p class="bold">Customer Feedback</p>
+                <img src="./img/fi-sr-star.png" alt="">
+                <span class="bold">4.9</span>
+                <span>(18.6k Reviews)</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- big feature section -->
+    <section class="big-feature flex container">
+        <div class="left flex">
+            <p class="red head">Our Story & Services</p>
+            <h3 class="h3">Our Culinary Journey And Services</h3>
+            <p class="contain">Rooted in passion, we curate unforgettable dining experiences and offer exceptional
+                services, blending culinary artistry with warm hospitality.</p>
+            <a href="#" class="btn">Explore</a>
+        </div>
+
+        <div class="right">
+            <div class="feature-card">
+                <img src="./img/fi-rr-salad.svg" alt="">
+                <h3 class="green">Catering</h3>
+                <p>Delight your guests with our flavors and presentation</p>
+            </div>
+            <div class="feature-card">
+                <img src="./img/fi-rr-time-fast.svg" alt="">
+                <h3 class="green">Catering</h3>
+                <p>Delight your guests with our flavors and presentation</p>
+            </div>
+            <div class="feature-card">
+                <img src="./img/fi-rr-shopping-cart-check.svg" alt="">
+                <h3 class="green">Catering</h3>
+                <p>Delight your guests with our flavors and presentation</p>
+            </div>
+            <div class="feature-card">
+                <img src="./img/fi-rr-gift.svg" alt="">
+                <h3 class="green">Catering</h3>
+                <p>Delight your guests with our flavors and presentation</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container flex footer-container">
+            <div class="footer-logo flex">
+                <a href="#" class="company-logo flex">
+                    <img src="./img/F.svg" alt="" class="first-icon">
+                    <img src="./img/oodi.png" alt="">
+                </a>
+                <p>Savor the artistry where every dish is a culinary masterpiece</p>
+            </div>
+            <div class="link-column flex">
+                <h4>Useful links</h4>
+                <a href="#" class="hover-link">About us</a>
+                <a href="#" class="hover-link">Events</a>
+                <a href="#" class="hover-link">Blogs</a>
+                <a href="#" class="hover-link">FAQ</a>
+
+            </div>
+            <div class="link-column flex">
+                <h4>Main Menu</h4>
+                <a href="#" class="hover-link">Home</a>
+                <a href="#" class="hover-link">Offers</a>
+                <a href="#" class="hover-link">Menus</a>
+                <a href="#" class="hover-link">Reservation</a>
+
+            </div>
+            <div class="link-column flex">
+                <h4>Contact Us</h4>
+                <a href="#" class="hover-link">example@email.com</a>
+                <a href="#" class="hover-link">+64 958 248 966</a>
+                <a href="#" class="hover-link">Social media</a>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- sub footer -->
+    <div class="sub-footer">
+        <div class="container flex subfooter-container">
+            <div class="icon flex">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="cp-contain">
+                <p class="hover-link">Copyright <img src="./img/fi-rr-copyright.svg" alt=""> 2023 Dscode | All rights
+                    reserved</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div style="margin-bottom: 100px;"></div> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let toggleButton = document.getElementById('toggle-btn');
+        let navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            console.log("button click");
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: "#swiper-button-next",
+                prevEl: "#swiper-button-prev",
+            },
+        });
+
+    </script>
+    <script src="https://kit.fontawesome.com/3f2c09a521.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
