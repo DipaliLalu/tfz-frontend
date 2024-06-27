@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Table demo in bootstrap
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3f2c09a521.js" crossorigin="anonymous"></script>
+    <style>
+        i{
+         width:50%;
+            margin-left: 9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <table class="table table-success w-50 mx-auto">
+            <tbody class="rounded-4">
+                <tr>
+                    <th colspan="2" class="text-center h2">Login</th>
+                </tr>
+                <tr class="center">
+                    <th><i class="fa-solid fa-user"></i></th>
+                    <th><input type="text" name="email" id="eamil"></th>
+                </tr>
+                <tr class="center">
+                    <th><i class="fa-solid fa-lock"></i></th>
+                    <th><input type="text" name="password" id="password"></th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="text-center"><button class="p-2 text-bg-primary border-primary rounded-4">Login</button></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
