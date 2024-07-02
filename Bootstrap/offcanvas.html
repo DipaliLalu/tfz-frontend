@@ -13,17 +13,62 @@
 </head>
 
 <body>
-    <div class="container mt-5 bg-success-subtle p-3">
+    <h1 class="bg-danger-subtle text-center p-2">Offcanvas in bootstrap</h1>
+    <div class="container mt-5 bg-success-subtle p-5">
         <h2>Show offcanvas</h2>
-        <a href=""></a>
+        <a href="#offcanvas-demo" class="btn btn-primary mt-3" data-bs-toggle="offcanvas" role="button">Show offcanvs</a>
 
         <!-- offcanvas -->
-         <div class="offcanvas offcanvas-start" id="offcanvas-demo">
+         <div class="offcanvas offcanvas-start text-bg-dark" id="offcanvas-demo">
             <div class="offcanvas-header">
-                <h2 class="offcanvas-title">demo of offcanvas in bootstrap</h2>
-                <button class="btn-close" type="button" data-bs-dismiss="offcanvas"></button>
+                <h2 class="offcanvas-title">Demo of offcanvas</h2>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, iste. Perferendis architecto sunt exercitationem, quam molestias magnam quibusdam incidunt dolorum.</div> 
+                <button class="btn btn-light mt-5">Learn More</button>
             </div>
          </div>
+    </div>
+    <div class="container mt-5 bg-success-subtle p-5">
+        <h2>Position of offcanvas</h2>
+        <a href="#offcanvas-demo2" class="btn btn-primary mt-3" data-bs-toggle="offcanvas" role="button">Right side</a>
+
+        <!-- offcanvas -->
+         <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvas-demo2">
+            <div class="offcanvas-header">
+                <h2 class="offcanvas-title">Demo of offcanvas</h2>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, iste. Perferendis architecto sunt exercitationem, quam molestias magnam quibusdam incidunt dolorum.</div> 
+                <button class="btn btn-light mt-5">Learn More</button>
+            </div>
+         </div>
+         <a href="#offcanvas-demo3" class="btn btn-primary mt-3" data-bs-toggle="offcanvas" role="button">Top side</a>
+
+         <!-- offcanvas -->
+          <div class="offcanvas offcanvas-top text-bg-dark" id="offcanvas-demo3">
+             <div class="offcanvas-header">
+                 <h2 class="offcanvas-title">Demo of offcanvas</h2>
+                 <button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas"></button>
+             </div>
+             <div class="offcanvas-body">
+                 <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, iste. Perferendis architecto sunt exercitationem, quam molestias magnam quibusdam incidunt dolorum.</div> 
+             </div>
+          </div>
+          <a href="#offcanvas-demo4" class="btn btn-primary mt-3" data-bs-toggle="offcanvas" role="button">Bottom side</a>
+
+          <!-- offcanvas -->
+           <div class="offcanvas offcanvas-bottom text-bg-dark" id="offcanvas-demo4">
+              <div class="offcanvas-header">
+                  <h2 class="offcanvas-title">Demo of offcanvas</h2>
+                  <button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas"></button>
+              </div>
+              <div class="offcanvas-body">
+                  <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, iste. Perferendis architecto sunt exercitationem, quam molestias magnam quibusdam incidunt dolorum.</div> 
+              </div>
+           </div>
     </div>
 </body>
 </html>
