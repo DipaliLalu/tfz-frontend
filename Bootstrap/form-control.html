@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form control in bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3f2c09a521.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2 class="p-3 text-center bg-success-subtle sticky-top">Form</h2>
+    <div class="container bg-danger-subtle p-4 mt-5">
+        <h2 class="p-2 bg-warning-subtle text-center">Login Form</h2>
+        <form action="#">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input type="text" class="form-control" id="email">
+            <label for="pwd" class="form-label fw-bold">Password</label>
+            <input type="password" class="form-control" id="pwd">
+            <button class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+    <div class="container bg-danger-subtle p-4 mt-5">
+        <h2 class="p-2 bg-warning-subtle text-center">Textarea</h2>
+            <label for="comment" class="form-label fw-bold">Comment :</label>
+            <textarea name="comment" id="comment" class="form-control"></textarea>
+    </div>
+    <div class="container bg-danger-subtle p-4 mt-5">
+        <h2 class="p-2 bg-warning-subtle text-center">Select menu</h2>
+            <label for="browser" class="form-label fw-bold">Choose your browser from the list:</label>
+            <select name="browser" id="browser" class="form-select">
+                <option value="select">select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+    </div>
+    <div class="container bg-danger-subtle p-4 mt-5">
+        <h2 class="p-2 bg-warning-subtle text-center">Checkbox</h2>
+        <div class="form-check">
+        <input type="checkbox" name="chk1" id="chk1" class="form-check-input" checked>
+        <label for="chk1" class="form-check-label">Option1</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="chk2" id="chk2" class="form-check-input">
+            <label for="chk2" class="form-check-label">Option2</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="chk3" id="chk3" class="form-check-input" disabled>
+            <label for="chk3" class="form-check-label">Option3</label>
+        </div>
+    </div>
+    <div class="container bg-danger-subtle p-4 mt-5">
+        <h2 class="p-2 bg-warning-subtle text-center">Radio button</h2>
+        <div class="form-check">
+        <input type="radio" name="r1" id="r1" class="form-check-input" checked>
+        <label for="r1" class="form-check-label">Option1</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" name="r2" id="r2" class="form-check-input">
+            <label for="r2" class="form-check-label">Option2</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" name="r3" id="r3" class="form-check-input" disabled>
+            <label for="r3" class="form-check-label">Option3</label>
+        </div>
+    </div>
+    <div class="container bg-danger-subtle p-4 mt-5">
+        <h2 class="p-2 bg-warning-subtle text-center">Input Group</h2>
+        <div class="input-group mb-2">
+            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+            <input type="text" class="form-control">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="container bg-danger-subtle p-4 mt-5">
+        <h2 class="p-2 bg-warning-subtle text-center">Input Group with button</h2>
+        <div class="input-group mb-2">
+         <button class="btn btn-primary">Login</button>
+            <input type="text" class="form-control">
+        </div>
+        <div class="input-group mb-2">
+            <input type="text" class="form-control">
+            <button class="btn btn-danger">Search</button>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control">
+            <span class="input-group-text">.00</span>
+        </div>
+    </div>
+    <div class="container bg-danger-subtle p-4 mt-5">
+        <h2 class="p-2 bg-warning-subtle text-center">Input Group with dropdown</h2>
+        <div class="input-group mb-2">
+            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item">item-1</li>
+                <li class="dropdown-item">item-2</li>
+                <li class="dropdown-item">item-3</li>
+                <li class="dropdown-item">item-4</li>
+            </ul>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+    </div>
+    <div class="container bg-danger-subtle p-4 mt-5">
+        <h2 class="p-2 bg-warning-subtle text-center">Floating Label</h2>
+        <div class="form-floating mb-2">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+    </div>
+</body>
+</html>
