@@ -60,6 +60,9 @@ p{
 .left-img img{
     width:100%;
 }
+.about-cols{
+    flex-basis: 50%;
+}
 .feature-section{
     background-image: url("./img/Background Image.png");
 }
@@ -82,13 +85,15 @@ p{
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-    gap:20px;
+    gap:10px;
   }
 
   .swiper-slide {
     background-position: center;
     background-size: cover;
     width: 300px !important;
+    align-items: center;
+    justify-content: center;
   }
 
   .swiper-slide img {
@@ -105,12 +110,39 @@ p{
   /* uses of app */
   .app-use{
     background-image: url("./img/Background Image.png");
+    height: 380px;
   }
   .paragraph{
     width:50%;
-    margin: auto;
+    text-align: center;
   }
- 
+  .set-video{
+    position: absolute;
+    top:-50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  .set-video iframe{
+    width: 500px;
+    height: 300px;
+    margin-bottom: 5rem;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  .team-section{
+    margin-top: 6rem;
+  }
+  .border-img{
+    background-image: url("./img/Group\ 1513.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 11px;
+  }
+  /* customer section */
+  .customer-section{
+    background-image: url("./img/Background Image.png");
+  }
+
 
 
 @media screen and (max-width:1240px) {
@@ -120,7 +152,6 @@ p{
     }
     
 }
-
 
 @media screen and (max-width:793px) {
     .header{
@@ -162,4 +193,19 @@ p{
    .paragraph{
     width: 100%;
    }
+   
+}
+@media screen and (max-width:600px) {
+    .app-use{
+        height: 450px;
+      }
+       .set-video iframe{
+        width: 280px;
+        height: 200px;
+        margin-bottom: 5rem;
+      }
+      .team-section{
+        margin-top: 2rem;
+      }
+
 }
