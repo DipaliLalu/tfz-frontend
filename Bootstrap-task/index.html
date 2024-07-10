@@ -38,12 +38,38 @@
                 <i class="fa-brands fa-youtube text-light"></i>
             </div>
         </div>
+        <div class="offcanvas offcanvas-start" id="offcanvas" aria-labelledby="offcanvasLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close border-dark rounded-5" data-bs-dismiss="offcanvas" aria-label="Close" id="closed"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold fs-5 text-dark" aria-current="page"
+                            href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#">FEATURES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#">SCREENSHOT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#">BLOG</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+    
         <nav class="navbar navbar-expand-lg text-bg-light container rounded position-relative">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navbars">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="modal" tabindex="-1" id="navbars">
+                <!-- <div class="modal" tabindex="-1" id="navbars">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -73,8 +99,8 @@
 
                         </div>
                     </div>
-                </div>
-                <div class="collapse navbar-collapse" id="mynavbar">
+                </div> -->
+                    <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav gap-5">
                         <li class="nav-item">
                             <a class="nav-link active fw-bold fs-5" aria-current="page" href="#">HOME</a>
@@ -124,20 +150,20 @@
                 </div>
             </div>
             <div class="right text-center mt-5">
-                <img src="./img/iPhoneX-Mockup 1.png" alt="" class="object-fit-contain w-75">
+                <img src="./img/iPhoneX-Mockup 1.png" alt="" class="object-fit-contain">
             </div>
         </section>
     </header>
     <main class="d-flex flex-column gap-5">
         <!-- about section -->
-        <section class="d-flex flex-column gap-3 about-first p-3 container">
+        <section class="d-flex flex-column gap-3 about-first p-3 container mt-5">
             <h2 class="text-center text-uppercase">About Our App</h2>
-            <p class="text-center w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
+            <p class="text-center paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
                 ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
                 ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
         </section>
         <section class="d-flex flex-column flex-lg-row about-second p-3 container gap-5">
-            <div class="left-img text-center">
+            <div class="left-img text-center mx-auto">
                 <img src="./img/android-smartphone-free-mockup 1.png" alt="" class="object-fit-contain">
             </div>
             <div class="about-cols d-flex flex-column gap-4 mt-5">
@@ -189,10 +215,10 @@
             </div>
         </section>
         <!-- feature section -->
-        <section class="feature-section text-light p-5">
-            <section class="d-flex feature flex-column gap-3">
+        <section class="feature-section text-light p-5 mt-5">
+            <section class="d-flex feature flex-column gap-3 mt-5">
                 <h2 class="text-center text-uppercase">App features</h2>
-                <p class="text-center mx-auto w-75">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+                <p class="text-center mx-auto paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
                     nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt
                     rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
             </section>
@@ -209,9 +235,9 @@
             </div>
             <div class="main-flex d-flex flex-column flex-md-row">
                 <div class="first d-flex flex-column">
-                    <div class="d-flex flex-column gap-4 p-3">
+                    <div class="d-flex flex-column gap-4">
                         <div>
-                            <img src="./img/surface1.png" alt="" class="image object-fit-contain">
+                            <img src="./img/surface1.png" alt="" class="img object-fit-contain">
                         </div>
                         <h6 class="text-uppercase m-0">unlimiter features</h6>
                         <p class="m-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -301,17 +327,17 @@
                 </div>
 
                 <div class="row row-clos-3">
-                    <div class="col text-bg-primary text-center p-2 rounded-2 m-2">
+                    <div class="col col-color py-4 text-center p-2 rounded-2 m-2">
                         <i class="fa-solid fa-download"></i>
                         <p class="m-0">59865</p>
                         <div class="text-uppercase">Download</div>
                     </div>
-                    <div class="col text-bg-primary text-center p-2 rounded-2 m-2">
+                    <div class="col col-color py-4 text-center p-2 rounded-2 m-2">
                         <i class="fa-solid fa-thumbs-up"></i>
                         <p class="m-0">29852</p>
                         <div class="text-uppercase">LIke</div>
                     </div>
-                    <div class="col text-bg-primary text-center p-2 rounded-2 m-2">
+                    <div class="col col-color py-4 text-center p-2 rounded-2 m-2">
                         <i class="fa-solid fa-star"></i>
                         <p class="m-0">1500</p>
                         <div class="text-uppercase">5 star rating</div>
