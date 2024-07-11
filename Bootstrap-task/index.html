@@ -20,7 +20,7 @@
 <body>
     <!-- header -->
     <header class="header container-fluid position-relative">
-        <div class="container d-flex p-3 gap-4 justify-content-between upper-nav">
+    <div class="container d-flex p-1 gap-4 justify-content-between upper-nav mb-3 pt-4">
             <div class="left d-flex gap-4">
                 <div class="mail d-flex align-items-center justify-content-center gap-3">
                     <i class="fa-solid fa-envelope text-light"></i>
@@ -40,13 +40,13 @@
         </div>
         <div class="offcanvas offcanvas-start" id="offcanvas" aria-labelledby="offcanvasLabel">
             <div class="offcanvas-header">
-              <button type="button" class="btn-close border-dark rounded-5" data-bs-dismiss="offcanvas" aria-label="Close" id="closed"></button>
+                <button type="button" class="btn-close border-dark rounded-5" data-bs-dismiss="offcanvas"
+                    aria-label="Close" id="closed"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold fs-5 text-dark" aria-current="page"
-                            href="#">HOME</a>
+                        <a class="nav-link active fw-bold fs-5 text-dark" aria-current="page" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold fs-5 text-dark" href="#">ABOUT</a>
@@ -62,48 +62,17 @@
                     </li>
                 </ul>
             </div>
-          </div>
-    
+        </div>
+
         <nav class="navbar navbar-expand-lg text-bg-light container rounded position-relative">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- <div class="modal" tabindex="-1" id="navbars">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link active fw-bold fs-5 text-dark" aria-current="page"
-                                            href="#">HOME</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link fw-bold fs-5 text-dark" href="#">ABOUT</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link fw-bold fs-5 text-dark" href="#">FEATURES</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link fw-bold fs-5 text-dark" href="#">SCREENSHOT</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link fw-bold fs-5 text-dark" href="#">BLOG</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div> -->
-                    <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul class="navbar-nav gap-5">
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav gap-4 ms-3">
                         <li class="nav-item">
-                            <a class="nav-link active fw-bold fs-5" aria-current="page" href="#">HOME</a>
+                            <a class="nav-link active fw-bold fs-5 text-decoration-underline royal-blue" aria-current="page" href="#">HOME</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold fs-5" href="#">ABOUT</a>
@@ -117,7 +86,7 @@
                     <img src="./img/Logo.png" alt="logo">
                 </div>
                 <div class="collapse navbar-collapse justify-content-around ms-5" id="mynavbar">
-                    <ul class="navbar-nav gap-5 ms-5">
+                    <ul class="navbar-nav gap-4 ms-5">
                         <li class="nav-item ms-5">
                             <a class="nav-link fw-bold fs-5" href="#">SCREENSHOT</a>
                         </li>
@@ -126,7 +95,7 @@
                         </li>
                     </ul>
                 </div>
-                <button class="btn btn-primary m-0">DOWNLOAD</button>
+                <button class="btn btn-primary m-0 royal-blue-bg">DOWNLOAD</button>
             </div>
         </nav>
         <!-- hero section -->
@@ -134,14 +103,14 @@
             class="d-flex hero-section flex-column flex-md-row container justify-content-center align-items-center">
             <div class="left mt-5 container">
                 <div alt="border" class="py-3 z-index-4 borders mt-5">
-                    <div class="inner-box d-flex flex-column bg-light p-3 gap-3">
-                        <h3 class="text-primary fw-bold text-uppercase">
+                    <div class="inner-box d-flex flex-column bg-light p-3 gap-2">
+                        <h3 class="fw-bold fs-1 text-uppercase royal-blue">
                             A Great App Makes Your Life Better
                         </h3>
                         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
                             officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                         </p>
-                        <div class="h3">Download App Now</div>
+                        <h3 class="text-uppercase">Download App Now</h3>
                         <div class="download d-flex">
                             <img src="./img/toppng 1.png" alt="" class="gp w-25 object-fit-contain">
                             <img src="./img/PngItem_1144050 2.png" class="w-25 object-fit-contain">
@@ -149,35 +118,31 @@
                     </div>
                 </div>
             </div>
-            <div class="right text-center mt-5">
-                <img src="./img/iPhoneX-Mockup 1.png" alt="" class="object-fit-contain">
+            <div class="right text-center mt-5 mb-5">
+                <img src="./img/Free Ui View Mobile App Mockup 1.png" alt="" class="object-fit-contain h-75 mb-5">
             </div>
         </section>
     </header>
     <main class="d-flex flex-column gap-5">
         <!-- about section -->
         <section class="d-flex flex-column gap-3 about-first p-3 container mt-5">
-            <h2 class="text-center text-uppercase">About Our App</h2>
-            <p class="text-center paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
-                ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
-                ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
+            <h2 class="text-center text-uppercase fw-semibold">About Our App</h2>
+            <p class="text-center paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
         </section>
         <section class="d-flex flex-column flex-lg-row about-second p-3 container gap-5">
             <div class="left-img text-center mx-auto">
                 <img src="./img/android-smartphone-free-mockup 1.png" alt="" class="object-fit-contain">
             </div>
-            <div class="about-cols d-flex flex-column gap-4 mt-5">
+            <div class="about-cols d-flex flex-column gap-4">
                 <div class="row">
                     <div class="col">
                         <div class="card shadow">
                             <div class="card-body">
                                 <div class="d-flex gap-3 align-items-center">
-                                    <i class="fa-solid fa-circle-check text-primary"></i>
-                                    <p class="text-uppercase m-0">Creative design</p>
+                                    <i class="fa-solid fa-circle-check royal-blue"></i>
+                                    <p class="text-uppercase m-0 fw-semibold">Creative design</p>
                                 </div>
-                                <p class="ps-4 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
-                                    nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam
-                                    tincidunt rhoncus, ullamcorper velit.</p>
+                                <p class="ps-4 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.</p>
                             </div>
                         </div>
                     </div>
@@ -187,12 +152,10 @@
                         <div class="card shadow">
                             <div class="card-body">
                                 <div class="d-flex gap-3 align-items-center">
-                                    <i class="fa-solid fa-circle-check text-primary"></i>
-                                    <p class="text-uppercase m-0">easy to use</p>
+                                    <i class="fa-solid fa-circle-check royal-blue"></i>
+                                    <p class="text-uppercase m-0 fw-semibold">easy to use</p>
                                 </div>
-                                <p class="ps-4 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
-                                    nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam
-                                    tincidunt rhoncus, ullamcorper velit.</p>
+                                <p class="ps-4 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.</p>
                             </div>
                         </div>
                     </div>
@@ -202,12 +165,10 @@
                         <div class="card shadow">
                             <div class="card-body">
                                 <div class="d-flex gap-3 align-items-center">
-                                    <i class="fa-solid fa-circle-check text-primary"></i>
-                                    <p class="text-uppercase m-0">Best user experince</p>
+                                    <i class="fa-solid fa-circle-check royal-blue"></i>
+                                    <p class="text-uppercase m-0 fw-semibold">Best user experince</p>
                                 </div>
-                                <p class="ps-4 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
-                                    nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam
-                                    tincidunt rhoncus, ullamcorper velit.</p>
+                                <p class="ps-4 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverr nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.</p>
                             </div>
                         </div>
                     </div>
@@ -215,15 +176,16 @@
             </div>
         </section>
         <!-- feature section -->
-        <section class="feature-section text-light p-5 mt-5">
-            <section class="d-flex feature flex-column gap-3 mt-5">
+        <section class="feature-section text-light mt-5">
+            <section class="d-flex feature flex-column gap-3 mt-5 p-5">
                 <h2 class="text-center text-uppercase">App features</h2>
-                <p class="text-center mx-auto paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+                <p class="text-center mx-auto paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Viverra
                     nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt
                     rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
             </section>
 
-            <div class="feature-card mb-4">
+            <div class="feature-card">
                 <div class="text-center d-flex flex-column gap-4 p-3">
                     <div>
                         <img src="./img/comment.png" alt="" class="img object-fit-contain">
@@ -233,16 +195,16 @@
                         elit.</p>
                 </div>
             </div>
-            <div class="main-flex d-flex flex-column flex-md-row">
+            <div class="main-flex d-flex flex-column flex-md-row justify-content-center align-items-center">
                 <div class="first d-flex flex-column">
-                    <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-4 p-1">
                         <div>
                             <img src="./img/surface1.png" alt="" class="img object-fit-contain">
                         </div>
                         <h6 class="text-uppercase m-0">unlimiter features</h6>
                         <p class="m-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                    <div class="d-flex flex-column gap-4 p-3">
+                    <div class="d-flex flex-column gap-4 p-1">
                         <div>
                             <img src="./img/vector.png" alt="" class="image object-fit-contain">
                         </div>
@@ -251,17 +213,17 @@
                     </div>
                 </div>
                 <div class="second text-center">
-                    <img src="./img/iPhoneX-Mockup 1.png" alt="" class="object-fit-contain">
+                    <img src="./img/App.png" alt="" class="object-fit-contain shadow-lg rounded-5">
                 </div>
                 <div class="third d-flex flex-column">
-                    <div class="d-flex flex-column gap-4 p-3">
+                    <div class="d-flex flex-column gap-4 p-1">
                         <div>
                             <img src="./img/cell-phone.png" alt="" class="image object-fit-contain">
                         </div>
                         <h6 class="text-uppercase m-0">iso & androind version</h6>
                         <p class="m-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                    <div class="d-flex flex-column gap-4 p-3">
+                    <div class="d-flex flex-column gap-4 p-1">
                         <div>
                             <img src="./img/eye-scanner 1.png" alt="" class="image object-fit-contain">
                         </div>
@@ -307,13 +269,14 @@
                 <!-- <div class="swiper-button-next btn-primary btn"></div>
                  <div class="swiper-button-prev btn-primary btn"></div>-->
                 <div class="swiper-pagination"></div>
-            </div> 
-                 
-                
-    
+            </div>
+
+
+
         </section>
         <!-- download section -->
-        <section class="d-flex flex-md-row flex-column download-section container justify-content-center align-items-center gap-3">
+        <section
+            class="d-flex flex-md-row flex-column download-section container justify-content-center align-items-center gap-3">
             <div class="content d-flex flex-column gap-3 container">
                 <h3 class="fw-bold text-uppercase">
                     Download App Now
@@ -321,7 +284,7 @@
                 <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
                     officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                 </p>
-                <div class="download d-flex">
+                <div class="download d-flex justify-content-center justify-content-md-start">
                     <img src="./img/toppng 1.png" alt="" class="gp object-fit-contain mt-1 w-25">
                     <img src="./img/PngItem_1144050 2.png" class="object-fit-contain w-25">
                 </div>
@@ -344,104 +307,117 @@
                     </div>
 
                 </div>
-                </div>
-                <div class="img-section text-center">
-                    <img src="./img/Gravity-Scene-iPhone-12-Mockup 1.png" alt="" class="w-75 object-fit-contain">
-                </div>
-            </section>
-            <!-- uses of app -->
-             <section class="p-5 app-use mt-3 text-light text-center mx-auto d-flex flex-column position-relative gap-4">
-                <h3 class="fw-bold text-uppercase">
-                    how to use the app perfectly
-                </h3>
-                <p class="paragraph mx-auto bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
-                </p>
-             </section>
-             <!-- set a video to up section -->
-              <section class="position-relative">
-              <div class="set-video">
-                    <iframe src="https://www.youtube.com/embed/xSG5UX0EQVg?si=e_s6iG0H8xgVVDO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              </div>  </section>
-              <!-- team section -->
-               <section class="team-section d-flex gap-4 flex-column container">
-               <div class="d-flex gap-2 flex-column container">
+            </div>
+            <div class="img-section text-center">
+                <img src="./img/Gravity-Scene-iPhone-12-Mockup 1.png" alt="" class="w-75 object-fit-contain">
+            </div>
+        </section>
+        <!-- uses of app -->
+        <section class="p-5 app-use mt-3 text-light text-center mx-auto d-flex flex-column position-relative gap-4">
+            <h3 class="fw-bold text-uppercase">
+                how to use the app perfectly
+            </h3>
+            <p class="paragraph mx-auto bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
+                ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+            </p>
+        </section>
+        <!-- set a video to up section -->
+        <section class="position-relative">
+            <div class="set-video">
+                <iframe src="https://www.youtube.com/embed/xSG5UX0EQVg?si=e_s6iG0H8xgVVDO8" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <!-- team section -->
+        <section class="team-section d-flex gap-4 flex-column container">
+            <div class="d-flex gap-2 flex-column container">
                 <h3 class="fw-bold text-uppercase text-center">
                     Our reative team
                 </h3>
-                <p class="paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                <p class="paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                    velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                    ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
                 </p>
-               </div>
-               <div class="card-section d-flex gap-3 flex-md-row flex-column">
-                <div class="card text-center p-3">
+            </div>
+            <div class="card-section d-flex gap-3 flex-md-row flex-column">
+                <div class="card text-center p-3 shadow">
                     <div class="images position-relative">
                         <img src="./img/Profile.png" alt="" class="border-img">
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title text-uppercase">Carla Press</h5>
-                      <h6 class="text-uppercase">App Developer</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div class="icon d-flex gap-3 justify-content-center">
-                        <i class="fa-brands fa-facebook"></i>
-                        <div class="vr"></div>
-                        <i class="fa-brands fa-instagram"></i>
-                        <div class="vr"></div>
-                        <i class="fa-brands fa-twitter"></i>
-                        <div class="vr"></div>
-                        <i class="fa-brands fa-youtube"></i>
-                      </div>
+                    <div class="card-body d-flex flex-column gap-3">
+                        <h5 class="card-title text-uppercase">Carla Press</h5>
+                        <h6 class="text-uppercase">App Developer</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="icon d-flex gap-3 justify-content-center">
+                            <i class="fa-brands fa-facebook icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-instagram icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-twitter icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-youtube icon-hover"></i>
+                        </div>
                     </div>
-                  </div>
-                  <div class="card text-center p-3">
+                </div>
+                <div class="card text-center p-3 shadow">
                     <div class="images position-relative">
                         <img src="./img/Profile Image (1).png" alt="" class="border-img">
                     </div>
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column gap-3">
                         <h5 class="card-title text-uppercase">Carla Press</h5>
                         <h6 class="text-uppercase">Website developer</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div class="icon d-flex gap-3 justify-content-center">
-                        <i class="fa-brands fa-facebook"></i>
-                        <div class="vr"></div>
-                        <i class="fa-brands fa-instagram"></i>
-                        <div class="vr"></div>
-                        <i class="fa-brands fa-twitter"></i>
-                        <div class="vr"></div>
-                        <i class="fa-brands fa-youtube"></i>
-                      </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="icon d-flex gap-3 justify-content-center">
+                            <i class="fa-brands fa-facebook icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-instagram icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-twitter icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-youtube icon-hover"></i>
+                        </div>
                     </div>
-                  </div>
-                  <div class="card text-center p-3">
+                </div>
+                <div class="card text-center p-3 shadow">
                     <div class="images position-relative">
                         <img src="./img/Profile Image.png" alt="" class="border-img">
                     </div>
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column gap-3">
                         <h5 class="card-title text-uppercase">Craig Gouse</h5>
                         <h6 class="text-uppercase">UI/UX Designer</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div class="icon d-flex gap-3 justify-content-center">
-                        <i class="fa-brands fa-facebook"></i>
-                        <div class="vr"></div>
-                        <i class="fa-brands fa-instagram"></i>
-                        <div class="vr"></div>
-                        <i class="fa-brands fa-twitter"></i>
-                        <div class="vr"></div>
-                        <i class="fa-brands fa-youtube"></i>
-                      </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="icon d-flex gap-3 justify-content-center">
+                            <i class="fa-brands fa-facebook icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-instagram icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-twitter icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-youtube icon-hover"></i>
+                        </div>
                     </div>
-                  </div>
-               </div>
-            </section>
-            <!-- customer section -->
-             <section class="customer-section d-flex flex-column gap-4 text-light">
-                <div class="heading-section container p-5 text-center d-flex flex-column gap-4">
-                    <h3 class="fw-bold text-uppercase">
-                        Our Happy Customers
-                    </h3>
-                    <p class="paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
-                    </p>
                 </div>
-             </section>
-             
+            </div>
+        </section>
+        <!-- customer section -->
+        <section class="customer-section d-flex flex-column gap-4 text-light mt-5">
+            <div class="heading-section container p-5 text-center d-flex flex-column gap-4 mt-5">
+                <h3 class="fw-bold text-uppercase">
+                    Our Happy Customers
+                </h3>
+                <p class="paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                    velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                    ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                </p>
+            </div>
+        </section>
+
     </main>
 
 
@@ -452,6 +428,8 @@
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: "auto",
+            //activeIndex:3,
+            initialSlide:2,
             coverflowEffect: {
                 rotate: 25,
                 stretch: 0,
