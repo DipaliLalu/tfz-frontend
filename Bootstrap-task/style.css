@@ -10,9 +10,21 @@
   font-family: "Poppins", sans-serif;
   /* border: 2px solid; */
 }
+:root{
+  --royal-blue:#5956E9;
+}
 
 p {
   font-family: "Josefin Sans", sans-serif;
+}
+.royal-blue{
+  color:var(--royal-blue) !important;
+}
+.royal-blue-bg{
+  background-color: var(--royal-blue) !important;
+}
+.icon-hover:hover{
+  color:var(--royal-blue);
 }
 
 .header {
@@ -36,6 +48,7 @@ p {
 .btn {
   width: 130px;
   height: 45px;
+  /* margin-left: 5px !important; */
   /* padding: 4px !important; */
 }
 
@@ -61,7 +74,7 @@ p {
 
 .inner-box {
   position: relative;
-  right: 6%;
+  right: 7%;
 }
 /* about section */
 
@@ -85,6 +98,9 @@ p {
 .feature-section {
   background-image: url("./img/Background Image.png");
 }
+.main-flex{
+  gap:10px !important;
+}
 
 .first {
   gap: 10rem;
@@ -102,6 +118,17 @@ p {
 
 .img {
   width: 50px;
+}
+.second img {
+  width:80%;
+  height: 100%;
+}
+.customer-suppot{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.feature-card{
+  margin-bottom: 40px;
 }
 
 .swiper {
@@ -182,15 +209,14 @@ p {
 
 
 @media screen and (max-width:1240px) {
-
   .first {
     padding: 10px !important;
   }
   .inner-box{
     right: 12%;
   }
-
 }
+
 
 @media screen and (max-width:793px) {
   .header {
@@ -227,12 +253,21 @@ p {
     font-size: 11px !important;
     padding: 8px !important;
   }
-
-  .second img {
-    width: 75% !important;
-    height: 100% !important;
+  .left{
+    width:50%;
   }
-
+  .left h3{
+    font-size: 20px !important;
+  }
+  .left p{
+    font-size: 12px !important;
+  }
+  .inner-box{
+    right: 10%;
+  }
+  .right img{
+    width: 80%;
+  }
   .hero-section {
     gap: 1rem;
   }
@@ -242,19 +277,31 @@ p {
     text-wrap: wrap !important;
     gap: 2rem;
     text-align: center;
-  
+  }
+  .second img{
+    width:100%;
   }
 
   .img {
     width: 55px;
   }
-
-  .customer-suppot {
-    margin-top: 2rem;
+  .main-flex{
+    gap:0px !important;
+  }
+  .customer-suppot{
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .feature-card{
+    margin-bottom: 10px;
   }
 
   .paragraph {
     width: 100%;
+  }
+  .content{
+    text-align: center;
+    
   }
 
 }
@@ -269,8 +316,19 @@ p {
     height: 200px;
     margin-bottom: 5rem;
   }
+  .second img{
+    width:80%;
+  }
 
   .team-section {
     margin-top: 2rem;
   }
+  .main-flex{
+    gap:30px !important;
+  }
+  .customer-suppot{
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  
 }
