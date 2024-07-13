@@ -49,13 +49,13 @@
                         <a class="nav-link active fw-bold fs-5 text-dark" aria-current="page" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold fs-5 text-dark" href="#">ABOUT</a>
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold fs-5 text-dark" href="#">FEATURES</a>
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#feature">FEATURES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold fs-5 text-dark" href="#">SCREENSHOT</a>
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#screenshot">SCREENSHOT</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold fs-5 text-dark" href="#">BLOG</a>
@@ -75,10 +75,10 @@
                             <a class="nav-link active fw-bold fs-5 text-decoration-underline royal-blue" aria-current="page" href="#">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold fs-5" href="#">ABOUT</a>
+                            <a class="nav-link fw-bold fs-5" href="#about">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold fs-5" href="#">FEATURES</a>
+                            <a class="nav-link fw-bold fs-5" href="#feature">FEATURES</a>
                         </li>
                     </ul>
                 </div>
@@ -88,7 +88,7 @@
                 <div class="collapse navbar-collapse justify-content-around ms-5" id="mynavbar">
                     <ul class="navbar-nav gap-4 ms-5">
                         <li class="nav-item ms-5">
-                            <a class="nav-link fw-bold fs-5" href="#">SCREENSHOT</a>
+                            <a class="nav-link fw-bold fs-5" href="#screenshot">SCREENSHOT</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold fs-5" href="#">BLOG</a>
@@ -104,16 +104,16 @@
             <div class="left mt-5 container">
                 <div alt="border" class="py-3 z-index-4 borders mt-5">
                     <div class="inner-box d-flex flex-column bg-light p-3 gap-2">
-                        <h3 class="fw-bold fs-1 text-uppercase royal-blue">
+                        <h3 class="fs-1 fw-semibold text-uppercase royal-blue">
                             A Great App Makes Your Life Better
                         </h3>
                         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
                             officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                         </p>
-                        <h3 class="text-uppercase">Download App Now</h3>
+                        <h2 class="text-uppercase ">Download App Now</h2>
                         <div class="download d-flex">
-                            <img src="./img/toppng 1.png" alt="" class="gp w-25 object-fit-contain">
-                            <img src="./img/PngItem_1144050 2.png" class="w-25 object-fit-contain">
+                            <img src="./img/toppng 1.png" alt="" class="gp object-fit-contain mt-1">
+                            <img src="./img/PngItem_1144050 2.png" class="object-fit-contain">
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
     </header>
     <main class="d-flex flex-column gap-5">
         <!-- about section -->
-        <section class="d-flex flex-column gap-3 about-first p-3 container mt-5">
+        <section class="d-flex flex-column gap-3 about-first p-3 container mt-5" id="about">
             <h2 class="text-center text-uppercase fw-semibold">About Our App</h2>
             <p class="text-center paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
         </section>
@@ -176,7 +176,7 @@
             </div>
         </section>
         <!-- feature section -->
-        <section class="feature-section text-light mt-5">
+        <section class="feature-section text-light mt-5" id="feature">
             <section class="d-flex feature flex-column gap-3 mt-5 p-5">
                 <h2 class="text-center text-uppercase">App features</h2>
                 <p class="text-center mx-auto paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -242,32 +242,33 @@
             </div>
         </section>
         <!-- interface section of app -->
-        <section class="d-flex flex-column gap-3 about-first p-3 container">
-            <h2 class="text-center text-uppercase">Checkout Our App Interface Look</h2>
+        <section class="d-flex flex-column gap-3 about-first position-relative" id="screenshot">
+            <div class="container p-4">
+            <h2 class="text-center text-uppercase mt-3">Checkout Our App Interface Look</h2>
             <p class="text-center w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nun
                 ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
-                ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
+                ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p></div>
             <!-- Swiper -->
-            <div class="swiper mySwiper container p-5">
+            <div class="swiper mySwiper p-5 container">
+                <!-- <div id="swiper-button-prev" class="fa-solid fa-chevron-left royal-blue-bg text-light pre-icon"></div>
+                <div id="swiper-button-next" class="fa-solid fa-chevron-right royal-blue-bg text-light next-icon"></div> -->
                 <div class="swiper-wrapper">
                     <div class="swiper-slide rounded-5">
-                        <img src="./img/5c07f1314b676b02b76259e1.jpg" class="object-fit-contain rounded-5" />
+                        <img src="./img/phone img/001-removebg-preview.png" class="object-fit-contain rounded-5 bg-light"/>
                     </div>
                     <div class="swiper-slide rounded-5">
-                        <img src="./img/iPhoneX-Mockup 1.png" class="object-fit-contain rounded-5" />
+                        <img src="./img/phone img/5c07f1314b676b02b76259e1-removebg-preview.png" class="object-fit-contain rounded-5" />
                     </div>
                     <div class="swiper-slide active swiper-slide-active rounded-5">
-                        <img src="./img/c89addd5da950ccb529f6bba16eed93f.png" class="object-fit-contain rounded-5" />
+                        <img src="./img/phone img/android-phone-2048px-0967-removebg-preview.png" class="object-fit-contain rounded-5" />
                     </div>
                     <div class="swiper-slide rounded-5">
-                        <img src="./img/5c07f1314b676b02b76259e1.jpg" class="object-fit-contain rounded-5" />
+                        <img src="./img/phone img/c89addd5da950ccb529f6bba16eed93f-removebg-preview.png" class="object-fit-contain rounded-5" />
                     </div>
                     <div class="swiper-slide rounded-5">
-                        <img src="./img/iPhoneX-Mockup 1.png" class="object-fit-contain rounded-5" />
+                        <img src="./img/phone img/iPhoneX-Mockup_1-removebg-preview.png" class="object-fit-contain rounded-5" />
                     </div>
                 </div>
-                <!-- <div class="swiper-button-next btn-primary btn"></div>
-                 <div class="swiper-button-prev btn-primary btn"></div>-->
                 <div class="swiper-pagination"></div>
             </div>
 
@@ -343,7 +344,7 @@
                 </p>
             </div>
             <div class="card-section d-flex gap-3 flex-md-row flex-column">
-                <div class="card text-center p-3 shadow">
+                <div class="card text-center px-1 py-3 shadow">
                     <div class="images position-relative">
                         <img src="./img/Profile.png" alt="" class="border-img">
                     </div>
@@ -363,7 +364,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card text-center p-3 shadow">
+                <div class="card text-center  px-1 py-3 shadow">
                     <div class="images position-relative">
                         <img src="./img/Profile Image (1).png" alt="" class="border-img">
                     </div>
@@ -383,7 +384,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card text-center p-3 shadow">
+                <div class="card text-center  px-1 py-3 shadow">
                     <div class="images position-relative">
                         <img src="./img/Profile Image.png" alt="" class="border-img">
                     </div>
@@ -416,6 +417,59 @@
                     ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
                 </p>
             </div>
+            <!-- carousel -->
+            <div class="containers">
+                <div class="card-carousel">
+                  <div class="card" id="1">
+                    <img src="./img/phone img/Profile Image.png" alt="img" class="mb-1">
+                    <h3 class="fw-bold text-uppercase text-center">
+                        Ann Lubin
+                    </h3>
+                    <h2 class="text-uppercase fw-semibold text-center">
+                        Co-Founder
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                        velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                        ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                    </p>
+                  </div>
+                  <div class="card" id="2">
+                    <img src="./img/phone img/Profile Image.png" alt="img" class="mb-1">
+                    <h3 class="fw-bold text-uppercase text-center">
+                        Ann Lubin
+                    </h3>
+                    <h2 class="text-uppercase fw-semibold text-center">
+                        Co-Founder
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                        velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                        ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                    </p>
+                  </div>
+                  <div class="card" id="3">
+                    <img src="./img/phone img/Profile Image.png" alt="img" class="mb-1">
+                    <h3 class="fw-bold text-uppercase text-center">
+                        Ann Lubin
+                    </h3>
+                    <h2 class="text-uppercase fw-semibold text-center">
+                        Co-Founder
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                        velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                        ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                    </p>
+                  </div>  
+                  <!-- <div class="card" id="4">
+                    <div class="image-container"></div>
+                    <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+                  </div>
+                  <div class="card" id="5">
+                    <div class="image-container"></div>
+                    <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+                  </div> -->
+                </div>
+                <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
+              </div>
         </section>
 
     </main>
@@ -441,11 +495,13 @@
                 el: ".swiper-pagination",
             },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: "#swiper-button-next",
+                prevEl: "#swiper-button-prev",
             },
         });
+          
     </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

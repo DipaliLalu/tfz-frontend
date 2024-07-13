@@ -74,7 +74,7 @@ p {
 
 .inner-box {
   position: relative;
-  right: 7%;
+  right: 6%;
 }
 /* about section */
 
@@ -94,7 +94,7 @@ p {
 .about-cols {
   flex-basis: 50%;
 }
-
+/* heature section */
 .feature-section {
   background-image: url("./img/Background Image.png");
 }
@@ -144,13 +144,34 @@ p {
   width: 300px !important;
   align-items: center;
   justify-content: center;
+  padding: 0 !important;
 }
 
 .swiper-slide img {
-  /* display: block; */
+  display: block;
+  background-color: #fff !important;
   width: 100%;
 }
-
+.next-icon{
+  border-radius: 30px;
+  padding: 12px 15px;
+  position: absolute;
+}
+.pre-icon{
+  border-radius: 30px;
+  padding: 12px 15px;
+  position: absolute;
+  left:1%;
+}
+.swiper-pagination .swiper-pagination-bullet{
+  width:15px;
+  height: 15px;
+  background-color: var(--royal-blue) !important;
+}
+.swiper-pagination-bullet-active{
+  outline: 2px solid var(--royal-blue) !important;
+  outline-offset: 1px !important;
+}
 /* download section */
 .content {
   flex-basis: 50%;
@@ -203,9 +224,145 @@ p {
 
 /* customer section */
 .customer-section {
-  background-image: url("./img/Background Image.png");
+   background-image: url("./img/Background Image.png");
 }
 
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+  
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.containers {
+  overflow: hidden;
+  padding: 20px;
+  /* margin-top: ; */
+  /* background: rgba(0,0,0,.1) */
+}
+
+.card-carousel {
+  --card-width: 100%;
+  --card-max-width: 700px;
+  --card-height: 350px;
+  --carousel-min-width: 600px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter .3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+  }
+  .card-carousel .card {
+    width:50% !important;
+  }
+}
+
+.card-carousel.smooth-return {
+  transition: all .2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0,0,0,.5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  border-radius: 1em;
+  filter: brightness(.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1)
+}
+
+
+/* .card:nth-of-type(1) .image-container {
+    background-image: url("https://static.addtoany.com/images/dracaena-cinnabari.jpg");
+}
+ 
+.card:nth-of-type(2) .image-container {
+  background-image: url("https://www.w3schools.com/w3css/img_lights.jpg")
+}
+
+.card:nth-of-type(3) .image-container {
+  background-image: url("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+.card:nth-of-type(4) .image-container {
+  background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+.card:nth-of-type(5) .image-container {
+  background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg")
+} */
+
+
+
+.image-container {
+  width: 8em;
+  height: 8em;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  padding: 1em;
+  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+  
+}
+
+.image-container::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 120%;
+  border: solid 3px rgba(0,0,0,.1);
+  border-radius: 100%;
+  position: absolute;
+  top: calc(-10% - 3px);
+  left: calc(-10% - 3px);
+}
+
+/* h2 {
+  padding: 1em;
+  margin-top: 1em;
+  background: rgba(0,0,0,.3);
+  text-align: center;
+  color: white;
+  border-radius: .2em;
+  display: inline-block;
+  transform: translateX(calc((100vw - 100%) / 2))
+} */
+
+h2 a {
+  color: #f5b916
+}
 
 
 @media screen and (max-width:1240px) {
@@ -257,13 +414,16 @@ p {
     width:50%;
   }
   .left h3{
-    font-size: 20px !important;
+    font-size: 24px !important;
   }
   .left p{
     font-size: 12px !important;
   }
+  .left h2{
+    font-size: 20px;
+  }
   .inner-box{
-    right: 10%;
+    right: 8%;
   }
   .right img{
     width: 80%;
@@ -306,9 +466,36 @@ p {
 
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:580px) {
+  .logo img {
+    width: 70%;
+    margin-left: 12px;
+  }
   .app-use {
     height: 450px;
+  }
+  .left h3{
+    font-size: 18px !important;
+  }
+  .left p{
+    font-size: 9px !important;
+  }
+  .inner-box{
+    right: 9%;
+    width:100%;
+  }
+  .download img{
+    width:50%;
+  }
+  .left h2{
+    font-size: 15px;
+  }
+  
+  .right img{
+    width: 80%;
+  }
+  .hero-section {
+    gap: 1rem;
   }
 
   .set-video iframe {
