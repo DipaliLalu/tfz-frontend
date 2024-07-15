@@ -272,7 +272,7 @@ h1 {
 }
 
 .card-carousel.smooth-return {
-  transition: all .2s ease;
+  transition: all .3s ease;
 }
 
 .card-carousel .card {
@@ -302,27 +302,6 @@ h1 {
   filter: brightness(1)
 }
 
-
-/* .card:nth-of-type(1) .image-container {
-    background-image: url("https://static.addtoany.com/images/dracaena-cinnabari.jpg");
-}
- 
-.card:nth-of-type(2) .image-container {
-  background-image: url("https://www.w3schools.com/w3css/img_lights.jpg")
-}
-
-.card:nth-of-type(3) .image-container {
-  background-image: url("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
-}
-.card:nth-of-type(4) .image-container {
-  background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
-}
-.card:nth-of-type(5) .image-container {
-  background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg")
-} */
-
-
-
 .image-container {
   width: 8em;
   height: 8em;
@@ -348,20 +327,65 @@ box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
   top: calc(-10% - 3px);
   left: calc(-10% - 3px);
 }
+/* blog section */
+.blog-card-section .card-body .card-title{
+   font-family: "Josefin Sans", sans-serif !important;
+   
+}
+.blog-card-section{
+  margin-bottom: 10rem;
+}
+.blog-card-section .card{
+  width:35%;
+}
+.blog-card-section a{
+  color:#5851EA;
+}
 
-/* h2 {
-  padding: 1em;
-  margin-top: 1em;
-  background: rgba(0,0,0,.3);
-  text-align: center;
-  color: white;
-  border-radius: .2em;
-  display: inline-block;
-  transform: translateX(calc((100vw - 100%) / 2))
-} */
-
-h2 a {
-  color: #f5b916
+/* footer section */
+footer{
+  font-family: "Josefin Sans", sans-serif !important;
+}
+.logo-part{
+  width:30%;
+}
+.quick-link{
+  width:30%;
+}
+.email-section{
+  margin-left: 100px;
+}
+.fa-paper-plane{
+  transform: rotate(54deg);
+}
+.email{
+  width:100%;
+  background-color: #fff;
+}
+.email input{
+  font-size: 17px;
+  font-family:"Josefin Sans", sans-serif !important ;
+}
+hr{
+  border-color: #fff !important;
+  opacity: 1 !important;
+  margin-top: 20px !important; 
+}
+.contact-section{
+  position: absolute;
+  top:-20%;
+  gap:200px;
+  background-color: #fff;
+  color:black;
+  padding: 4rem;
+} 
+.contact-section .vr{
+  padding: 1px;
+  background-color: black !important; 
+  height: 70px;
+  opacity: 1;
+  border-radius: 10px;
+  margin-left: 150px;
 }
 
 
@@ -396,7 +420,7 @@ h2 a {
   .logo img {
     width: 80%;
     height: 90px !important;
-    object-fit: fill;
+    object-fit: contain;
   }
 
   .upper-nav {
@@ -461,9 +485,32 @@ h2 a {
   }
   .content{
     text-align: center;
-    
   }
-
+  .blog-card-section .card{
+    width:100%;
+  }
+  .email-section{
+    margin-left: 0;
+  }
+  .logo-part{
+    width:100%;
+  }
+  .quick-link{
+    width:100%;
+  }
+  .email{
+    width:100%;
+    background-color: #fff;
+  }
+  .contact-section{
+    gap:15px;
+    padding: 1rem;
+    top:-10%;
+  }
+  .contact-section .vr{
+    display: none;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width:580px) {
@@ -517,5 +564,19 @@ h2 a {
     margin-top: 30px;
     margin-bottom: 50px;
   }
+  .email input{
+    font-size: 11px;
+    width:80%;
+  }
+  .contact-section{
+    gap:3px;
+    padding: 0.5rem;
+    top:-10%;
+    width:75% !important;
+  }
+  .first-contact{
+    gap:2px !important;
+  }
+    
   
 }
