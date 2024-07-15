@@ -371,6 +371,23 @@ hr{
   opacity: 1 !important;
   margin-top: 20px !important; 
 }
+.contact-section{
+  position: absolute;
+  top:-20%;
+  gap:200px;
+  background-color: #fff;
+  color:black;
+  padding: 4rem;
+} 
+.contact-section .vr{
+  padding: 1px;
+  background-color: black !important; 
+  height: 70px;
+  opacity: 1;
+  border-radius: 10px;
+  margin-left: 150px;
+}
+
 
 @media screen and (max-width:1240px) {
   .first {
@@ -403,7 +420,7 @@ hr{
   .logo img {
     width: 80%;
     height: 90px !important;
-    object-fit: fill;
+    object-fit: contain;
   }
 
   .upper-nav {
@@ -485,6 +502,15 @@ hr{
     width:100%;
     background-color: #fff;
   }
+  .contact-section{
+    gap:15px;
+    padding: 1rem;
+    top:-10%;
+  }
+  .contact-section .vr{
+    display: none;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width:580px) {
@@ -541,6 +567,15 @@ hr{
   .email input{
     font-size: 11px;
     width:80%;
+  }
+  .contact-section{
+    gap:3px;
+    padding: 0.5rem;
+    top:-10%;
+    width:75% !important;
+  }
+  .first-contact{
+    gap:2px !important;
   }
     
   
