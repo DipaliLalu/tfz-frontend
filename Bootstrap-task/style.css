@@ -35,15 +35,20 @@ p {
 
 .logo {
   position: absolute;
-  left: 50%;
+  left: 48%;
   transform: translateX(-50%);
+  height: 90px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+.logo img{
+  object-fit: contain;
 }
 
-.logo img {
-  width: 90%;
-  height: 99px;
-  object-fit: cover;
-}
 
 .btn {
   width: 130px;
@@ -387,6 +392,14 @@ hr{
   border-radius: 10px;
   margin-left: 150px;
 }
+.blog-footer{
+  margin-top: 10rem;
+}
+.search{
+  border:2px solid rgba(0, 0, 0, 0.491);
+  height: 40px;
+  border-radius: 8px;
+}
 
 
 @media screen and (max-width:1240px) {
@@ -416,11 +429,10 @@ hr{
     height: 20px !important;
     width: 20px !important;
   }
-
-  .logo img {
-    width: 80%;
-    height: 90px !important;
-    object-fit: contain;
+  .logo {
+    height: 70px;
+    padding: 8px;
+    border-radius: 5px;
   }
 
   .upper-nav {
@@ -506,6 +518,7 @@ hr{
     gap:15px;
     padding: 1rem;
     top:-10%;
+    width: 87% !important;
   }
   .contact-section .vr{
     display: none;
@@ -514,9 +527,14 @@ hr{
 }
 
 @media screen and (max-width:580px) {
-  .logo img {
-    width: 70%;
-    margin-left: 12px;
+   .logo img {
+    width: 90%;
+    /* margin-left: 12px; */
+  }
+  .logo {
+    height: 60px;
+    width:120px;
+    padding: 0px;
   }
   .app-use {
     height: 450px;
@@ -572,7 +590,7 @@ hr{
     gap:3px;
     padding: 0.5rem;
     top:-10%;
-    width:75% !important;
+    width:72% !important;
   }
   .first-contact{
     gap:2px !important;
