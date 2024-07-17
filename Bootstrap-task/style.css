@@ -42,13 +42,16 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: 5px 12px;
   border-radius: 5px;
 }
 .logo img{
   object-fit: contain;
 }
-
+.nav-link:hover{
+  text-decoration: underline !important;
+  color:var(--royal-blue) !important;
+}
 
 .btn {
   width: 130px;
