@@ -143,10 +143,10 @@ p {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 300px !important;
@@ -155,7 +155,7 @@ p {
   padding: 0 !important;
 }
 
-.swiper-slide img {
+.mySwiper .swiper-slide img {
   display: block;
   background-color: #fff !important;
   width: 100%;
@@ -171,12 +171,12 @@ p {
   position: absolute;
   left:1%;
 }
-.swiper-pagination .swiper-pagination-bullet{
+.mySwiper .swiper-pagination .swiper-pagination-bullet{
   width:15px;
   height: 15px;
   background-color: var(--royal-blue) !important;
 }
-.swiper-pagination-bullet-active{
+.mySwiper .swiper-pagination-bullet-active{
   outline: 2px solid var(--royal-blue) !important;
   outline-offset: 1px !important;
 }
@@ -243,98 +243,27 @@ p {
   
 }
 
-h1 {
-  color: white;
-  text-align: center;
-  margin-top: 1em;
-}
-
-.containers {
-  overflow: hidden;
-  padding: 20px;
-  /* margin-top: ; */
-  /* background: rgba(0,0,0,.1) */
-}
-
-.card-carousel {
-  --card-width: 100%;
-  --card-max-width: 700px;
-  --card-height: 350px;
-  --carousel-min-width: 600px;
-  z-index: 1;
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  height: var(--card-height);
-  min-width: var(--carousel-min-width);
-  transition: filter .3s ease;
-}
-
-@media screen and (max-width: 640px) {
-  .card-carousel {
-    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
-  }
-  .card-carousel .card {
-    width:50% !important;
-  }
-}
-
-.card-carousel.smooth-return {
-  transition: all .3s ease;
-}
-
-.card-carousel .card {
-  background: whitesmoke;
-  width: var(--card-width);
-  max-width: var(--card-max-width);
-  text-align: center;
-  padding: 1em;
-  min-width: 250px;
-  height: var(--card-height);
-  position: absolute;
-  margin: 0 auto;
-  color: rgba(0,0,0,.5);
-  transition: inherit;
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  border-radius: 1em;
-  filter: brightness(.9);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.card.highlight {
-  filter: brightness(1)
-}
-
-.image-container {
-  width: 8em;
-  height: 8em;
-  position: relative;
+.mySwipers .swiper-slide {
+  background-position: center;
   background-size: cover;
-  margin-bottom: 2em;
-  border-radius: 100%;
-  padding: 1em;
-  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
--moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
-  
+  width: 650px;
+  height: 330px;
 }
 
-.image-container::after {
-  content: "";
-  display: block;
-  width: 120%;
-  height: 120%;
-  border: solid 3px rgba(0,0,0,.1);
-  border-radius: 100%;
-  position: absolute;
-  top: calc(-10% - 3px);
-  left: calc(-10% - 3px);
+
+.swiper-slide .card img{
+  width:96px;
+  height: 96px;
+  object-fit: contain;
 }
+.mySwipers .swiper-pagination .swiper-pagination-bullet{
+  width:10px;
+  height: 10px;
+  background-color:white !important;
+}
+
+
+
 /* blog section */
 .blog-card-section .card-body .card-title{
    font-family: "Josefin Sans", sans-serif !important;
@@ -353,6 +282,10 @@ box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
 /* footer section */
 footer{
   font-family: "Josefin Sans", sans-serif !important;
+  background-color: #232233;
+}
+.footer{
+  margin-top: 100px;
 }
 .logo-part{
   width:30%;
@@ -371,7 +304,7 @@ footer{
   background-color: #fff;
 }
 .email input{
-  font-size: 17px;
+  font-size: 1.3vw;
   font-family:"Josefin Sans", sans-serif !important ;
 }
 hr{
@@ -382,18 +315,26 @@ hr{
 .contact-section{
   position: absolute;
   top:-20%;
+  left:4.8%;
   gap:200px;
   background-color: #fff;
   color:black;
-  padding: 4rem;
+  padding: 3rem;
+  width:100%;
 } 
+.contact-section i{
+  border-radius: 90px;
+  padding: 33px 22px;
+}
+.contact-section p{
+  font-size: 23px;
+}
 .contact-section .vr{
   padding: 1px;
   background-color: black !important; 
   height: 70px;
   opacity: 1;
   border-radius: 10px;
-  margin-left: 150px;
 }
 .blog-footer{
   margin-top: 10rem;
@@ -518,25 +459,34 @@ hr{
     background-color: #fff;
   }
   .contact-section{
-    gap:15px;
+    /* gap:10px; */
     padding: 1rem;
     top:-10%;
-    width: 87% !important;
+    /* width: 87% !important; */
   }
   .contact-section .vr{
     display: none;
     margin-left: 0;
   }
+  .contact-section p{
+    font-size: 18px;
+  }
+  /* .mySwipers .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 330px;
+  } */
 }
 
 @media screen and (max-width:580px) {
    .logo img {
-    width: 90%;
+    width: 85%;
     /* margin-left: 12px; */
   }
   .logo {
-    height: 60px;
-    width:120px;
+    height: 65px;
+    width:100px;
     padding: 0px;
   }
   .app-use {
@@ -589,15 +539,33 @@ hr{
     font-size: 11px;
     width:80%;
   }
+  .footer{
+    margin-top: 50px;
+  }
   .contact-section{
-    gap:3px;
-    padding: 0.5rem;
-    top:-10%;
-    width:72% !important;
+    gap:10px;
+    padding: 1rem;
+    top:-8%;
+    /* left:%; */
+    width:90% !important;
+
   }
-  .first-contact{
+  /* .first-contact{
     gap:2px !important;
+  } */
+  .contact-section i{
+    border-radius: 90px;
+    padding: 26px 14px;
   }
-    
+  .contact-section p{
+    font-size: 15px;
+  }
+  .mySwipers .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 330px;
+  }
   
 }
+
