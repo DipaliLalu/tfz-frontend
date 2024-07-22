@@ -313,9 +313,10 @@ hr{
   margin-top: 20px !important; 
 }
 .contact-section{
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
-  top:-20%;
-  left:4.8%;
   gap:200px;
   background-color: #fff;
   color:black;
