@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My all task list</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --margin-block: 30px;
+    }
+    html {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(./images.png);
+      background-position: top left;
+      color: white;
+      text-align: center;
+    }
+    h2 {
+      font-size: 35px;
+      margin-block: var(--margin-block);
+    }
+    a {
+      text-decoration: none;
+      color: white;
+
+    }
+    hr {
+      border: 2px solid;
+      margin-block: 10px;
+      margin-inline: 60px;
+      margin-top: 35px;
+    }
+    .btn {
+      padding: 8px 30px;
+      border-radius: 5px;
+      border: 1px solid white;
+      background-color: black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-inline: 20px;
+    }
+    .btn:hover {
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 8px white;
+    }
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    @media screen and (max-width:479px) {
+      .flex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>JavaScript Basic (20-7-2024)</h2>
+    <div class="flex">
+      <a href="./Basic js/index.html" class="btn">Basic Program</a>
+    </div>
+    <hr>
+    <h2>JavaScript Variables (21-7-2024)</h2>
+    <div class="flex">
+      <a href="./variable.html" class="btn">Variables</a>
+    </div>
+    <hr>
+  
+  
+  </div>
+</body>
+</html>
+
