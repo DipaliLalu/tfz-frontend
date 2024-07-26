@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array in js</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2 class="p-3 text-center bg-secondary-subtle">Js String</h2>
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <!-- <h2 class="p-2 text-center bg-secondary-subtle">Length Property</h2> -->
+        <label for="str" class="form-label fw-semibold">Enter array</label>
+        <input type="text" id="str" class=" form-control">
+        <p id="arr"></p>
+        <Button onclick="arr()" class="btn btn-primary">Find Length</Button>
+    </div>
+
+    <script>
+        function arr(){
+          let arr;
+            arr=document.getElementById('str').value;
+            Array.from(arr).forEach(e=>{                
+             })
+           
+        }
+    </script>
+</body>
+</html>
+
