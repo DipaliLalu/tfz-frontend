@@ -21,4 +21,8 @@ const strobj=new String(s3);
 // console.log(s1.lastIndexOf('name'));
 let reg=/[A-Z]/g;
 console.log(s1.match(reg));
+let str="this is cat."
+let str2="cat"
+// console.log(str.trim());
+console.log(str.match(str2));
 
