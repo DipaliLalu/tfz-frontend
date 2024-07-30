@@ -16,3 +16,4 @@ let b=array2.filter((value)=>{
 })
 
 console.log('b is : ',b);
+
