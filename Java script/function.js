@@ -44,6 +44,16 @@ function Human(name, age) {
     this.age = age;
   }
       
-  const a = new Person('d', 21); // Error!
-  console.log(a);
+//   const a = new Person('d', 21); // Error!
+//   console.log(a);
 
+  console.log(this);
+  function demo(){
+    console.log(this);
+  }
+  demo();
+
+  const demo1=()=>{
+    console.log(this);
+  }
+  demo1();
