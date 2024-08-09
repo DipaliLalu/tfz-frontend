@@ -9,19 +9,36 @@
     <h2>Async and Await in Js</h2>
 
     <script>
-
-      let p = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve("hello");
-        }, 3000);
-      });
-
-      async function display() {
-        //let a = await p;
-        console.log(await p);
+      function resloveAfter2Seconds(){
+        return new Promise((reslove,reject)=>{
+          setTimeout(()=>{
+            reslove("slow");
+         //   reject(new Error("something wrong!"));
+            console.log("slow promise is done");
+          },2000);
+        });
       }
-      display();
+      async function start(){
+        try{
+            await resloveAfter2Seconds();
+            console.log("promise is resolve");
+        }catch{
+            console.log("promise is rejected");
+        }
+      }
 
+      function delay(ms){
+        return new Promise((reslove)=>setTimeout(reslove,ms));
+      }
+
+      async function delayLoop(){
+        for(let i=0;i<5;i++){
+          console.log(`iteration ${i}`);
+          await delay(1000);
+        }
+      }
+      //start();
+      delayLoop();
     </script>
   </body>
 </html>

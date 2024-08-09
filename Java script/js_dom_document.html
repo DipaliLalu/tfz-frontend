@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom document in js</title>
+  </head>
+  <body onclick="mydemo()">
+    <div class="container">
+      <div class="demo">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+        accusantium?"
+      </div>
+      <p id="pid"></p>
+      <input type="text" value="An input field" />
+      <button>A Button</button>
+      <ul id="ul">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+    </div>
+    <h2 id="text"></h2>
+    <script>
+      let p = document.getElementById("pid");
+      p.innerHTML = "hello world!";
+
+      let divs = document.getElementsByClassName("demo").length;
+      console.log(divs);
+      let ul=document.getElementById('ul');
+      document.write("My Name Is Dipali.<br>")
+      // divs.style.backgroundColor = "red"
+      // p.innerHTML=divs;
+
+      let h2 = document.getElementsByTagName("h2");
+      h2[0].innerHTML = "hello";
+
+      p.title = "hello world!";
+
+      let img = document.createElement("img");
+      img.src = "/image-gallery/img/mounten.jfif";
+      console.log(img.src);
+      document.body.appendChild(img);
+      // p.remove();
+      function mydemo() {
+        const element = document.activeElement.tagName;
+        document.getElementById("text").innerHTML = element;
+      }
+
+      //create attribute
+      const att=document.createAttribute("style");
+      att.value="color:red";
+      document.getElementsByTagName('div')[1].setAttributeNode(att);
+
+      //create comment
+      const comment=document.createComment("My comments");
+      document.body.append(comment);
+    </script>
+  </body>
+</html>
