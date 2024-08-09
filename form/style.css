@@ -1,0 +1,29 @@
+.container {
+    margin: auto;
+    width: 40vw;
+    height: 90vh;
+    background-color: lavender;
+    border-radius: 20px;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+label{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+input{
+    margin-top: 10px;
+    margin-left:20px ;
+}
+.black{
+    color:black;
+}
+select{
+    margin-top: 10px;
+    margin-left:20px ;
+}
+input[type="submit"]{
+    margin-left: 190px;
+    margin-top: 20px;
+}

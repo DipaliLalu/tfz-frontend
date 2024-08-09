@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object in JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+      
+    <h2 class="p-3 text-center bg-secondary-subtle">Js Object</h2>
+    <div class="container p-5 bg-danger-subtle mt-5">
+      
+        <label for="no1" class=" form-label">Enter First Name :</label>
+        <input type="text" id="fname" class=" form-control">
+        <label for="no2" class=" form-label">Enter Last Name :</label>
+        <input type="text" id="lname" class=" form-control">
+        <label class=" form-label">Full Name :</label>
+        <p type="number" id="ans" class="p-3 form-control" ></p>
+        <button class="btn btn-primary" onclick="done()">Ans</button>
+        <button class="btn btn-primary" onclick="up()">Uppercase</button>
+        <button class="btn btn-primary" onclick="lowercase()">Lowercase</button>
+        <button class="btn btn-primary" onclick="bold()">Bold</button>
+    </div>
+
+    <script>
+        
+      
+    function done(){ 
+        const obj={
+            Firstname:document.getElementById('fname').value,
+            Lastname:document.getElementById('lname').value,
+        };
+        console.log(obj.Firstname);
+        console.log(obj.Lastname);
+        document.getElementById("ans").innerHTML = obj.Firstname + "  " + obj.Lastname ;}
+    function up(){
+        const obj={
+            Firstname:document.getElementById('fname').value,
+            Lastname:document.getElementById('lname').value,
+        };
+        document.getElementById("ans").innerHTML = obj.Firstname.toUpperCase() + "  " + obj.Lastname.toUpperCase() ;}
+        function lowercase(){
+            const obj={
+                Firstname:document.getElementById('fname').value,
+                Lastname:document.getElementById('lname').value,
+            };
+            document.getElementById("ans").innerHTML = obj.Firstname.toLowerCase() + "  " + obj.Lastname.toLowerCase() ;}
+            function bold(){
+                const obj={
+                    Firstname:document.getElementById('fname').value,
+                    Lastname:document.getElementById('lname').value,
+                };
+                document.getElementById("ans").innerHTML = obj.Firstname.bold() + "  " + obj.Lastname.bold() ;}
+
+    
+    </script>
+</body>
+</html>
+

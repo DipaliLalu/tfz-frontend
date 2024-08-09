@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Form</h2>
+
+        <form>
+            <table>
+               <tr>
+                <td><label for="fname">First Name</label></td>
+                <td><input type="text" name="fname" id="fname"/></td>
+               </tr>
+               <tr>
+                <td><label for="lname">Last Name</label></td>
+                <td><input type="text" name="lname" id="lname"/></td>
+               </tr>
+               <tr>
+                <td><label for="fathername">Father's Name</label></td>
+                <td><input type="text" name="fathername" id="fathername"/></td>
+               </tr>
+               <tr>
+                <td><label for="dob">Dob</label></td>
+                <td><input type="text" name="dob" id="dob"/></td>
+               </tr>
+               <tr>
+                <td><label for="gender">Gender</label></td>
+                <td class="black"><input type="radio" name="gender" id="gender"/>male
+                <input type="radio" name="gender" id="gender"/>female</td>
+               </tr>
+               <tr>
+                <td><label for="address">Address</label></td>
+                <td><input type="text" name="address" id="address"/></td>
+               </tr>
+               <tr>
+                <td><label for="state">State</label></td>
+                <td><select name="state" id="state">
+                    <option value="ap" class="black">ap</option>
+                    <option value="mp">mp</option>
+                    <option value="up">up</option>
+                   </select></td>
+               </tr>
+               <tr>
+                <td><label for="pincode">Pincode</label></td>
+                <td><input type="text" name="pincode" id="pincode"/></td>
+               </tr>
+               <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="email"/></td>
+               </tr>
+               <tr>
+                <td><label for="pno">Phone Number</label></td>
+                <td><input type="text" name="pno" id="pno"/></td>
+               </tr>
+               <tr>
+                <td><label for="lang">Language</label></td>
+                <td class="black"><input type="checkbox" name="lang" id="lang"/>telugu
+                    <input type="checkbox" name="lang" id="lang"/>hindi
+                    <input type="checkbox" name="lang" id="lang"/>english</td>
+               </tr>
+               <tr>
+                <td class="center"><input type="submit" value="Submit"></td>
+               </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+
+</html>

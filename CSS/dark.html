@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change the background</title>
+    <style>
+        :root {
+            --dark: black;
+            --white: white;
+            
+        }
+
+        .container {
+            background-color: var(--dark);
+            color: var(--white);
+            width: 500px;
+            height: 500px;
+        }
+
+        .white {
+            background-color: var(--white);
+            color: var(--dark);
+        }
+    </style>    
+</head>
+
+<body>
+    <div class="container" id="con">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum dolore qui corrupti modi eligendi, molestias
+        obcaecati ducimus iste quam minus?
+    </div>
+    <button id="btn">Change the background</button>
+    <script>
+        var conatiner = document.getElementById("con");
+        var btn = document.querySelector("button");
+        btn.addEventListener("click", () => {
+            conatiner.classList.toggle('white');
+           
+        })
+
+    </script>
+</body>
+
+</html>

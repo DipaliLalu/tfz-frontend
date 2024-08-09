@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation demo</title>
+    <style>
+        body{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        .container{
+            width: 500px;
+            height: 200px;
+            background-color: rgb(167, 152, 152);
+            position: relative;
+        }
+        .box{
+            width:50px;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+            animation: anim 3s infinite;
+        }
+        @keyframes anim {
+            from{
+               background-color: green;
+              left:0;
+            }
+            to{
+              background-color: #fff;
+             left:90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body{
+    background: linear-gradient(171deg, rgba(0, 0, 0, 0.895), purple);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:rgb(243, 188, 228);
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.container{
+    margin: 100px auto;
+    width:40vw;
+    /* height: 60vh; */
+    border-radius: 40px;
+    background-color:purple;
+    box-shadow: 1px 1px 30px 20px rgba(255, 192, 203, 0.811);
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    font-size: xx-large;
+    font-weight: 900;
+    text-decoration: underline;
+    color:rgb(248, 155, 248);
+   box-sizing: border-box;
+}
+.detail{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap:10px;
+    flex-direction: column;
+    /* margin-top: -10px; */
+}
+.task-detail{
+    font-weight: 500;
+    font-size: 30px;
+}
+summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+   padding-top: 50px;
+}
+summary::after {
+    content: '';
+    background: url("up.svg");
+    width: 25px;
+    height: 24px;
+    transition: 0.2s;
+    margin-top: 8px;
+    margin-right: 20px;
+ }
+
+details[open]>summary::after {
+    transform: rotate(180deg);
+    margin-top: 9px;
+   margin-right: 40px;
+}
+details[open]>summary {
+    margin-left: 30px;
+    padding-top: 1px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(243, 188, 228);
+    font-size: 20px;
+}

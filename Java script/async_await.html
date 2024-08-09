@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async and Await in Js</title>
+  </head>
+  <body>
+    <h2>Async and Await in Js</h2>
+
+    <script>
+      function resloveAfter2Seconds(){
+        return new Promise((reslove,reject)=>{
+          setTimeout(()=>{
+            reslove("slow");
+         //   reject(new Error("something wrong!"));
+            console.log("slow promise is done");
+          },2000);
+        });
+      }
+      async function start(){
+        try{
+            await resloveAfter2Seconds();
+            console.log("promise is resolve");
+        }catch{
+            console.log("promise is rejected");
+        }
+      }
+
+      function delay(ms){
+        return new Promise((reslove)=>setTimeout(reslove,ms));
+      }
+
+      async function delayLoop(){
+        for(let i=0;i<5;i++){
+          console.log(`iteration ${i}`);
+          await delay(1000);
+        }
+      }
+      //start();
+      delayLoop();
+    </script>
+  </body>
+</html>

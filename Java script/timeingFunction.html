@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <button id="stop" onclick="stop()">stop</button>
+    <script>
+        setTimeout(() => {
+            console.log("this is the first message");
+        }, 1000);
+        
+        setTimeout(() => {
+            console.log("this is the second message");
+        }, 2000);
+        setTimeout(() => {
+            console.log("this is the third message");
+        }, 3000);
+        console.log('hello world');
+        // setInterval(function() {
+        //     console.log("This code will be executed every 1 second.");
+        //   }, 1000);
+        function setcolor(){
+            let x=document.body;
+            x.style.backgroundColor=(x.style.backgroundColor=="royalblue")?'pink':'royalblue';
+        }
+        let i=setInterval(setcolor,1000);
+        function stop(){
+            clearInterval(i);
+        }
+        
+    </script>
+</body>
+</html>
+
+
+

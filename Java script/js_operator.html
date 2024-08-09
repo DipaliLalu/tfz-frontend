@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js operator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h2 class="p-3 text-center bg-secondary-subtle">Js Operator</h2>
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h3 class=" fw-semibold text-decoration-underline">Arithmetic opration</h3>
+        <label for="no1" class=" form-label">Enter Number 1 :</label>
+        <input type="number" id="no1" class=" form-control">
+        <label for="no2" class=" form-label">Enter Number 2 :</label>
+        <input type="number" id="no2" class=" form-control">
+        <label class=" form-label">Answer</label>
+        <p type="number" id="ans" class="p-3 form-control" disabled></p>
+        <div class="d-flex flex-wrap mt-4 gap-4 justify-content-center align-items-center">
+            <button class=" btn btn-outline-primary" onclick="add()">Addition</button>
+            <button class=" btn btn-outline-primary" onclick="sub()">Subtraction</button>
+            <button class=" btn btn-outline-primary" onclick="multi()">Multiplication</button>
+            <button class=" btn btn-outline-primary" onclick="divition()">Division</button>
+        </div>
+    </div>
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h3 class=" fw-semibold text-decoration-underline">Comparison opration</h3>
+        <label for="no1" class=" form-label">Enter Number 1 :</label>
+        <input type="number" id="cmp_no1" class=" form-control">
+        <label for="no2" class=" form-label">Enter Number 2 :</label>
+        <input type="number" id="cmp_no2" class=" form-control">
+        <button class="btn btn-outline-primary mt-3" onclick="comparision()">Done</button>
+    </div>
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h3 class=" fw-semibold text-decoration-underline">Ternary opration</h3>
+        <label for="no1" class=" form-label">Enter age for votting :</label>
+        <input type="number" id="age" class=" form-control">
+     
+        <button class="btn btn-outline-primary mt-3" onclick="age()">Click</button>
+    </div>
+
+    <script>
+       //arithmetic oprator 
+        var no1 = 0;
+        var no2 = 0;
+        function value() {
+            no1 = parseInt(document.getElementById('no1').value);
+            no2 = parseInt(document.getElementById('no2').value);
+        }
+        function add() {
+            value();
+            let result = no1 + no2;
+            document.getElementById('ans').innerHTML = result;
+        }
+        function sub() {
+            value();
+            let result = no1 - no2;
+            document.getElementById('ans').innerHTML = result;
+        }
+        function multi() {
+            value();
+            let result = no1 * no2;
+            document.getElementById('ans').innerHTML = result;
+        }
+        function divition() {
+            value();
+            let result = no1 / no2;
+            document.getElementById('ans').innerHTML = result;
+        }
+        //comparison oparetor
+        var cop_no1,cop_no2;
+        function values(){
+            cop_no1=parseInt(document.getElementById('cmp_no1').value);
+            cop_no2=parseInt(document.getElementById('cmp_no2').value);
+        }
+        function comparision(){
+            values();
+            if(cop_no1 == cop_no2){
+                window.alert(cop_no1 + ' ' + 'And' + ' ' +cop_no2+ ' '+ 'Are Same!' );
+            }
+            else if(cop_no1 > cop_no2){
+                window.alert(cop_no1 +' ' + 'Is Bigger Then' +' ' +cop_no2);
+            }
+            else{
+                window.alert(cop_no2 + ' ' +'Is Bigger Then' +' ' +cop_no1);
+            }
+        }
+        function age(){
+            var age=parseInt(document.getElementById('age').value);
+
+            (age>18)? window.alert('you can votting') : window.alert('you can not be votting');
+            
+        }
+
+    </script>
+</body>
+</html>
+
