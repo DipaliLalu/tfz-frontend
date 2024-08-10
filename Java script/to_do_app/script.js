@@ -1,25 +1,43 @@
-let textValue=document.getElementById('text');
-let task=document.querySelector('.task-list');
-function saveTask(){
-    if(textValue.value==""){
+let textValue = document.getElementById('text');
+let task = document.querySelector('.task-list');
+let count=0;
+
+window.onload = () => {
+    count = localStorage.length;
+    display();
+};
+
+function saveTask() {
+    if (textValue.value == "") {
         alert("please enter task");
     }
-    else{
-        let newElement=document.createElement("li");
-        newElement.innerHTML=`<div class="tasks">${textValue.value}</div> <div class="d-flex gap-4 mt-1">  <i class="fa-solid fa-trash-can"></i>  <i class="fa-regular fa-pen-to-square"></i></div>`;
-        task.appendChild(newElement);
-        textValue.value="";
-        newElement.querySelector(".fa-trash-can").addEventListener("click",remove);
-        function remove(){
-            newElement.remove();
-        }
-        newElement.querySelector('.fa-pen-to-square').addEventListener("click",edit)
-        function edit(){
-            let Edit=this.parentElement;
-            let edit=Edit.parentElement;
-            edit.contentEditable = true;
-        }
+    else {
+         count = count + 1;
+        // console.log(count)
+        localStorage.setItem(count, textValue.value);
+        // let getValue = localStorage.getItem(count);
+        // console.log(getValue);
+        textValue.value="";     
+        return count;
     }
-    // console.log("hello")
-    // console.log(textValue.value)
+    
 }
+
+function display(){
+    for (let index = 1 ; index <= localStorage.length; index++) {
+    //   console.log(localStorage.getItem(index));
+      let get=localStorage.getItem(index);
+      let newElement = document.createElement("li");
+    //   newElement.id=index;
+      newElement.innerHTML = `<div>${get}</div>
+      <button class="btn btn-delete" onClick="reply_click(this.id)" id="${index}">Delete</button>`;
+      task.appendChild(newElement);
+    }
+}
+
+
+function reply_click(e) {
+ console.log(`Button ID: ${e}`)
+ localStorage.removeItem(e)
+}
+
