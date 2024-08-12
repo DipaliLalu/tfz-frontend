@@ -15,15 +15,18 @@
 </head>
 
 <body>
+  <h1 class="text-uppercase mt-3 fs-1 text-center">Todo app</h1>
 
-  <div class="container d-flex gap-5 flex-column-reverse flex-lg-row">
+  <div class="container d-flex gap-5 flex-column-reverse flex-md-row">
     <div class="left-side d-flex flex-column gap-5">
       <h2 class="text-uppercase mt-5 fs-1 text-center">Todo app</h2>
-      <div class="d-flex gap-4">
+      <div >
+        <form class="d-flex gap-4">
         <input type="text" class="form-control p-2" id="text" placeholder="Enter your task" />
-        <button class="btn btn-success" onclick="saveTask()">Submit</button>
+        <button class="btn" onclick="saveTask()">Submit</button>
+        </form>
       </div>
-      <ul class="list-unstyled task-list">
+      <ul class="list-unstyled task-list d-flex flex-column gap-2">
       </ul>
     </div>
     <div class="right-side mt-5 text-center">

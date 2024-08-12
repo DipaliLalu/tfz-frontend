@@ -18,22 +18,46 @@ body{
 .right-side{
     flex-basis: 45%;
 }
+button{
+    background-color: #00684A !important;
+    color:white !important;
+}
 
 li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 8px;
+    padding: 8px 8px;
     border-radius: 10px;
     background-color: #00684A;
     color:white;
-    margin-bottom: 10px;
+    text-transform:capitalize;
 }
 li button{
     background-color: white !important;
+    color: #00684A !important;
+    padding: 4px;
+    border-radius: 2px;
+    border: none;
 }
 li button:hover{
-    color:black !important;
     box-shadow: 2px; 
+}
+
+h1{
+    text-align: center;
+    display: none;
+}
+@media  screen and (max-width:430px) {
+    img{
+        width:90%;
+    }
+    h1{
+        display: block;
+    }
+    h2{
+        display: none;
+    }
+
 }
 
