@@ -2,34 +2,38 @@
 let textValue = document.getElementById('text');
 let task = document.querySelector('.task-list');
 let array = [];
+// console.log(array)
 window.onload = () => {
-    if(localStorage.getItem('todo')!==""){
+    if (localStorage.getItem('todo') !== "") {
         array.push(localStorage.getItem('todo'));
         display();
+        // console.log(array)
     }
 }
 
 let getData = localStorage.getItem('todo');
-// console.log(getDta);
+// console.log(getData);
+
 function saveTask() {
-    
-    if (textValue.value == "") {
+    if (textValue.value == "" || textValue.value.trim() == "") {
+        // alert("hello");
         alert("please enter task");
-    } else if (getData.split(',').includes(textValue.value)) {
+    }
+    else if (textValue.value.trim() !== "") {
+        // array=[];
+        array.push(textValue.value.trim());
+        localStorage.setItem('todo', array);
+        // textValue.value = "";
+    }
+    else if (getData.split(',').includes(textValue.value)) {
         alert("please enter unique value");
     }
-    else {
-        array.push(textValue.value);
-        console.log(array);
-        localStorage.setItem('todo', array);
-        textValue.value = ""; 
-    }
-
 }
 
 // console.log(getData.split(','));
 function display() {
     let set = new Set(getData.split(','));
+    set.delete('');
     set.forEach((element) => {
         let newElement = document.createElement("li");
         newElement.innerHTML = `<div>${element}</div>
@@ -53,6 +57,10 @@ function remove(e) {
     e.target.parentElement.remove();
     location.reload();
     // console.log(update);
-    
+}
+
+function allDataDelete() {
+    localStorage.removeItem('todo');
+    location.reload();
 }
 
