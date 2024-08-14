@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API in js</title>
+</head>
+<body>
+    <h2>API in Js</h2>
+    <button onclick="back()">Back</button>
+    <button onclick="next()">Next</button>
+
+    <script>
+        //history API
+        function back(){
+            window.history.back();
+        }
+        function next(){
+            window.history.go(-1);
+        }
+    </script>
+</body>
+</html>
