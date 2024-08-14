@@ -19,14 +19,14 @@ function saveTask() {
         // alert("hello");
         alert("please enter task");
     }
-    else if (textValue.value.trim() !== "") {
+    else if (localStorage.getItem('todo').split(',').includes(textValue.value)) {
+        alert("please enter unique value");
+    }
+    else {
         // array=[];
         array.push(textValue.value.trim());
         localStorage.setItem('todo', array);
         // textValue.value = "";
-    }
-    else if (getData.split(',').includes(textValue.value)) {
-        alert("please enter unique value");
     }
 }
 
