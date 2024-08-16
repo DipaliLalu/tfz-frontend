@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction of jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <style>
+        .div {
+            width: 80px;
+            height: 80px;
+            display: none;
+        }
+         #div1 {
+            background-color: red;
+        }
+
+        #div2 {
+            background-color: green;
+        }
+
+        #div3 {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>jQuery Introduction</h1>
+    <p id="hello">hello</p>
+    <p class="myClass">Toogle hide and show</p>
+    <button id="go">Go</button>
+    <p class="p2">mouseenter event</p>
+    <p class="on">on in event</p>
+    <div id="div1" class="div"></div><br>
+    <div id="div2" class="div"></div><br>
+    <div id="div3" class="div"></div>
+    <button id="show">show</button>
+    <button id="hide">hide</button>
+    <button id="fadeToggle">Toggle</button>
+
+    <script>
+        $("#hello").text('hi jQuery');
+        $("#go").click(() => {
+            $(".myClass").toggle(1000);
+        })
+        $(document).ready(function () {
+            $("h1").dblclick(function () {
+                $(this).hide(1000);
+            });
+        });
+        document.querySelector('h1').addEventListener('click', () => {
+            //document.getElementById('hello').remove();
+        });
+        $(".p2").mouseenter(() => {
+            //alert("hello");
+        });
+        $(".on").on({
+            mouseenter: function () {
+                $(this).css("background-color", "lightgray");
+            },
+            mouseleave: function () {
+                $(this).css("background-color", "lightblue");
+            },
+            click: function () {
+                $(this).css("background-color", "yellow");
+            }
+        });
+
+        $("#show").click(function () {
+            $("#div1").fadeIn();
+            $("#div2").fadeIn("slow");
+            $("#div3").fadeIn(3000);
+        });
+        $("#hide").click(function () {
+            $("#div1").fadeOut();
+            $("#div2").fadeOut("slow");
+            $("#div3").fadeOut(3000);
+        });
+        $("#fadeToggle").click(function () {
+            $("#div1").fadeToggle();
+            $("#div2").fadeToggle("slow");
+            $("#div3").fadeToggle(3000);
+        });
+    </script>
+</body>
+
+</html>

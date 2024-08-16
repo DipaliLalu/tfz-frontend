@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1A4A60 !important;   
+}
+.left-side{
+    background-color: #1F485B;
+}
