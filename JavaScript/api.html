@@ -30,7 +30,9 @@
                 //document.write("<br><br>Id is:",json.id);
                 //document.write("<br><br>Title is:",json.title);
                 //document.write("<br><br>Completed is:",json.completed);
-              document.write(json.map((value)=>`<br>id:${value.id} titles:${value.title} `));
+              document.write(json.map((value)=>`<br>id:${value.id} titles:${value.title}`));
+                let obj=json.filter((value)=>value.id<10);
+                obj.map((value)=>console.log(value.id));
             })
 
            
@@ -39,6 +41,8 @@
                 //document.write('<br><br>longitude',position.coords.longitude);
               });
               navigator.geolocation.watchPosition((success, error, options)=>console.log(success));
+
+            
     </script>
 </body>
 </html>
