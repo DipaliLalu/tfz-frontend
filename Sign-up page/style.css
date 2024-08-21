@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-.outer-box{
+
+.outer-box {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to right, #b7e7fb, #95d5ef);
@@ -11,113 +13,130 @@
     overflow: hidden;
     position: relative;
 }
-.signup-container{
-    width:340px;
+
+.signup-container {
+    width: 340px;
     height: 400px;
     margin: 0 auto;
     /* border: 10px solid black; */
     position: relative;
-    top:45%;
-   transform: translateY(-50%);
-   overflow: hidden;
-   border-radius: 20px;
-   z-index: 103;
+    top: 45%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 103;
 }
-.inner-box{
+
+.inner-box {
     width: 95%;
     height: 95%;
     box-sizing: border-box;
-    margin:10px auto;
+    margin: 10px auto;
     /* border: 10px solid #deecf3; */
     position: relative;
     /* top:45%; */
-   /* transform: translateY(-20%); */
-   padding: 5px 20px;
-   background:linear-gradient(to left,#deecf3,#e1f0f7);
-   border-radius: 20px;
-   font-family: "Poppins", sans-serif;
-   font-weight: 400;
-   z-index: 103;
-   /* box-shadow: 10px 10px 10px rgb(140, 189, 208); */
-   overflow: hidden;
+    /* transform: translateY(-20%); */
+    padding: 5px 20px;
+    background: linear-gradient(to left, #deecf3, #e1f0f7);
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    z-index: 103;
+    /* box-shadow: 10px 10px 10px rgb(140, 189, 208); */
+    overflow: hidden;
 }
-label{
+
+label {
     display: block;
 }
-.signup-header h1{
-   font-size: 2.1rem;
+
+.signup-header h1 {
+    font-size: 2.1rem;
 }
-.signup-header :nth-child(2){
+
+.signup-header :nth-child(2) {
     font-size: 1rem;
     margin: 10px 0;
 }
-.signup-body label{
+
+.signup-body label {
     margin: 8px 0 0 0;
-    font-weight:500;
+    font-weight: 500;
 }
-.signup-body input{
-     width:95%;
-     height: 30px;
-     box-sizing: border-box;
-     margin-top: 2px;
+
+.signup-body input {
+    width: 95%;
+    height: 30px;
+    box-sizing: border-box;
+    margin-top: 2px;
 }
-:placeholder-shown{
+
+:placeholder-shown {
     padding-left: 8px;
 }
-#submit{
+
+#submit {
     background-color: skyblue;
     border: none;
     margin: 10px 0;
     height: 30px;
     font-size: 1.1rem;
     cursor: pointer;
-    color:white;
+    color: white;
     margin-top: 15px;
 }
-#submit:hover{
- background-color: rgb(107, 160, 181);
+
+#submit:hover {
+    background-color: rgb(107, 160, 181);
 }
-.signup-footer{
+
+.signup-footer {
     margin: 8px 0;
 }
-.signup-footer a{
-    color:rgb(110, 177, 203);
+
+.signup-footer a {
+    color: rgb(110, 177, 203);
 }
-.circle{
+
+.circle {
     width: 150px;
     height: 150px;
     border-radius: 75px;
-    background: linear-gradient(#dfeff6,#e1ebefbe);
+    background: linear-gradient(#dfeff6, #e1ebefbe);
     /* z-index: 1; */
 }
-.c1{
+
+.c1 {
     position: absolute;
-    top:20%;
+    top: 20%;
     left: 15%;
 }
-.c2{
+
+.c2 {
     position: absolute;
     bottom: 10%;
     right: 20%;
 }
 
-.signup-container::after{
+.signup-container::after {
     content: "";
     position: absolute;
-    background:linear-gradient( #b7e7fb);
-    top:50%;
+    background: linear-gradient(#b7e7fb);
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
     height: 600px;
-     width: 200px;   
+    width: 200px;
     border-radius: 20px;
-    background-color:#55c0ed ;
+    background-color: #55c0ed;
     /* border: 2px solid #27b3eb; */
-  animation: move 1.5s infinite;  
-  z-index: 1;
+    animation: move 1.5s infinite;
+    z-index: 1;
 }
+
 @keyframes move {
-    100%{
-        transform: translate(-50%,-50%) rotate(255deg);
+    100% {
+        transform: translate(-50%, -50%) rotate(255deg);
     }
 }
+
