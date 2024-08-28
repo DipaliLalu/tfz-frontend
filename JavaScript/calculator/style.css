@@ -1,0 +1,41 @@
+body{
+    background-color: hsl(0, 0%, 90%);
+}
+.container{
+    background-color: black;
+    color:white;
+    border: none !important;
+    box-shadow: 0 0 60px black;
+    padding: 12px;
+    border-radius: 25px;
+    width:28%;
+}
+input{
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 30px;
+    text-align: right;
+}
+.number{
+    background-color: rgb(108, 106, 106);
+    color: rgba(255, 255, 255, 0.813);
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+.grey{
+    background-color: rgb(164, 163, 163);
+}
+.pink{
+    background-color: rgb(218 39 57);
+}
+@media screen and (max-width:500px) {
+    .container{
+        width: 90%;
+    }
+}
+
