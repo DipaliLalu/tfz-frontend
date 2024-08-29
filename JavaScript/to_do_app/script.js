@@ -19,7 +19,7 @@ function saveTask() {
         // alert("hello");
         alert("please enter task");
     }
-    else if (localStorage.getItem('todo').split(',').includes(textValue.value)) {
+    else if (localStorage.getItem('todo').split(',').includes(textValue.value.trim())) {
         alert("please enter unique value");
     }
     else {
