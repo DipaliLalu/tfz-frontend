@@ -22,6 +22,8 @@
         function next() {
             window.history.go(-1);
         }
+
+        //fetch api
         let btn=document.getElementById('demo');
         fetch('https://jsonplaceholder.typicode.com/todos')
             .then(response => response.json())
@@ -32,10 +34,19 @@
                 //document.write("<br><br>Completed is:",json.completed);
               document.write(json.map((value)=>`<br>id:${value.id} titles:${value.title}`));
                 let obj=json.filter((value)=>value.id<10);
-                obj.map((value)=>console.log(value.id));
+                //obj.map((value)=>console.log(value.id));
             })
 
-           
+        async function fetchData(){
+            try{
+                let res=await fetch('https://jsonplaceholder.typicode.com/todos');
+                let data=res.json();
+                console.log(data);
+                //data.then(value=>value.map((el)=>console.log(el.id))); 
+            }
+            catch(error){console.log(error);}
+        } 
+        fetchData();
             navigator.geolocation.getCurrentPosition(function(position) {
                // document.write('<br><br>latitude:',position.coords.latitude);
                 //document.write('<br><br>longitude',position.coords.longitude);
