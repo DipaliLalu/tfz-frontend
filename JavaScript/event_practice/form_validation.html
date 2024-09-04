@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation in js</title>
+</head>
+<body>
+    <h2>Form validation</h2>
+    <form action="">
+        <input type="text" id="username" placeholder="Enter username">
+        <p id="p"></p>
+        <input type="text" id="password1" placeholder="Enter password">
+        <p id="p2"></p>
+        <input type="text" id="password2" placeholder="Enter confirm password">
+        <p id="p3"></p>
+        <input type="text" id="password" placeholder="Enter email">
+        <p id="p4"></p>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        let uname=document.getElementById("username");
+        let pwd1=document.getElementById("password1");
+        let pwd2=document.getElementById("password2");
+        let email=document.getElementById("email");
+
+       uname.addEventListener("input",(e)=>{
+            let p=document.getElementById("p");
+            if(uname.value.trim()==""){
+               p.textContent="enter username";
+            }else if(uname.value.includes(" ")){
+                p.textContent="Whitepace not allow";
+            }
+        });
+
+        email.addEventListener("input",(e)=>{
+            let p=document.getElementById("p4");
+            let regex=/[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]/i;
+            if(email.value.trim()==""){
+                p.textContent="enter username";
+             }else if(email.value.includes(" ")){
+                 p.textContent="Whitepace not allow";
+             }
+        })
+
+    </script>
+</body>
+</html>

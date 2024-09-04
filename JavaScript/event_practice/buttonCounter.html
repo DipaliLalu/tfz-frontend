@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Counter in js</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            text-align: center;
+            align-content: center;
+        }
+
+        button {
+            background-color: royalblue;
+            color: white;
+            width: 20%;
+            height: 15%;
+            border: none;
+            border-radius: 20px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="click-count">Clicked 0 time</button>
+    
+    <script>
+        let btn = document.getElementById("click-count");
+        let count = 0;
+        btn.addEventListener("click", () => {
+            count++;
+            btn.textContent = `Clicked ${count} time`;
+        })
+    </script>
+
+
+</body>
+</html>
+
