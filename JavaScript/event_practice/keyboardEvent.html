@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard event in js</title>
+    <style>
+        #container {
+            width: max-content;
+            height: max-content;
+            padding: 20px;
+            background-color: grey;
+            margin: 20px;
+            border-radius: 20px;
+        }
+
+        #ip,
+        select {
+            margin: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Keyboard events</h2>
+    <div id="container">
+        <p>keydown</p>
+        <input type="text" id="keydown"
+            onkeydown="document.getElementById('container').style.backgroundColor=this.value;">
+        <p>keyup</p>
+        <input type="text" id="keyup" onkeyup="document.getElementById('container').style.backgroundColor=this.value;">
+        <p>keypress</p>
+        <input type="text" id="keypress"
+            onkeypress="document.getElementById('container').style.backgroundColor=this.value;">
+    </div>
+
+    <select>
+        <option value="city">city</option>
+        <option value="jnd">jnd</option>
+        <option value="rajkot">rajkot</option>
+        <option value="surat">surat</option>
+    </select>
+    <span>value is:</span>
+
+    <div>
+        <input type="text" id="ip">
+        <span id="text">text is:</span>
+        <span id="length">length is:</span>
+    </div>
+
+    <script>
+        let select = document.querySelector("select");
+        select.addEventListener("change", () => {
+            document.querySelector("span").innerText = "city is: " + select.value;
+        });
+        let ip = document.getElementById("ip");
+        ip.addEventListener("change", () => {
+            document.getElementById("text").innerHTML = "text is: " + ip.value;
+        })
+        ip.addEventListener("focus", () => {
+            ip.style.backgroundColor = "pink";
+        })
+        ip.addEventListener("blur", () => {
+            ip.value = ip.value.toUpperCase();
+            document.getElementById("length").textContent = "Length is: " + ip.value.length;
+        })
+    </script>
+
+</body>
+</html>
+
