@@ -32,46 +32,52 @@
         </form>
 
         <script>
-            let uname = document.getElementById("uname");
-            let pwd = document.getElementById("pwd");
-            let user = JSON.parse(localStorage.getItem("user"));
-            let msg = document.getElementById("error-msg");
-            console.log(user);
+            // Select DOM elements
+            const uname = document.getElementById("uname");
+            const pwd = document.getElementById("pwd");
+            const msg = document.getElementById("error-msg");
+
+            // Parse user data from localStorage
+            const users = JSON.parse(localStorage.getItem("user")) || [];
+            console.log(users);
+
+            // Add submit event listener to the form
             document.querySelector("form").addEventListener("submit", (e) => {
                 e.preventDefault();
-                let error = {};
-                let data;
-                user.map((e) => {
-                    if (e.uname == uname.value.trim() && e.pwd == pwd.value.trim()) {
-                        data = e;
-                        console.log(data)
-                    } else { data = {}; }
-                    return data;
-                });
 
-                if (uname.value.trim() == "" || pwd.value.trim() == "") {
-                    error.required = "Please enter all field";
-                    msg.style.display = "block";
+                // Reset error message
+                msg.innerHTML = "";
+                msg.style.display = "none";
 
-                    Object.values(error).forEach((e) => {
-                        msg.innerHTML += e + "<br>";
-                    });
+                const errors = {};
+
+                // Validate input fields
+                if (uname.value.trim()=="" || pwd.value.trim()=="") {
+                    errors.required = "Please enter all fields.";
+                } else {
+                    // Find the user in the stored data
+                    const foundUser = users.find(user =>
+                        user.uname === uname.value.trim() && user.pwd === pwd.value.trim()
+                    );
+
+                    // Check if user was found
+                    if (!foundUser) {
+                        errors.validData = "Please enter valid data.";
+                    }
                 }
-                else {
-                    if (Object.keys(data).length == 0) {
-                        error.validData = "Please enter valid data";
-                        msg.style.display = "block";
 
-                        Object.values(error).forEach((e) => {
-                            msg.innerHTML += e + "<br>";
-                        });
-                    }
-                    else {
-                        alert("Login successfully");
-                    }
+                // Display errors if any
+                if (Object.keys(errors).length > 0) {
+                    msg.style.display = "block";
+                    msg.innerHTML = Object.values(errors).map(error => `${error}<br>`).join('');
+                } else {
+                    // Successful login
+                    alert("Login successful");
                 }
             });
-        </script>
-</body>
 
+        </script>
+
+</body>
 </html>
+
