@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        .alert {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container p-5 bg-primary-subtle mt-4 w-75 rounded-4">
+        <h2 class="text-center">Login Form</h2>
+        <form action="">
+
+            <div id="error-msg" class="alert alert-danger"></div>
+            <label for="uname" class="form-label fs-5 m-1">Username</label>
+            <input type="text" id="uname" placeholder="Enter username" class="form-control m-1">
+            <label for="pwd" class="form-label fs-5 m-1">Password</label>
+            <input type="text" id="pwd" placeholder="Enter password" class="form-control m-1">
+
+            <button type="submit" id="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+
+        <script>
+            // Select DOM elements
+            const uname = document.getElementById("uname");
+            const pwd = document.getElementById("pwd");
+            const msg = document.getElementById("error-msg");
+
+            // Parse user data from localStorage
+            const users = JSON.parse(localStorage.getItem("user")) || [];
+            console.log(users);
+
+            // Add submit event listener to the form
+            document.querySelector("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                // Reset error message
+                msg.innerHTML = "";
+                msg.style.display = "none";
+
+                const errors = {};
+
+                // Validate input fields
+                if (uname.value.trim()=="" || pwd.value.trim()=="") {
+                    errors.required = "Please enter all fields.";
+                } else {
+                    // Find the user in the stored data
+                    const foundUser = users.find(user =>
+                        user.uname === uname.value.trim() && user.pwd === pwd.value.trim()
+                    );
+
+                    // Check if user was found
+                    if (!foundUser) {
+                        errors.validData = "Please enter valid data.";
+                    }
+                }
+
+                // Display errors if any
+                if (Object.keys(errors).length > 0) {
+                    msg.style.display = "block";
+                    msg.innerHTML = Object.values(errors).map(error => `${error}<br>`).join('');
+                } else {
+                    // Successful login
+                    alert("Login successful");
+                }
+            });
+
+        </script>
+
+</body>
+</html>
+
