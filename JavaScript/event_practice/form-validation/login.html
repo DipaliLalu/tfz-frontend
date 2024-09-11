@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./style.css">
     <style>
         .alert {
             display: none;
@@ -18,18 +19,40 @@
 </head>
 
 <body>
-    <div class="container p-5 bg-primary-subtle mt-4 w-75 rounded-4">
-        <h2 class="text-center">Login Form</h2>
-        <form action="">
+    <div class="outer-box">
+        <div class="round-1"></div>
+        <div class="round-2"></div>
+        <div class="round-3"></div>
+        <div class="round-4"></div>
+        <div class="round-5"></div>
 
-            <div id="error-msg" class="alert alert-danger"></div>
-            <label for="uname" class="form-label fs-5 m-1">Username</label>
-            <input type="text" id="uname" placeholder="Enter username" class="form-control m-1">
-            <label for="pwd" class="form-label fs-5 m-1">Password</label>
-            <input type="text" id="pwd" placeholder="Enter password" class="form-control m-1">
+        <div class="container rounded-4">
+            <h2 class="text-center text-light mb-3">Login Form</h2>
+            <form action="" class="d-flex flex-column text-light gap-3">
+                <!-- <div id="error-msg" class="alert alert-danger"></div> -->
+                <p id="usernameError" class="error"></p>
+                <label for="uname">Username</label>
+                <input type="text" id="uname" class="form-control">
+                <label for="pwd">Password</label>
+                <input type="text" id="pwd" class="form-control">
+                <!-- <p id="pwdError" class="error"></p> -->
 
-            <button type="submit" id="submit" class="btn btn-primary mt-3">Submit</button>
-        </form>
+                <button type="submit" id="submit" class="btn fw-semibold mt-4 rounded-5">Submit</button>
+            </form>
+          
+        </div>
+        
+  
+        <div class="modals p-4" tabindex="-1" id="exampleModal" >
+          
+              <div class="modal-bg d-flex flex-column gap-3" id="modal-body">
+                    <div>Login Suucessful</div>
+                    <div class="btns d-flex justify-content-center gap-4">
+                    <button id="close" class="btn">Close</button></div>
+              </div>
+           
+        </div>
+    </div>
 
         <script>
             // Select DOM elements
@@ -45,15 +68,11 @@
             document.querySelector("form").addEventListener("submit", (e) => {
                 e.preventDefault();
 
-                // Reset error message
-                msg.innerHTML = "";
-                msg.style.display = "none";
-
-                const errors = {};
+               const error= {};
 
                 // Validate input fields
                 if (uname.value.trim()=="" || pwd.value.trim()=="") {
-                    errors.required = "Please enter all fields.";
+                    error.required = "Please enter all fields.";
                 } else {
                     // Find the user in the stored data
                     const foundUser = users.find(user =>
@@ -62,19 +81,37 @@
 
                     // Check if user was found
                     if (!foundUser) {
-                        errors.validData = "Please enter valid data.";
+                        error.validData = "Please enter valid data.";
                     }
                 }
 
-                // Display errors if any
-                if (Object.keys(errors).length > 0) {
-                    msg.style.display = "block";
-                    msg.innerHTML = Object.values(errors).map(error => `${error}<br>`).join('');
-                } else {
-                    // Successful login
-                    alert("Login successful");
-                }
+                if (error && Object.keys(error).length !== 0) {
+                    // Display errors by showing elements with the class 'error'
+                    document.querySelectorAll(".error").forEach((e) => e.style.display = "block");
+                  
+                    // Clear previous error messages
+                    document.getElementById("usernameError").innerHTML = '';
+                    //document.getElementById("pwdError").innerHTML = '';
+                  
+                    // Display new error messages
+                    document.getElementById("usernameError").innerHTML = error.required || error.validData|| '';
+                    //document.getElementById("pwdError").innerHTML = error.validData || '';
+            
+                  } else {
+                    // Check if the error object is empty or undefined, then add new user
+                    if (!error || Object.keys(error).length === 0) {
+                        document.getElementById("exampleModal").style.display="block";
+                    } else {
+                        // Hide error elements if no errors are present or error is undefined
+                        document.querySelectorAll(".error").forEach((e) => e.style.display = "none");
+                    }
+                  }
             });
+           
+              document.getElementById("close").addEventListener("click",()=>{
+                document.getElementById("exampleModal").style.display="none";
+                location.reload();
+              })
 
         </script>
 
