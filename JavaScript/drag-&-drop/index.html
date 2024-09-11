@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop image in js</title>
+</head>
+<style>
+    .container {
+        border: 2px solid;
+        width: 400px;
+        height: 300px;
+        text-align: center;
+        margin: auto;
+    }
+
+    #image-view {
+        height: 200px;
+        width: 350px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #drop-img {
+        align-content: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <label for="file-input" id="drop-img">
+            <input type="file" accept="image/*" id="file-input" hidden>
+            <div id="image-view">
+                <img src="./icon.png" alt="" width="100">
+                <p>Select any image</p>
+            </div>
+        </label>
+    </div>
+
+    <script>
+        let input = document.getElementById("file-input");
+        let dropImg = document.getElementById("drop-img");
+        let imgView = document.getElementById("image-view");
+
+        input.addEventListener("change", uploadImage);
+
+        function uploadImage() {
+            let url = URL.createObjectURL(input.files[0]);
+            imgView.style.backgroundImage = `URL(${url})`;
+            imgView.textContent = "";
+        }
+        dropImg.addEventListener("dragover", (e) => {
+            e.preventDefault();
+        });
+        dropImg.addEventListener("drop", (e) => {
+            e.preventDefault();
+            input.files = e.dataTransfer.files;
+            uploadImage();
+        })
+    </script>
+</body>
+
+</html>
