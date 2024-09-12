@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and drop events</title>
+    <style>
+        body{
+            background-color: rosybrown;
+            display: flex;
+            gap:20px;
+        }
+        .boxs{
+            width:100px;
+            height: 90px;
+            background-color: #fff;
+        }
+        img{
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxs">
+        <img src="./icon.png" alt="draggable image" draggable="true">
+    </div>
+    <div class="boxs"></div>
+    <div class="boxs"></div>
+    <div class="boxs"></div>
+    <div class="boxs"></div>
+
+    <script>
+        let boxs=document.querySelectorAll(".boxs");
+        let img=document.querySelector("img");
+        //console.log(boxs)
+
+        img.addEventListener("dragstart",()=>{
+            console.log("dragstart event occur");
+        });
+        img.addEventListener("dragend",()=>{
+            console.log("dragend event occur");
+        });
+        
+        boxs.forEach((box)=>{
+
+            box.addEventListener("dragenter",()=>{
+                console.log("dragenter event occur");
+            });
+            box.addEventListener("dragleave",()=>{
+                console.log("dragleave event occur");
+            });
+            box.addEventListener("dragover",(e)=>{
+                e.preventDefault();
+                console.log("dragover event occur");
+            });
+            box.addEventListener("drop",(e)=>{
+                console.log("drop event occur");
+                e.target.appendChild(img);
+            });
+        })
+    </script>
+</body>
+</html>
+
