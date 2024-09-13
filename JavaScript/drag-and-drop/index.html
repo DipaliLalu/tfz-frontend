@@ -6,34 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drag and Drop image in js</title>
 </head>
-<style>
-    .container {
-        border: 2px solid;
-        width: 400px;
-        height: 300px;
-        text-align: center;
-        margin: auto;
-    }
-
-    #image-view {
-        height: 200px;
-        width: 350px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    #drop-img {
-        align-content: center;
-    }
-</style>
+<link rel="stylesheet" href="./style.css">
 
 <body>
     <div class="container">
         <label for="file-input" id="drop-img">
             <input type="file" accept="image/*" id="file-input" hidden>
-            <div id="image-view">
-                <img src="./icon.png" alt="" width="100">
-                <p>Select any image</p>
+            <div id="img-view">
+                <img src="./icon.png" alt="upload image">
+                <h2>Drag and Drop or click here<br>to upload image</h2>
+                <span>Upload any image from desktop</span>
             </div>
         </label>
     </div>
@@ -41,7 +23,7 @@
     <script>
         let input = document.getElementById("file-input");
         let dropImg = document.getElementById("drop-img");
-        let imgView = document.getElementById("image-view");
+        let imgView = document.getElementById("img-view");
 
         input.addEventListener("change", uploadImage);
 
@@ -49,6 +31,7 @@
             let url = URL.createObjectURL(input.files[0]);
             imgView.style.backgroundImage = `URL(${url})`;
             imgView.textContent = "";
+            imgView.style.border = "none";
         }
         dropImg.addEventListener("dragover", (e) => {
             e.preventDefault();
@@ -56,6 +39,7 @@
         dropImg.addEventListener("drop", (e) => {
             e.preventDefault();
             input.files = e.dataTransfer.files;
+            console.log(input.files);
             uploadImage();
         })
     </script>
