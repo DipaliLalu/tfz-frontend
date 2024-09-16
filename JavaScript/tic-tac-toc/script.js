@@ -13,7 +13,7 @@ function check() {
         (array[1] !== "" && array[1] == array[4] && array[4] == array[7]) ||
         (array[2] !== "" && array[2] == array[5] && array[5] == array[8]) ||
         (array[0] !== "" && array[0] == array[4] && array[4] == array[8]) ||
-        (array[2] !== "" && array[2] == array[5] && array[5] == array[8])
+        (array[2] !== "" && array[2] == array[4] && array[4] == array[6])
     ) {
         alert(currentPlayer + " is winner");
         location.reload();
