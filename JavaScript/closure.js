@@ -19,3 +19,4 @@ function sum(a){
 }
 let sums=sum(10)(2)(3);
 console.log(sums);
+
