@@ -33,15 +33,19 @@
             imgView.textContent = "";
             imgView.style.border = "none";
         }
+
         dropImg.addEventListener("dragover", (e) => {
             e.preventDefault();
         });
+        
         dropImg.addEventListener("drop", (e) => {
             e.preventDefault();
+            console.log(e.dataTransfer.files);
             input.files = e.dataTransfer.files;
             console.log(input.files);
             uploadImage();
-        })
+        });
+        
     </script>
 </body>
 </html>

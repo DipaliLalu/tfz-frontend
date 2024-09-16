@@ -43,8 +43,8 @@ body {
 .round-3 {
     position: absolute;
     border-radius: 700px;
-    width: 300px;
-    height: 300px;
+    width: 233px;
+    height: 234px;
     top: 30%;
     left: 60%;
     z-index: -1;
@@ -62,6 +62,46 @@ body {
     z-index: -1;
     background: linear-gradient(110deg, royalblue, #C20171);
     filter: blur(3px);
+    animation:bounsX 3s linear infinite,bounsY 1s ease-out infinite alternate;
+}
+
+@keyframes bounsX{
+    from{
+        left: 0;
+    }
+    to{
+        left: 80%;
+    }
+}
+@keyframes bounsY{
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 80%;
+    }
+}
+.round-5{
+    position: absolute;
+    border-radius: 700px;
+    width: 130px;
+    height: 130px;
+    bottom: 50%;
+    left: 1%;
+    z-index: -1;
+    background: linear-gradient(110deg, royalblue, #C20171);
+    filter: blur(3px);
+}
+.round-6{
+    position: absolute;
+    border-radius: 700px;
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    right: 1%;
+    z-index: -1;
+    background: linear-gradient(110deg, royalblue, #C20171);
+    filter: blur(3px);
 }
 
 .container {
@@ -69,21 +109,29 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 35% !important;
+    width: max-content !important;
     backdrop-filter: blur(10px);
     background-color: #3129544a;
     border: 1px solid rgba(255, 255, 255, 0.833);
-    padding: 30px;
+    padding: 40px;
+    z-index: 2;
+    overflow: hidden;
 }
 
 input {
     background-color: transparent !important;
     border: none !important;
-    border-radius: 0 !important;
+    border-radius: 4px !important;
     border-bottom: 1px solid white !important;
     color: white !important;
     height: 25px !important;
+    padding: 16px 11px;
+    width: 100%;
 }
+::placeholder {
+    color:white;
+    opacity: 0.8; /* Firefox */
+  }
 
 input:hover {
     box-shadow: none !important;
@@ -125,10 +173,31 @@ p {
 .btn-border {
     border: 2px solid #6b48f5;
 }
-
-@media screen and (max-width:500px) {
-    .container {
-        width: 80% !important;
-    }
+.fields{
+    gap:20px;
 }
+.successMsg{
+        display: none; /* Hidden by default */
+        padding: 15px;
+        background-color: white;
+        color: black;
+        position: fixed;
+        right: 0;
+        top: 20px;
+        border-radius: 4px;
+        animation: slideInRight 0.5s forwards;
+ }
+    
+    @keyframes slideInRight {
+        from {
+            right: -300px;
+            opacity: 0;
+        }
+        to {
+            right: 20px;
+            opacity: 1;
+        }
+    }
+    
+
 

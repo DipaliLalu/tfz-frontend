@@ -14,27 +14,27 @@ const validateRequiredFields = () => {
   const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i;
   error = {}; // Clear previous errors
 
-  if (!uname.value.trim()) error.uname = "Please enter username";
-  if (!pwd1.value.trim()) error.pwd1 = "Please enter password";
-  if (!pwd2.value.trim()) error.pwd2 = "Please enter confirm password";
+  if (!uname.value.trim()) error.uname = "* Please enter username";
+  if (!pwd1.value.trim()) error.pwd1 = "* Please enter password";
+  if (!pwd2.value.trim()) error.pwd2 = "* Please enter confirm password";
   if (!email.value.trim()) {
-    error.email = "Enter email";
+    error.email = "* Enter email";
   } else if (!emailRegex.test(email.value.trim())) {
-    error.emailCheck = "Please enter a valid email format";
+    error.emailCheck = "* Please enter a valid email format";
   }
 };
 
 // Function to check password match
 const checkPasswordMatch = () => {
   if (pwd1.value.trim() !== pwd2.value.trim()) {
-    error.pwd = "Please enter the same password";
+    error.pwd = "* Please enter the same password";
   }
 };
 
 // Function to ensure unique username
 const checkUniqueUsername = () => {
   if (usernames.includes(uname.value.trim())) {
-    error.uniqueUsername = "Username already exists";
+    error.uniqueUsername = "* Username already exists";
   }
 };
 
@@ -75,8 +75,16 @@ document.querySelector("form").addEventListener("submit", (e) => {
       // Assuming storedUsers is defined elsewhere in your code
       storedUsers.push(newUser);
       localStorage.setItem("user", JSON.stringify(storedUsers));
-      document.getElementById("exampleModal").style.display = "block";
+       // Show success message
+       const successMessage = document.getElementById("successMessage");
+       successMessage.style.display = "block";
 
+       //hide the message after 3 seconds
+       setTimeout(() => {
+           successMessage.style.display = "none";
+       }, 3000);
+       document.querySelector("form").reset();
+       
     } else {
       // Hide error elements if no errors are present or error is undefined
       document.querySelectorAll(".error").forEach((e) => e.style.display = "none");
@@ -84,13 +92,6 @@ document.querySelector("form").addEventListener("submit", (e) => {
   }
 
 });
-document.getElementById("login").addEventListener("click", () => {
-  // Redirect to login page
-  location.href = "./login.html";
-});
 
-document.getElementById("close").addEventListener("click", () => {
-  document.getElementById("exampleModal").style.display = "none";
-  location.reload();
-})
+
 
