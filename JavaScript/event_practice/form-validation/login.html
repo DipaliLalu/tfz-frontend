@@ -36,7 +36,7 @@
                         <input type="text" id="uname" placeholder="Enter Username">
                         <p id="usernameError" class="error"></p>
                     </div>
-                    <input type="text" id="pwd" placeholder="Enter Password">
+                    <input type="password" id="pwd" placeholder="Enter Password">
                 </div>
                 <div class="d-flex flex-column gap-2">
                     <button type="submit" id="submit" class="btn fw-semibold rounded-5 w-75 mt-3">Submit</button>
@@ -47,10 +47,13 @@
         <div class="successMsg p-2 rounded bg-light w-25" id="successMessage">
             <i class="fa-solid fa-circle-check fa-lg text-success"></i> Login successfully
         </div>
+        <div class="successMsg p-2 rounded bg-light w-25" id="ErrorMessage"> 
+        </div>
 
     </div>
 
     <script>
+     
         // Select DOM elements
         const uname = document.getElementById("uname");
         const pwd = document.getElementById("pwd");
@@ -77,7 +80,7 @@
 
                 // Check if user was found
                 if (!foundUser) {
-                    error.validData = "* Please enter valid data.";
+                    error.validData = "Please enter valid data.";
                 }
             }
 
@@ -87,10 +90,15 @@
 
                 // Clear previous error messages
                 document.getElementById("usernameError").innerHTML = '';
-                //document.getElementById("pwdError").innerHTML = '';
 
                 // Display new error messages
-                document.getElementById("usernameError").innerHTML = error.required || error.validData || '';
+                if(error.required){
+                    document.getElementById("usernameError").innerHTML = error.required || '';
+                }
+                else{
+                    document.getElementById("ErrorMessage").innerHTML=error.validData || '';
+                    Errormessage();
+                }
 
 
             } else {
@@ -99,10 +107,15 @@
                     // Show success message
                     const successMessage = document.getElementById("successMessage");
                     successMessage.style.display = "block";
-
+                    const d = new Date();
+                    d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
+                    const expires = `expires=${d.toUTCString()}`;
+                    document.cookie=`username=${uname.value};${expires}`;
+                    document.cookie="isAuthenticate=true;"+expires;
                     //hide the message after 3 seconds
                     setTimeout(() => {
                         successMessage.style.display = "none";
+                        location.href="Authentication.html";    
                     }, 3000);
                     document.querySelector("form").reset();
                 } else {
@@ -111,6 +124,16 @@
                 }
             }
         });
+        function Errormessage(){
+            const errorMessage = document.getElementById("ErrorMessage");
+            errorMessage.style.display = "block";
+
+            //hide the message after 3 seconds
+            setTimeout(() => {
+                errorMessage.style.display = "none";
+            }, 3000);
+            document.querySelector("form").reset();
+        }
     </script>
 
 </body>

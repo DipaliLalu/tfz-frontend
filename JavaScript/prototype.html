@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype in js</title>
+</head>
+<body>
+    
+    <script>
+        let animal={
+            eats:true
+        };
+        let rabbit = {
+            jumps: true
+        };
+        rabbit.__proto__=animal;
+        console.log(rabbit);
+        console.log(animal);
+
+    </script>
+</body>
+</html>
+
