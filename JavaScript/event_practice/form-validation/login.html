@@ -36,7 +36,7 @@
                         <input type="text" id="uname" placeholder="Enter Username">
                         <p id="usernameError" class="error"></p>
                     </div>
-                    <input type="text" id="pwd" placeholder="Enter Password">
+                    <input type="password" id="pwd" placeholder="Enter Password">
                 </div>
                 <div class="d-flex flex-column gap-2">
                     <button type="submit" id="submit" class="btn fw-semibold rounded-5 w-75 mt-3">Submit</button>
@@ -53,6 +53,7 @@
     </div>
 
     <script>
+     
         // Select DOM elements
         const uname = document.getElementById("uname");
         const pwd = document.getElementById("pwd");
@@ -106,11 +107,15 @@
                     // Show success message
                     const successMessage = document.getElementById("successMessage");
                     successMessage.style.display = "block";
-                    document.cookie=`username=${uname.value}`;
-                    document.cookie="isAuthenticate=true";
+                    const d = new Date();
+                    d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
+                    const expires = `expires=${d.toUTCString()}`;
+                    document.cookie=`username=${uname.value};${expires}`;
+                    document.cookie="isAuthenticate=true;"+expires;
                     //hide the message after 3 seconds
                     setTimeout(() => {
                         successMessage.style.display = "none";
+                        location.href="Authentication.html";    
                     }, 3000);
                     document.querySelector("form").reset();
                 } else {

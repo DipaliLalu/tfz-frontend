@@ -62,7 +62,7 @@ body {
     z-index: -1;
     background: linear-gradient(110deg, royalblue, #C20171);
     filter: blur(3px);
-    /* animation:bounsX 3s linear infinite,bounsY 1s ease-out infinite alternate; */
+    animation:bounsX 3s linear infinite,bounsY 1s ease-out infinite alternate;
 }
 
 @keyframes bounsX{
