@@ -47,13 +47,27 @@
         <div class="successMsg p-2 rounded bg-light w-25" id="successMessage">
             <i class="fa-solid fa-circle-check fa-lg text-success"></i> Login successfully
         </div>
-        <div class="successMsg p-2 rounded bg-light w-25" id="ErrorMessage"> 
+        <div class="successMsg p-2 rounded bg-light w-25" id="ErrorMessage">
+            <i class="fa-solid fa-circle-exclamation fa-lg" style="color: #ff2929;margin-right: 5px;"></i> 
         </div>
 
     </div>
 
     <script>
-     
+        // Code runs before the DOM is fully loaded
+        let checkCookie=()=>{
+            let cookie = document.cookie.split(';');
+            let obj = {};
+            let maps = cookie.map((val) => {
+            let [key, value] = val.split('=');
+            obj[key.trim()] = value.trim();
+            });
+            console.log(obj);
+            if(obj["isAuthenticate"]=="true"){
+            location.href="Authentication.html"; 
+            }
+        }
+        document.addEventListener("DOMContentLoaded", checkCookie);
         // Select DOM elements
         const uname = document.getElementById("uname");
         const pwd = document.getElementById("pwd");
@@ -96,7 +110,7 @@
                     document.getElementById("usernameError").innerHTML = error.required || '';
                 }
                 else{
-                    document.getElementById("ErrorMessage").innerHTML=error.validData || '';
+                    document.getElementById("ErrorMessage").innerHTML +=error.validData || '';
                     Errormessage();
                 }
 
@@ -115,14 +129,17 @@
                     //hide the message after 3 seconds
                     setTimeout(() => {
                         successMessage.style.display = "none";
+                        window.history.replaceState(null, '', 'Authentication.html'); 
                         location.href="Authentication.html";    
                     }, 3000);
                     document.querySelector("form").reset();
+                   // history.replaceState(null, '', 'https://google.com');
                 } else {
                     // Hide error elements if no errors are present or error is undefined
                     document.querySelectorAll(".error").forEach((e) => e.style.display = "none");
                 }
             }
+
         });
         function Errormessage(){
             const errorMessage = document.getElementById("ErrorMessage");
@@ -134,6 +151,7 @@
             }, 3000);
             document.querySelector("form").reset();
         }
+       
     </script>
 
 </body>
