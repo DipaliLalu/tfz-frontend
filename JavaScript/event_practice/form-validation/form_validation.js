@@ -8,10 +8,11 @@ let checkCookie=()=>{
   });
   console.log(obj);
   if(obj["isAuthenticate"]=="true"){
-    location.href="Authentication.html"; 
+      window.history.replaceState(null, '', 'Authentication.html'); 
+      location.href="Authentication.html";   
   }
 }
-document.addEventListener("DOMContentLoaded", checkCookie);
+checkCookie();
 
 // Getting elements
 const uname = document.getElementById("username");
