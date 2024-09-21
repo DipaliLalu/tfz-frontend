@@ -1,3 +1,18 @@
+// Code runs before the DOM is fully loaded
+let checkCookie=()=>{
+  let cookie = document.cookie.split(';');
+  let obj = {};
+  let maps = cookie.map((val) => {
+    let [key, value] = val.split('=');
+    obj[key.trim()] = value.trim();
+  });
+  console.log(obj);
+  if(obj["isAuthenticate"]=="true"){
+    location.href="Authentication.html"; 
+  }
+}
+document.addEventListener("DOMContentLoaded", checkCookie);
+
 // Getting elements
 const uname = document.getElementById("username");
 const pwd1 = document.getElementById("password1");
