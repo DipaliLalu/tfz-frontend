@@ -247,7 +247,7 @@ p {
   background-position: center;
   background-size: cover;
   width: 650px;
-  height: 330px;
+  height: max-content;
 }
 
 
@@ -317,7 +317,7 @@ hr{
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  gap:200px;
+  gap:100px;
   background-color: #fff;
   color:black;
   padding: 3rem;
@@ -461,8 +461,9 @@ hr{
   }
   .contact-section{
     /* gap:10px; */
-    padding: 1rem;
-    top:-10%;
+    /* padding: 1rem; */
+    gap:10px;
+    top:0%;
     /* width: 87% !important; */
   }
   .contact-section .vr{
@@ -472,12 +473,12 @@ hr{
   .contact-section p{
     font-size: 18px;
   }
-  /* .mySwipers .swiper-slide {
+  .mySwipers .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 200px;
-    height: 330px;
-  } */
+    width: 480px;
+  }
+
 }
 
 @media screen and (max-width:580px) {
@@ -541,13 +542,12 @@ hr{
     width:80%;
   }
   .footer{
-    margin-top: 50px;
+    margin-top: 10px;
   }
   .contact-section{
     gap:10px;
     padding: 1rem;
-    top:-8%;
-    /* left:%; */
+    top:-1%;
     width:90% !important;
 
   }
@@ -565,7 +565,6 @@ hr{
     background-position: center;
     background-size: cover;
     width: 300px;
-    height: 330px;
   }
   
 }

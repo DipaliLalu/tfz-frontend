@@ -6,18 +6,54 @@
     <title>Prototype in js</title>
 </head>
 <body>
-    
+    <h1>Prototype in js</h1>
     <script>
+        //use object instance 
         let animal={
             eats:true
         };
         let rabbit = {
             jumps: true
         };
+        
         rabbit.__proto__=animal;
         console.log(rabbit);
         console.log(animal);
 
+        //use constructor function
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        const person1 = new Person("dipali",20);
+        const person2 = new Person("arati",20);
+        Person.prototype.nationality = "English";
+        person2.__proto__=person1;
+        console.log(person1);
+        console.log(person2);
+        console.log(person1.__proto__ === Person.prototype); 
+
+        Person.prototype.getName = function() {
+            return 'Name is: ' + this.name;
+          };
+         console.log(person1.getName());
+        //console.log(Person.prototype);
+        //console.log(person1.__proto__);
+        console.log(Object.getPrototypeOf(person1));
+
+        //use classes
+        class demo{
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+        }
+        const d1=new demo('benu',20);
+        console.log(d1);
+        demo.prototype.getName=function(){
+            return 'Name is: ' + this.name;
+        }
+        console.log(d1.getName());
     </script>
 </body>
 </html>
