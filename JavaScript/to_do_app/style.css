@@ -11,9 +11,8 @@ body{
     background-size: cover;
 }
 
-
 .left-side{
-    flex-basis: 45%;
+    width:45%;
 }
 .right-side{
     flex-basis: 45%;
@@ -32,6 +31,7 @@ li{
     background-color: #00684A;
     color:white;
     text-transform:capitalize;
+    overflow: hidden;
 }
 li button{
     background-color: white !important;
@@ -43,12 +43,23 @@ li button{
 li button:hover{
     box-shadow: 2px; 
 }
+i:hover{
+    cursor: pointer;
+}
 
 h1{
     text-align: center;
     display: none;
 }
+.overflow{
+    width:90%;
+    overflow-wrap: anywhere;
+}
+
 @media  screen and (max-width:430px) {
+  .left-side{
+    width:100%;
+  }
     img{
         width:90%;
     }
