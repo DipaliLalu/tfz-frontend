@@ -23,7 +23,7 @@ function saveTask() {
 function display() {
     array.forEach((element) => {
         let newElement = document.createElement("li");
-        newElement.innerHTML = `<div>${element}</div>
+        newElement.innerHTML = `<div class="overflow">${element}</div>
         <i class="fa-solid fa-trash-can"></i>`;
         task.appendChild(newElement);
         newElement.querySelector('.fa-trash-can').addEventListener('click', (e) => remove(e));
