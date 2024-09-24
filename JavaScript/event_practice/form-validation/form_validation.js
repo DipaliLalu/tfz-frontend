@@ -1,19 +1,3 @@
-// Code runs before the DOM is fully loaded
-let checkCookie=()=>{
-  let cookie = document.cookie.split(';');
-  let obj = {};
-  let maps = cookie.map((val) => {
-    let [key, value] = val.split('=');
-    obj[key.trim()] = value.trim();
-  });
-  console.log(obj);
-  if(obj["isAuthenticate"]=="true"){
-      window.history.replaceState(null, '', 'Authentication.html'); 
-      location.href="Authentication.html";   
-  }
-}
-checkCookie();
-
 // Getting elements
 const uname = document.getElementById("username");
 const pwd1 = document.getElementById("password1");
@@ -62,9 +46,9 @@ document.querySelector("form").addEventListener("submit", (e) => {
   checkUniqueUsername();
   checkPasswordMatch();
 
-  // Check if error is defined and is an object with properties
+  // Check if error 
   if (error && Object.keys(error).length !== 0) {
-    // Display errors by showing elements with the class 'error'
+   
     document.querySelectorAll(".error").forEach((e) => e.style.display = "block");
 
     // Clear previous error messages
@@ -88,7 +72,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
         email: email.value.trim(),
       };
 
-      // Assuming storedUsers is defined elsewhere in your code
+
       storedUsers.push(newUser);
       localStorage.setItem("user", JSON.stringify(storedUsers));
        // Show success message
@@ -102,12 +86,47 @@ document.querySelector("form").addEventListener("submit", (e) => {
        document.querySelector("form").reset();
        
     } else {
-      // Hide error elements if no errors are present or error is undefined
       document.querySelectorAll(".error").forEach((e) => e.style.display = "none");
     }
   }
 
 });
 
+function togglePassword(eyeIcon, eyeSlash, passwordField) {
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    eyeIcon.style.display = "none";
+    eyeSlash.style.display = "block";
+  } else {
+    passwordField.type = "password";
+    eyeIcon.style.display = "block";
+    eyeSlash.style.display = "none";
+  }
+}
+
+//password elements
+let eyeIcon = document.getElementById("icon-eye");
+let eyeSlash = document.getElementById("icon-eye-slash");
+let password = document.getElementById("password1");
+
+let eyeIcon2 = document.getElementById("icon-eye2");
+let eyeSlash2 = document.getElementById("icon-eye-slash2");
+let confirmPass = document.getElementById("password2");
+
+// Event listeners 
+eyeIcon.addEventListener("click", () => {
+  togglePassword(eyeIcon, eyeSlash, password);
+});
+eyeSlash.addEventListener("click", () => {
+  togglePassword(eyeIcon, eyeSlash, password);
+});
+
+// Event listeners
+eyeIcon2.addEventListener("click", () => {
+  togglePassword(eyeIcon2, eyeSlash2, confirmPass);
+});
+eyeSlash2.addEventListener("click", () => {
+  togglePassword(eyeIcon2, eyeSlash2, confirmPass);
+});
 
 

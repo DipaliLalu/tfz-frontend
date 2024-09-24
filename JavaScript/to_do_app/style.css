@@ -7,8 +7,11 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url('./todo-bg.png') no-repeat;
-    background-size: cover;
+    /* background-image:url('./image.png'), url('./todo-bg.png'); */
+    background: url('./image.png') 90% 50% no-repeat, url('./todo-bg.png') left top no-repeat;
+  padding: 15px;
+  background-size: auto,cover;
+  background-attachment: fixed;
 }
 
 .left-side{
@@ -26,7 +29,7 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 8px;
+    padding: 8px 16px;
     border-radius: 10px;
     background-color: #00684A;
     color:white;
@@ -55,14 +58,26 @@ h1{
     width:90%;
     overflow-wrap: anywhere;
 }
+@media  screen and (max-width:990px) {
+    body{
+        background: url('./image.png') 100% 50% no-repeat, url('./todo-bg.png') left top no-repeat;
+        padding: 15px;
+        background-size: 400px,cover;
+        background-attachment: fixed;
+    }
+}
 
-@media  screen and (max-width:430px) {
+@media  screen and (max-width:750px) {
+    body{
+        background:  url('./todo-bg.png') left top no-repeat;
+      padding: 15px;
+      background-size: auto,cover;
+      background-attachment: fixed;
+    }
   .left-side{
     width:100%;
   }
-    img{
-        width:90%;
-    }
+  
     h1{
         display: block;
     }

@@ -31,4 +31,5 @@ submit.addEventListener("click", (e) => {
 
     // Successful validation
     alert("Registration successful!");
+    document.querySelector("form").reset();
 })

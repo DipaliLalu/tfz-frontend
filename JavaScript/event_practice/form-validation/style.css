@@ -86,8 +86,7 @@ body {
     border-radius: 700px;
     width: 130px;
     height: 130px;
-    bottom: 50%;
-    left: 1%;
+    bottom: 30%;
     z-index: -1;
     background: linear-gradient(110deg, royalblue, #C20171);
     filter: blur(3px);
@@ -118,31 +117,29 @@ body {
     overflow: hidden;
 }
 
+label{
+
+    border-radius: 4px !important;
+    border-bottom: 1px solid white !important;
+    padding: 0 11px;
+    color:white;
+}
 input {
     background-color: transparent !important;
     border: none !important;
-    border-radius: 4px !important;
-    border-bottom: 1px solid white !important;
     color: white !important;
-    height: 25px !important;
-    padding: 16px 11px;
-    width: 100%;
 }
+input:focus{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+    background-color: transparent;
+}
+
 ::placeholder {
     color:white;
     opacity: 0.8; /* Firefox */
   }
-
-input:hover {
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-label {
-    font-size: medium;
-    /* margin-top: 5px !important; */
-    color: white !important;
-}
 
 .btn {
     width: 50%;
@@ -157,22 +154,6 @@ p {
     display: none;
 }
 
-.modals {
-    position: absolute;
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%, -50%);
-    border: 2px solid white;
-    color: black;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 20px;
-    display: none;
-}
-
-.btn-border {
-    border: 2px solid #6b48f5;
-}
 .fields{
     gap:20px;
 }
@@ -185,19 +166,13 @@ p {
         right: 0;
         top: 20px;
         border-radius: 4px;
-        animation: slideInRight 0.5s forwards;
- }
-    
-    @keyframes slideInRight {
-        from {
-            right: -300px;
-            opacity: 0;
-        }
-        to {
-            right: 20px;
-            opacity: 1;
-        }
-    }
-    
-
+}
+.password-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+i{
+    cursor: pointer;
+}
 

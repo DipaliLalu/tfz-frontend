@@ -29,11 +29,6 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3f2c09a521.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
-    <style>
-        .alert {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -48,12 +43,17 @@
         <div class="container rounded-4">
             <h2 class="text-center text-light mb-4">Login Form</h2>
             <form action="" class="d-flex flex-column text-light gap-4">
+                <p id="usernameError" class="error alert alert-danger"></p>
                 <div class="d-flex flex-column gap-4">
-                    <div>
-                        <input type="text" id="uname" placeholder="Enter Username">
-                        <p id="usernameError" class="error"></p>
-                    </div>
-                    <input type="password" id="pwd" placeholder="Enter Password">
+                    <label for="uname">
+                        <input type="text" id="uname" placeholder="Enter Username" autocomplete="off">
+                    </label>
+                    <label for="pwd" class="password-container">
+                    <input type="password" id="pwd" placeholder="Enter Password" autocomplete="off">
+                    <i class="fa-solid fa-eye" id="icon-eye"></i>
+                    <i class="fa-solid fa-eye-slash" id="icon-eye-slash" style="display: none;"></i>
+                </label>
+
                 </div>
                 <div class="d-flex flex-column gap-2">
                     <button type="submit" id="submit" class="btn fw-semibold rounded-5 w-75 mt-3">Submit</button>
@@ -65,18 +65,18 @@
             <i class="fa-solid fa-circle-check fa-lg text-success"></i> Login successfully
         </div>
         <div class="successMsg p-2 rounded bg-light w-25" id="ErrorMessage">
-            <i class="fa-solid fa-circle-exclamation fa-lg" style="color: #ff2929;margin-right: 5px;"></i> 
+            <i class="fa-solid fa-circle-exclamation fa-lg" style="color: red;margin-right: 5px;"></i> 
         </div>
 
     </div>
 
     <script>
-        // Select DOM elements
+        // Select elements
         const uname = document.getElementById("uname");
         const pwd = document.getElementById("pwd");
         const msg = document.getElementById("error-msg");
 
-        // Parse user data from localStorage
+        //user data from localStorage
         const users = JSON.parse(localStorage.getItem("user")) || [];
         console.log(users);
 
@@ -97,30 +97,31 @@
 
                 // Check if user was found
                 if (!foundUser) {
-                    error.validData = "Please enter valid data.";
+                    error.validData = "Please enter a correct username and password";
                 }
             }
 
             if (error && Object.keys(error).length !== 0) {
-                // Display errors by showing elements with the class 'error'
-                document.querySelectorAll(".error").forEach((e) => e.style.display = "block");
-
+                // Display errors
+                
                 // Clear previous error messages
                 document.getElementById("usernameError").innerHTML = '';
-
+                
                 // Display new error messages
                 if(error.required){
+                    document.querySelectorAll(".error").forEach((e) => e.style.display = "block");
                     document.getElementById("usernameError").innerHTML = error.required || '';
                 }
                 else{
+                    document.getElementById("usernameError").style.display = "none";
                     document.getElementById("ErrorMessage").innerHTML +=error.validData || '';
                     Errormessage();
                 }
 
 
             } else {
-                // Check if the error object is empty or undefined, then add new user
                 if (!error || Object.keys(error).length === 0) {
+                    document.getElementById("usernameError").style.display = "none";
                     // Show success message
                     const successMessage = document.getElementById("successMessage");
                     successMessage.style.display = "block";
@@ -136,10 +137,8 @@
                         location.href="Authentication.html";    
                     }, 3000);
                     document.querySelector("form").reset();
-                   // history.replaceState(null, '', 'https://google.com');
                 } else {
-                    // Hide error elements if no errors are present or error is undefined
-                    document.querySelectorAll(".error").forEach((e) => e.style.display = "none");
+                    document.getElementById("usernameError").style.display = "none";
                 }
             }
 
@@ -151,9 +150,33 @@
             //hide the message after 3 seconds
             setTimeout(() => {
                 errorMessage.style.display = "none";
+                location.reload();
             }, 3000);
             document.querySelector("form").reset();
         }
+        function togglePassword(eyeIcon, eyeSlash, passwordField) {
+            if (passwordField.type === "password") {
+              passwordField.type = "text";
+              eyeIcon.style.display = "none";
+              eyeSlash.style.display = "block";
+            } else {
+              passwordField.type = "password";
+              eyeIcon.style.display = "block";
+              eyeSlash.style.display = "none";
+            }
+          }
+          
+          //password elements
+          let eyeIcon = document.getElementById("icon-eye");
+          let eyeSlash = document.getElementById("icon-eye-slash");
+          let password = document.getElementById("pwd");
+          // Event listeners 
+eyeIcon.addEventListener("click", () => {
+    togglePassword(eyeIcon, eyeSlash, password);
+  });
+  eyeSlash.addEventListener("click", () => {
+    togglePassword(eyeIcon, eyeSlash, password);
+  });
        
     </script>
 
