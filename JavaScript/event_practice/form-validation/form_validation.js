@@ -65,6 +65,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
   } else {
     // Check if the error object is empty or undefined, then add new user
     if (!error || Object.keys(error).length === 0) {
+      document.querySelectorAll(".error").forEach((e) => e.style.display = "none");
       // Add new user
       const newUser = {
         uname: uname.value.trim(),
