@@ -86,9 +86,22 @@ const demo=[
 ];
 demo.pop();
 demo.push({name:'bbb',age:15});
-console.log(demo);
-console.log(demo[2].age);
+// console.log(demo);
+// console.log(demo[2].age);
 
-
-
-
+const obj={
+    0:1,
+    1:2,
+    2:3
+}
+let newArrObj=[];
+for (const value of Object.values(obj)) {
+    // console.log(value);
+    newArrObj.push(value);
+}
+// console.log(newArrObj);
+let newObjArr={};
+for (const [key,value] of Object.entries(newArrObj)) {
+    newObjArr[key]=value;
+}
+console.log(newObjArr);

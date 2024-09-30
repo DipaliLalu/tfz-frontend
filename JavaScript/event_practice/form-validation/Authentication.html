@@ -107,11 +107,11 @@
             location.href="login.html";    
         })
         const products = [
-        { id: 1, name: 'Laptop', price: 80, imgSrc: './image/laptop.webp',quantity:1,total:this.price},
-        { id: 2, name: 'Laptop', price: 80, imgSrc: './image/laptop2.jfif',quantity:1,total:this.price},
-        { id: 3, name: 'Headphones', price: 20, imgSrc: './image/Headphones.webp',quantity:1,total:this.price},
-        { id: 4, name: 'Headphones', price: 20, imgSrc: './image/Headphones2.webp',quantity:1,total:this.price},
-        { id: 5, name: 'Headphones', price: 20, imgSrc: './image/Headphones3.webp',quantity:1,total:this.price},
+        { id: 1, name: 'Laptop', price: 80, imgSrc: './image/laptop.webp',quantity:1,total:80},
+        { id: 2, name: 'Laptop', price: 80, imgSrc: './image/laptop2.jfif',quantity:1,total:80},
+        { id: 3, name: 'Headphones', price: 20, imgSrc: './image/Headphones.webp',quantity:1,total:20},
+        { id: 4, name: 'Headphones', price: 20, imgSrc: './image/Headphones2.webp',quantity:1,total:20},
+        { id: 5, name: 'Headphones', price: 20, imgSrc: './image/Headphones3.webp',quantity:1,total:20},
     ];
     //localStorage.setItem("products",JSON.stringify(products));
     //render products
@@ -138,12 +138,23 @@
     //add to cart
     cart=JSON.parse(localStorage.getItem('cart'))||[];
     function addToCart(productid){
+
         const product = products.find(p => p.id === productid);
         console.log(product);
-        cart.push(product);
-        localStorage.setItem('cart',JSON.stringify(cart));
+        console.log(cart.includes(product));
+        let found=cart.some(el=>el.id===productid);
+        if(found){
+            alert("you are already add this item in cart");
+        }else{
+            cart.push(product);
+            alert("Add item in cart");
+            localStorage.setItem('cart',JSON.stringify(cart));
+            location.reload();
+        }
     }
-    document.getElementById('cart-item').innerHTML=cart.length;
+    if(cart.length>0){
+        document.getElementById('cart-item').innerHTML=cart.length;
+    }
     </script>
 </body>
 </html>
