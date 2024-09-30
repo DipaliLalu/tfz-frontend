@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appolly Langing page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3f2c09a521.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="icon" href="./img/figma-icon.png" type="image/png" sizes="16x16 32x32">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header container-fluid position-relative">
+        <div class="container d-flex p-1 gap-4 justify-content-between upper-nav mb-3 pt-4">
+            <div class="left d-flex gap-4">
+                <div class="mail d-flex align-items-center justify-content-center gap-3">
+                    <i class="fa-solid fa-envelope text-light"></i>
+                    <p class="text-light m-0">Info@youremail.com</p>
+                </div>
+                <div class="phone d-flex align-items-center justify-content-center gap-3">
+                    <i class="fa-solid fa-phone text-light"></i>
+                    <p class="text-light m-0">(480) 555-0103</p>
+                </div>
+            </div>
+            <div class="icons d-flex align-items-center justify-content-center gap-3 flex-column flex-sm-row">
+                <i class="fa-brands fa-facebook text-light icon-hover"></i>
+                <i class="fa-brands fa-instagram text-light icon-hover"></i>
+                <i class="fa-brands fa-twitter text-light icon-hover"></i>
+                <i class="fa-brands fa-youtube text-light icon-hover"></i>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-start" id="offcanvas" aria-labelledby="offcanvasLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close border-dark rounded-5" data-bs-dismiss="offcanvas"
+                    aria-label="Close" id="closed"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold fs-5 text-dark" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#feature">FEATURES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#screenshot">SCREENSHOT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 text-dark" href="#">BLOG</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg text-bg-light container rounded position-relative">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav gap-4 ms-3">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-5"
+                                aria-current="page" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-5" href="index.html#about">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-5" href="#feature">FEATURES</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo position-absolute">
+                    <img src="./img/Logo4 1.png" alt="logo">
+                </div>
+                <div class="collapse navbar-collapse justify-content-around ms-5" id="mynavbar">
+                    <ul class="navbar-nav gap-4 ms-5">
+                        <li class="nav-item ms-5">
+                            <a class="nav-link fw-bold fs-5" href="#screenshot">SCREENSHOT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-5" href="./blog.html">BLOG</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary m-0 royal-blue-bg">DOWNLOAD</button>
+            </div>
+        </nav>
+        <!-- hero section -->
+        <section
+            class="d-flex hero-section flex-column flex-md-row container justify-content-center align-items-center">
+            <div class="left mt-5 container">
+                <div alt="border" class="py-3 z-index-4 borders mt-5">
+                    <div class="inner-box d-flex flex-column bg-light p-3 gap-2">
+                        <h3 class="fs-1 fw-semibold text-uppercase royal-blue">
+                            A Great App Makes Your Life Better
+                        </h3>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                            officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                        </p>
+                        <h2 class="text-uppercase ">Download App Now</h2>
+                        <div class="download d-flex">
+                            <img src="./img/toppng 1.png" alt="" class="gp object-fit-contain mt-1">
+                            <img src="./img/PngItem_1144050 2.png" class="object-fit-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right text-center mt-5 mb-5">
+                <img src="./img/Free Ui View Mobile App Mockup 1.png" alt="" class="object-fit-contain h-75 mb-5">
+            </div>
+        </section>
+    </header>
+    <main class="d-flex flex-column gap-5">
+        <!-- about section -->
+        <section class="d-flex flex-column gap-3 about-first p-3 container mt-5" id="about">
+            <h2 class="text-center text-uppercase fw-semibold">About Our App</h2>
+            <p class="text-center paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+                nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
+        </section>
+        <section class="d-flex flex-column flex-lg-row about-second p-3 container gap-5">
+            <div class="left-img text-center mx-auto">
+                <img src="./img/android-smartphone-free-mockup 1.png" alt="" class="object-fit-contain">
+            </div>
+            <div class="about-cols d-flex flex-column gap-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <i class="fa-solid fa-circle-check royal-blue"></i>
+                                    <p class="text-uppercase m-0 fw-semibold">Creative design</p>
+                                </div>
+                                <p class="ps-4 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+                                    nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam
+                                    tincidunt rhoncus, ullamcorper velit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <i class="fa-solid fa-circle-check royal-blue"></i>
+                                    <p class="text-uppercase m-0 fw-semibold">easy to use</p>
+                                </div>
+                                <p class="ps-4 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+                                    nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam
+                                    tincidunt rhoncus, ullamcorper velit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <i class="fa-solid fa-circle-check royal-blue"></i>
+                                    <p class="text-uppercase m-0 fw-semibold">Best user experince</p>
+                                </div>
+                                <p class="ps-4 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverr
+                                    nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam
+                                    tincidunt rhoncus, ullamcorper velit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature section -->
+        <section class="feature-section text-light mt-5" id="feature">
+            <section class="d-flex feature flex-column gap-3 mt-5 p-5">
+                <h2 class="text-center text-uppercase">App features</h2>
+                <p class="text-center mx-auto paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Viverra
+                    nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt
+                    rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
+            </section>
+
+            <div class="feature-card">
+                <div class="text-center d-flex flex-column gap-4 p-3">
+                    <div>
+                        <img src="./img/comment.png" alt="" class="img object-fit-contain">
+                    </div>
+                    <h6 class="text-center text-uppercase m-0">Full free chat</h6>
+                    <p class="text-center mx-auto m-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.</p>
+                </div>
+            </div>
+            <div class="main-flex d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <div class="first d-flex flex-column">
+                    <div class="d-flex flex-column gap-4 p-1">
+                        <div>
+                            <img src="./img/surface1.png" alt="" class="img object-fit-contain">
+                        </div>
+                        <h6 class="text-uppercase m-0">unlimiter features</h6>
+                        <p class="m-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="d-flex flex-column gap-4 p-1">
+                        <div>
+                            <img src="./img/vector.png" alt="" class="image object-fit-contain">
+                        </div>
+                        <h6 class="text-uppercase m-0">awsome ui design</h6>
+                        <p class="m-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="second text-center">
+                    <img src="./img/App.png" alt="" class="object-fit-contain shadow-lg rounded-5">
+                </div>
+                <div class="third d-flex flex-column">
+                    <div class="d-flex flex-column gap-4 p-1">
+                        <div>
+                            <img src="./img/cell-phone.png" alt="" class="image object-fit-contain">
+                        </div>
+                        <h6 class="text-uppercase m-0">iso & androind version</h6>
+                        <p class="m-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="d-flex flex-column gap-4 p-1">
+                        <div>
+                            <img src="./img/eye-scanner 1.png" alt="" class="image object-fit-contain">
+                        </div>
+                        <h6 class="text-uppercase m-0">retina ready greaphics</h6>
+                        <p class="m-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center d-flex flex-column gap-4 customer-suppot">
+                <div>
+                    <img src="./img/male-telemarketer.png" alt="" class="img object-fit-contain">
+                </div>
+                <h6 class="text-center text-uppercase m-0">24/7 support by real pepole</h6>
+                <p class="text-center mx-auto m-0 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.</p>
+            </div>
+        </section>
+        <!-- interface section of app -->
+        <section class="d-flex flex-column gap-3 about-first position-relative" id="screenshot">
+            <div class="container p-4">
+                <h2 class="text-center text-uppercase mt-3">Checkout Our App Interface Look</h2>
+                <p class="text-center w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nun
+                    ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                    ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper p-5 container">
+                <!-- <div id="swiper-button-prev" class="fa-solid fa-chevron-left royal-blue-bg text-light pre-icon"></div>
+                <div id="swiper-button-next" class="fa-solid fa-chevron-right royal-blue-bg text-light next-icon"></div> -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide rounded-5">
+                        <img src="./img/phone img/001-removebg-preview.png"
+                            class="object-fit-contain rounded-5 bg-light" />
+                    </div>
+                    <div class="swiper-slide rounded-5">
+                        <img src="./img/phone img/5c07f1314b676b02b76259e1-removebg-preview.png"
+                            class="object-fit-contain rounded-5" />
+                    </div>
+                    <div class="swiper-slide active swiper-slide-active rounded-5">
+                        <img src="./img/phone img/android-phone-2048px-0967-removebg-preview.png"
+                            class="object-fit-contain rounded-5" />
+                    </div>
+                    <div class="swiper-slide rounded-5">
+                        <img src="./img/phone img/c89addd5da950ccb529f6bba16eed93f-removebg-preview.png"
+                            class="object-fit-contain rounded-5" />
+                    </div>
+                    <div class="swiper-slide rounded-5">
+                        <img src="./img/phone img/iPhoneX-Mockup_1-removebg-preview.png"
+                            class="object-fit-contain rounded-5" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+
+        </section>
+        <!-- download section -->
+        <section
+            class="d-flex flex-md-row flex-column download-section container justify-content-center align-items-center gap-3">
+            <div class="content d-flex flex-column gap-3 container">
+                <h3 class="fw-bold text-uppercase">
+                    Download App Now
+                </h3>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                    officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </p>
+                <div class="download d-flex justify-content-center justify-content-md-start">
+                    <img src="./img/toppng 1.png" alt="" class="gp object-fit-contain mt-1 w-25">
+                    <img src="./img/PngItem_1144050 2.png" class="object-fit-contain w-25">
+                </div>
+
+                <div class="row row-clos-3">
+                    <div class="col col-color py-4 text-center p-2 rounded-2 m-2">
+                        <i class="fa-solid fa-download"></i>
+                        <p class="m-0">59865</p>
+                        <div class="text-uppercase">Download</div>
+                    </div>
+                    <div class="col col-color py-4 text-center p-2 rounded-2 m-2">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <p class="m-0">29852</p>
+                        <div class="text-uppercase">LIke</div>
+                    </div>
+                    <div class="col col-color py-4 text-center p-2 rounded-2 m-2">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="m-0">1500</p>
+                        <div class="text-uppercase">5 star rating</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="img-section text-center">
+                <img src="./img/Gravity-Scene-iPhone-12-Mockup 1.png" alt="" class="w-75 object-fit-contain">
+            </div>
+        </section>
+        <!-- uses of app -->
+        <section class="p-5 app-use mt-3 text-light text-center mx-auto d-flex flex-column position-relative gap-4">
+            <h3 class="fw-bold text-uppercase">
+                how to use the app perfectly
+            </h3>
+            <p class="paragraph mx-auto bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
+                ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+            </p>
+        </section>
+        <!-- set a video to up section -->
+        <section class="position-relative">
+            <div class="set-video">
+                <iframe src="https://www.youtube.com/embed/xSG5UX0EQVg?si=e_s6iG0H8xgVVDO8" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <!-- team section -->
+        <section class="team-section d-flex gap-4 flex-column container">
+            <div class="d-flex gap-2 flex-column container">
+                <h3 class="fw-bold text-uppercase text-center">
+                    Our reative team
+                </h3>
+                <p class="paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                    velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                    ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                </p>
+            </div>
+            <div class="card-section d-flex gap-3 flex-md-row flex-column">
+                <div class="card text-center px-1 py-3 shadow">
+                    <div class="images position-relative">
+                        <img src="./img/Profile.png" alt="" class="border-img">
+                    </div>
+                    <div class="card-body d-flex flex-column gap-3">
+                        <h5 class="card-title text-uppercase">Carla Press</h5>
+                        <h6 class="text-uppercase">App Developer</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="icon d-flex gap-3 justify-content-center">
+                            <i class="fa-brands fa-facebook icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-instagram icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-twitter icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-youtube icon-hover"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-center  px-1 py-3 shadow">
+                    <div class="images position-relative">
+                        <img src="./img/Profile Image (1).png" alt="" class="border-img">
+                    </div>
+                    <div class="card-body d-flex flex-column gap-3">
+                        <h5 class="card-title text-uppercase">Carla Press</h5>
+                        <h6 class="text-uppercase">Website developer</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="icon d-flex gap-3 justify-content-center">
+                            <i class="fa-brands fa-facebook icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-instagram icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-twitter icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-youtube icon-hover"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-center  px-1 py-3 shadow">
+                    <div class="images position-relative">
+                        <img src="./img/Profile Image.png" alt="" class="border-img">
+                    </div>
+                    <div class="card-body d-flex flex-column gap-3">
+                        <h5 class="card-title text-uppercase">Craig Gouse</h5>
+                        <h6 class="text-uppercase">UI/UX Designer</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="icon d-flex gap-3 justify-content-center">
+                            <i class="fa-brands fa-facebook icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-instagram icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-twitter icon-hover"></i>
+                            <div class="vr"></div>
+                            <i class="fa-brands fa-youtube icon-hover"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- customer section -->
+        <section class="customer-section d-flex flex-column gap-4 mt-5 pb-5">
+            <div class="heading-section container p-5 text-center d-flex flex-column gap-4 mt-5">
+                <h3 class="fw-bold text-uppercase text-light">
+                    Our Happy Customers
+                </h3>
+                <p class="paragraph mx-auto text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+                    nunc ante
+                    velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                    ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                </p>
+            </div>
+              <!-- Swiper -->
+        <div class="swiper mySwipers container p-5">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card p-4" id="1">
+                    <img src="./img/phone img/Profile Image.png" alt="img" class="mb-1  mx-auto">
+                    <h3 class="fw-bold text-uppercase text-center">
+                        Ann Lubin
+                    </h3>
+                    <h2 class="text-uppercase fw-semibold text-center">
+                        Co-Founder
+                    </h2>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                        velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                        ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card p-4" id="2">
+                    <img src="./img/Profile.png" alt="img" class="mb-1  mx-auto">
+                    <h3 class="fw-bold text-uppercase text-center">
+                        Ann Lubin
+                    </h3>
+                    <h2 class="text-uppercase fw-semibold text-center">
+                        Co-Founder
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                        velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                        ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card p-4" id="3">
+                    <img src="./img/Profile Image (1).png" alt="img" class="mb-1 mx-auto">
+                    <h3 class="fw-bold text-uppercase text-center">
+                        Ann Lubin
+                    </h3>
+                    <h2 class="text-uppercase fw-semibold text-center">
+                        Co-Founder
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                        velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                        ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                    </p>
+                </div>
+            </div>
+            
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        </section>
+        <!-- blog section -->
+        <div class="blog-section">
+            <div class="heading-section container p-5 text-center d-flex flex-column gap-4">
+                <h3 class="fw-bold text-uppercase">
+                    Our recent blog
+                </h3>
+                <p class="paragraph mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                    velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus,
+                    ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+                </p>
+            </div>
+            <!-- blog cards -->
+            <div
+                class="blog-card-section d-flex flex-md-row flex-column container gap-4 justify-content-center align-items-center p-3">
+                <div class="card shadow">
+                    <img src="./img/phone img/Image.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3 text-uppercase">The Snap Pixel: How It Works and How to Install Now
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                            velit vitae. Est tellus vitae, nullam lobortis enim.</p>
+                        <a href="#" class="text-uppercase">read more</a>
+                    </div>
+                </div>
+                <div class="card shadow">
+                    <img src="./img/phone img/Image (1).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3 text-uppercase">Global Partner Solutions: A Partnership of Innovation
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                            velit vitae. Est tellus vitae, nullam lobortis enim.</p>
+                        <a href="#" class="text-uppercase">read more</a>
+                    </div>
+                </div>
+                <div class="card shadow">
+                    <img src="./img/phone img/Image (2).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3 text-uppercase">2021: An opportunity for Snapchatters to start fresh
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
+                            velit vitae. Est tellus vitae, nullam lobortis enim.</p>
+                        <a href="#" class="text-uppercase">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer section -->
+    <footer class=" text-light p-5 position-relative">
+        <!-- contact us section -->
+         <div class="contact-section container d-flex rounded-5 justify-content-center shadow-lg flex-column flex-md-row">
+            <div class="first-contact d-flex gap-3 align-items-center justify-content-center">
+                <i class="fa-solid fa-envelope fa-xl royal-blue-bg text-light"></i>
+                <p class="m-0 fw-semibold">Info@youremail.com</p>
+               
+            </div>
+            <div class="vr"></div>
+            <div class="second-contact d-flex gap-4 align-items-center justify-content-center">
+                <i class="fa-solid fa-phone fa-xl royal-blue-bg text-light rounded-5"></i>
+                <p class="m-0">+880 321 655 9985</p>
+            </div>
+         </div>
+        <div class="d-flex flex-column flex-md-row gap-5 justify-content-center container mb-5 footer">
+
+            <div class="d-flex flex-column gap-3 logo-part mt-5">
+                <div class="text-uppercase h1">Logo</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est
+                    tellus vitae, nullam lobortis enim.</p>
+                <div class="icon d-flex gap-3">
+                    <i class="fa-brands fa-facebook icon-hover"></i>
+                    <div class="vr"></div>
+                    <i class="fa-brands fa-instagram icon-hover"></i>
+                    <div class="vr"></div>
+                    <i class="fa-brands fa-twitter icon-hover"></i>
+                    <div class="vr"></div>
+                    <i class="fa-brands fa-youtube icon-hover"></i>
+                </div>
+            </div>
+        
+        <div class="quick-link mt-5">
+              <ul class="nav flex-column">
+                <li class="nav-item h4">
+                    <a class="nav-link text-light text-uppercase" href="#">quick link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#feature">Feature</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#screenshot">Screenshot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#blog">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="email-section mt-5">
+            <div class="d-flex flex-column gap-2">
+                <div class="d-flex flex-column gap-3">
+                    <div class="text-uppercase h4">news letter</div>
+                    <p>Subscribe our newsletter to get our latest update & news</p>
+                </div>
+                <div class="email text-light rounded-1 d-flex p-1 justify-content-between">
+                    <input type="text" placeholder="Your email address" class="border-0 rounder bg-transparent w-50 ms-1">
+                    <div class="bg royal-blue-bg text-light p-3">
+                    <i class="fa-solid fa-paper-plane fa-lg"></i></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <hr class="border-3 mt-5 mx-4">
+        <div class="container d-flex flex-wrap gap-4 align-items-center justify-content-center">
+            <i class="fa-regular fa-copyright"></i><p class="m-0">Copyright 2021 .Ojjomedia. All Right Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            //activeIndex:3,
+            initialSlide: 2,
+            coverflowEffect: {
+                rotate: 25,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: "#swiper-button-next",
+                prevEl: "#swiper-button-prev",
+            },
+        });
+        var swiper = new Swiper(".mySwipers", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            initialSlide: 1,
+            coverflowEffect: {
+              rotate:  0,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+            },
+          });
+    </script>
+    <!-- <script src="./script.js"></script> -->
+</body>
+</html>
+

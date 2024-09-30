@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
+}
+
+body {
+    background-color: #1C1544;
+}
+
+.outer-box {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.round-1 {
+    position: absolute;
+    border-radius: 70px;
+    width: 100px;
+    height: 100px;
+    left: 30%;
+    z-index: -1;
+    background: linear-gradient(royalblue, #C20171);
+    filter: blur(3px);
+}
+
+.round-2 {
+    position: absolute;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    bottom: 0;
+    right: 50%;
+    z-index: -1;
+    filter: blur(3px);
+    background: linear-gradient(126deg, royalblue, #C20171);
+}
+
+.round-3 {
+    position: absolute;
+    border-radius: 700px;
+    width: 233px;
+    height: 234px;
+    top: 30%;
+    left: 60%;
+    z-index: -1;
+    background: linear-gradient(royalblue, #C20171);
+    filter: blur(3px);
+}
+
+.round-4 {
+    position: absolute;
+    border-radius: 700px;
+    width: 130px;
+    height: 130px;
+    bottom: 1%;
+    left: 1%;
+    z-index: -1;
+    background: linear-gradient(110deg, royalblue, #C20171);
+    filter: blur(3px);
+    animation:bounsX 3s linear infinite,bounsY 1s ease-out infinite alternate;
+}
+
+@keyframes bounsX{
+    from{
+        left: 0;
+    }
+    to{
+        left: 80%;
+    }
+}
+@keyframes bounsY{
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 80%;
+    }
+}
+.round-5{
+    position: absolute;
+    border-radius: 700px;
+    width: 130px;
+    height: 130px;
+    bottom: 30%;
+    z-index: -1;
+    background: linear-gradient(110deg, royalblue, #C20171);
+    filter: blur(3px);
+}
+.round-6{
+    position: absolute;
+    border-radius: 700px;
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    right: 1%;
+    z-index: -1;
+    background: linear-gradient(110deg, royalblue, #C20171);
+    filter: blur(3px);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content !important;
+    backdrop-filter: blur(10px);
+    background-color: #3129544a;
+    border: 1px solid rgba(255, 255, 255, 0.833);
+    padding: 40px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+label{
+
+    border-radius: 4px !important;
+    border-bottom: 1px solid white !important;
+    padding: 0 11px;
+    color:white;
+}
+input {
+    background-color: transparent !important;
+    border: none !important;
+    color: white !important;
+}
+input:focus{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+::placeholder {
+    color:white;
+    opacity: 0.8; /* Firefox */
+  }
+
+.btn {
+    width: 50%;
+    background-color: #fff;
+    color: #6b48f5;
+    margin: auto;
+}
+
+p {
+    font-size: smaller;
+    color: rgba(255, 0, 0, 0.842);
+    display: none;
+}
+
+.fields{
+    gap:20px;
+}
+.successMsg{
+        display: none; /* Hidden by default */
+        padding: 15px;
+        background-color: white;
+        color: black;
+        position: fixed;
+        right: 0;
+        top: 20px;
+        border-radius: 4px;
+}
+.password-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+i{
+    cursor: pointer;
+}
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie in js</title>
+</head>
+<body>
+    <h2>Cookies in js</h2>
+    <script>
+        document.cookie="username=dipali";
+        console.log('cookies is:',document.cookie);
+        let user=document.cookie.split(';');
+        console.log(user[1]);
+        if(user[1] !== ""){
+            alert("Welcome again " + user[1]);
+        }
+    </script>
+</body>
+</html>

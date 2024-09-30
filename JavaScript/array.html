@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array in js</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h2 class="p-3 text-center bg-secondary-subtle">Js Array</h2>
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">Length Property</h2>
+        <label for="str" class="form-label fw-bold ">Enter array items</label>
+        <input type="text" id="str" class=" form-control">
+        <p id="arr" class="mt-1 fw-semibold"></p>
+        <Button onclick="arr()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">join() Method</h2>
+        <label for="str" class="form-label fw-bold">Enter array items</label>
+        <input type="text" id="str_join" class=" form-control">
+        <label for="str" class="form-label fw-bold ">Enter Join symbol</label>
+        <input type="text" id="join_symbol" class=" form-control">
+        <p id="arr_join" class="mt-1 fw-semibold"></p>
+        <Button onclick="join()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">pop() Method</h2>
+        <label for="str" class="form-label fw-bold ">Enter array items</label>
+        <input type="text" id="str_pop" class=" form-control">
+        <p id="arr_pop" class="mt-1 fw-semibold"></p>
+        <Button onclick="pop()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">push() Method</h2>
+        <label for="str" class="form-label fw-bold ">Array items : [1,2,3,4,5]</label><br>
+        <label for="str" class="form-label fw-bold ">Enter the element is push</label>
+        <input type="text" id="str_push" class=" form-control">
+        <p id="arr_push" class="mt-1 fw-semibold"></p>
+        <Button onclick="push()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">shift() Method</h2>
+        <label for="str" class="form-label fw-bold ">Enter array items</label>
+        <input type="text" id="str_shift" class=" form-control">
+        <p id="arr_shift" class="mt-1 fw-semibold"></p>
+        <Button onclick="shift()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">unshift() Method</h2>
+        <label for="str" class="form-label fw-bold ">Array items : [1,2,3,4,5]</label><br>
+        <label for="str" class="form-label fw-bold ">Enter the element to add</label>
+        <input type="text" id="str_unshift" class=" form-control">
+        <p id="arr_unshift" class="mt-1 fw-semibold"></p>
+        <Button onclick="unshift()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">concat() Method</h2>
+        <label for="str" class="form-label fw-bold">Enter first array items</label>
+        <input type="text" id="str1" class=" form-control">
+        <label for="str" class="form-label fw-bold ">Enter second array items</label>
+        <input type="text" id="str2" class=" form-control">
+        <p id="arr_concat" class="mt-1 fw-semibold"></p>
+        <Button onclick="concat()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">splice() Method</h2>
+        <label for="str" class="form-label fw-bold ">Array items : [1,2,3,4,5]</label><br>
+        <label for="str" class="form-label fw-bold">Enter the start index</label>
+        <input type="text" id="index1" class=" form-control">
+        <label for="str" class="form-label fw-bold ">Enter the end index</label>
+        <input type="text" id="index2" class=" form-control">
+        <label for="str" class="form-label fw-bold ">Enter the comma separated value to add in array</label>
+        <input type="text" id="value" class=" form-control">
+        <p id="arr_splice" class="mt-1 fw-semibold"></p>
+        <Button onclick="splice()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">slice() Method</h2>
+        <label for="str" class="form-label fw-bold ">Array items : [1,2,3,4,5]</label><br>
+        <label for="str" class="form-label fw-bold">Enter the start index</label>
+        <input type="text" id="indexs1" class=" form-control">
+        <label for="str" class="form-label fw-bold ">Enter the end index</label>
+        <input type="text" id="indexs2" class=" form-control">
+        <p id="arr_slice" class="mt-1 fw-semibold"></p>
+        <Button onclick="slice()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">fill() Method</h2>
+        <label for="str" class="form-label fw-bold ">Array items : [1,2,3,4,5]</label><br>
+        <label for="str" class="form-label fw-bold">Enter the start index</label>
+        <input type="text" id="start_index" class=" form-control">
+        <label for="str" class="form-label fw-bold ">Enter the end index</label>
+        <input type="text" id="end_index" class=" form-control">
+        <label for="str" class="form-label fw-bold ">Enter the fill value</label>
+        <input type="text" id="fill_value" class=" form-control">
+        <p id="arr_fill" class="mt-1 fw-semibold"></p>
+        <Button onclick="fill()" class="btn btn-primary">Done</Button>
+    </div>
+
+
+    <script>
+        function fill(){
+            let index1 = document.getElementById('start_index').value;
+            let index2 = document.getElementById('end_index').value;
+            let value = document.getElementById('fill_value').value;
+            let arr=[1,2,3,4,5];
+            let ans=arr.fill(value,index1,index2);
+            document.getElementById('arr_fill').innerHTML='Array is : '+arr;
+        }
+
+        function slice(){
+            let index1 = document.getElementById('indexs1').value;
+            let index2 = document.getElementById('indexs2').value;
+            let arr=[1,2,3,4,5];
+            let ans=arr.slice(index1,index2);
+            document.getElementById('arr_slice').innerHTML="slice elements : "+ans+ '<br>Array is : '+arr;
+        }
+
+        function splice(){
+            let index1 = document.getElementById('index1').value;
+            let index2 = document.getElementById('index2').value;
+            let value = document.getElementById('value').value;
+            let arr=[1,2,3,4,5];
+            let ans=arr.splice(index1,index2,value);
+            document.getElementById('arr_splice').innerHTML="splice element : "+ans+ '<br>Array is : '+arr;
+        }
+
+        function arr() {
+            let str = document.getElementById('str').value;
+            let arr = str.split(' ');
+            console.log('array:', arr);
+            document.getElementById('arr').innerHTML ="Array is : "+ arr + '<br> ' + " Length is : "+ arr.length;
+        }
+
+        function join() {
+            let str = document.getElementById('str_join').value;
+            let sym=document.getElementById('join_symbol').value;
+            let arr = str.split(' ');
+            console.log('array:', arr);
+            document.getElementById('arr_join').innerHTML ="Array is : "+ arr + '<br> ' + " Use Join : "+ arr.join(sym);
+        }
+    
+        function pop() {
+            let strs = document.getElementById('str_pop').value;
+            let arrs = strs.split(' '); 
+            console.log('array:', arrs);
+            document.getElementById('arr_pop').innerHTML ="Popped element is : "+ arrs.pop();
+        }    
+        
+        function push() {
+            let str = document.getElementById('str_push').value;
+            let arr = [1,2,3,4,5];
+            let ans=arr.push(str);
+            document.getElementById('arr_push').innerHTML ="Array is : " + arr + '<br> push element is : '+ ans;
+        }    
+
+        function shift() {
+            let strs = document.getElementById('str_shift').value;
+            let arrs = strs.split(' '); 
+            document.getElementById('arr_shift').innerHTML ="Shifted element is : "+ arrs.shift();
+        }    
+
+        function unshift() {
+            let str = document.getElementById('str_unshift').value;
+            let arr = [1,2,3,4,5];
+            let ans=arr.unshift(str);
+            document.getElementById('arr_unshift').innerHTML ="Array is : " + arr + '<br> new element is : '+ ans;
+        }    
+
+        function concat() {
+            let str1 = document.getElementById('str1').value;
+            let str2=document.getElementById('str2').value;
+            let arr1 = str1.split(' ');
+            let arr2 = str2.split(' ');
+            let ans=arr1.concat(arr2);
+            document.getElementById('arr_concat').innerHTML ="Array is : "+ ans ;
+        }
+
+
+    </script>
+</body>
+</html>
+

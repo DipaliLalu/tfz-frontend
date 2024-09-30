@@ -1,0 +1,2 @@
+Hello everyone.
+This is demo of ajax in js.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse event in js</title>
+</head>
+
+<body>
+    <h2>Mouse Events</h2>
+    <p id="onclick">onclick</p>
+    <p id="ondblclick">ondblclick</p>
+    <p id="onmousedown-up">onmousedown and onmouseup</p>
+    <p id="onmouseenter">onmouseenter and onmouseleave</p>
+    <p id="onmousemove">onmousemove</p>
+    <p id="onmousover-out">onmouseover and onmouseout</p>
+
+    <script>
+        document.getElementById("onclick").addEventListener("click", () => {
+            document.getElementById("onclick").style.color = "red";
+        });
+        document.getElementById("ondblclick").addEventListener("dblclick", () => {
+            document.getElementById("ondblclick").style.color = "green";
+        });
+        document.getElementById("onmousedown-up").addEventListener("mousedown", () => {
+            document.getElementById("onmousedown-up").style.backgroundColor = "red";
+        });
+        document.getElementById("onmousedown-up").addEventListener("mouseup", () => {
+            document.getElementById("onmousedown-up").style.backgroundColor = "green";
+        });
+        document.getElementById("onmouseenter").addEventListener("mouseenter", () => {
+            document.getElementById("onmouseenter").style.backgroundColor = "grey";
+        });
+        document.getElementById("onmouseenter").addEventListener("mouseleave", () => {
+            document.getElementById("onmouseenter").style.backgroundColor = "pink";
+        });
+        let count = 0;
+        document.getElementById("onmousemove").addEventListener("mouseleave", () => {
+            document.getElementById("onmousemove").style.border = "2px solid"
+            document.getElementById("onmousemove").textContent = count++;
+        });
+        document.getElementById("onmousover-out").addEventListener("mouseover", () => {
+            document.getElementById("onmousover-out").style.backgroundColor = "pink";
+        });
+        document.getElementById("onmousover-out").addEventListener("mouseout", () => {
+            document.getElementById("onmousover-out").style.backgroundColor = "grey";
+        });
+
+    </script>
+</body>
+</html>
+

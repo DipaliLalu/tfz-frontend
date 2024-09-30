@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  background: url('./image.png') 90% 50% no-repeat, url('./todo-bg.png') left top no-repeat;
+  padding: 15px;
+  background-size: auto,cover;
+  background-attachment: fixed;
+}
+
+.left-side{
+    width:50%;
+}
+
+button{
+    background-color: #00684A !important;
+    color:white !important;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #00684A;
+    color:white;
+    text-transform:capitalize;
+    overflow: hidden;
+}
+li button{
+    background-color: white !important;
+    color: #00684A !important;
+    padding: 4px;
+    border-radius: 2px;
+    border: none;
+}
+li button:hover{
+    box-shadow: 2px; 
+}
+i:hover{
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+    display: none;
+}
+.overflow{
+    width:90%;
+    overflow-wrap:anywhere;
+}
+@media  screen and (max-width:990px) {
+    body{
+        background: url('./image.png') 100% 50% no-repeat, url('./todo-bg.png') left top no-repeat;
+        padding: 15px;
+        background-size: 400px,cover;
+        background-attachment: fixed;
+    }
+}
+
+@media  screen and (max-width:750px) {
+    body{
+        background:  url('./todo-bg.png') left top no-repeat;
+      padding: 15px;
+      background-size: auto,cover;
+      background-attachment: fixed;
+    }
+  .left-side{
+    width:100%;
+  }
+  
+    h1{
+        display: block;
+    }
+    h2{
+        display: none;
+    }
+
+}
+

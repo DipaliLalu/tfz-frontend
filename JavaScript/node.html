@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node in Js</title>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="box">hello</div>
+        <div class="box">hello</div>
+        <div class="box">hello</div>
+        <div class="box">hello</div>
+        <div class="box">hello</div>
+    </div>
+    <h2>Hello world!</h2>
+
+    <script>
+        let body=document.body;
+        let cn=document.body.firstElementChild;
+
+        //node property
+        console.log("the childNodes of body: ",body.childNodes);
+        console.log("the childElement of body: ",body.children);
+        console.log("the firstChild of body: ",body.firstChild);
+        console.log("the firstElementChild of body: ",body.firstElementChild);
+        console.log("the parentNode of body: ",body.parentNode);
+        console.log("the parentElement of body: ",body.parentElement);
+        console.log("the lastChild of body: ",body.lastChild);
+        console.log("the lastElementChild of body: ",body.lastElementChild);
+        console.log("the nextSibling of container: ",cn.nextSibling);
+        console.log("the nextElementSibling of container: ",cn.nextElementSibling);
+        console.log("the previousSibling of body lastchild: ",body.lastElementChild.previousSibling);
+        console.log("the previousElementSibling of body lastchild: ",body.lastElementChild.previousElementSibling);
+        console.log("the nodeName of body: ",body.nodeName);
+        console.log("the nodeName of container: ",cn.nodeName);
+        console.log("the nodeType of body: ",body.nodeType);
+        console.log("the nodeType of container: ",cn.firstChild.nodeType);
+        console.log("the nodeValue of body: ",body.nodeValue);
+        console.log("the textcontent  of container firstChild: ",body.firstElementChild.textContent);
+        console.log("the textcontent  of container lastChild: ",body.children[1].textContent="hello everyone");
+
+        //node methods
+        const p=document.body.appendChild(document.createElement("p"));
+        p.innerHTML="hello world!"
+        const clone=cn.cloneNode(true);
+        body.appendChild(clone);
+        console.log(cn.getRootNode());
+        console.log(body.hasChildNodes());
+        console.log(document.querySelector('h2').hasChildNodes());
+
+        const newNode = document.createElement("span");
+        newNode.innerHTML="i am span"
+        body.insertBefore(newNode,body.firstElementChild)
+        console.log(body.removeChild(body.lastElementChild));
+
+        const newP=document.createElement('p');
+        body.replaceChild(newP,newNode);
+         newP.innerHTML='i am p.'
+    </script>
+</body>
+</html>
+

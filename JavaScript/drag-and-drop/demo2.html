@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 100px;
+            border: 2px solid;
+            margin: 5px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p id="demo" draggable="true">I am draggable</p>
+    </div>
+    <div class="box"></div>
+
+    <script>
+        let boxs = document.querySelectorAll(".box");
+        let p = document.getElementById("demo");
+
+        p.addEventListener("dragstart", (e) => {
+            e.dataTransfer.setData("text", e.target.id);
+        });
+        boxs.forEach((box) => {
+            box.addEventListener("dragover", (e) => {
+                e.preventDefault();
+            });
+            box.addEventListener("drop", (e) => {
+                e.preventDefault();
+                let data = e.dataTransfer.getData("text");
+                e.target.appendChild(document.getElementById(data));
+                //e.target.appendChild(p);
+            })
+        })
+
+    </script>
+</body>
+</html>
+

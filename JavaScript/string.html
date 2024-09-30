@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js String</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2 class="p-3 text-center bg-secondary-subtle">Js String</h2>
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">Length Property</h2>
+        <label for="str" class="form-label fw-semibold">Enter a any string and find a length</label>
+        <input type="text" id="str" class=" form-control">
+        <p id="str-length"></p>
+        <Button onclick="str_length()" class="btn btn-primary">Find Length</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">charAt() Method</h2>
+        <h3>This is a string.</h3>
+        <label for="str" class="form-label fw-semibold">Enter number between 16 and find charater of the string.</label>
+        <input type="text" id="str_charAt" class=" form-control">
+        <p id="str_index" class=" fw-semibold"></p>
+        <Button onclick="charAt()" class="btn btn-primary">Find</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">slice() Method</h2>
+        <label for="strs" class="form-label fw-semibold">Enter the any string</label>
+        <input type="text" id="strs" class=" form-control">
+        <label for="str1" class="form-label fw-semibold">Enter Starting Position Number</label>
+        <input type="text" id="str1" class=" form-control">
+        <label for="str2" class="form-label fw-semibold">Enter Ending Position Number</label>
+        <input type="text" id="str2" class=" form-control">
+        <p id="str_position" class=" fw-semibold"></p>
+        <Button onclick="slice()" class="btn btn-primary">Find</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">toUpperCase() Method</h2>
+        <label for="str" class="form-label fw-semibold">Enter any string.</label>
+        <input type="text" id="uppercase" class=" form-control">
+        <p id="upper" class=" fw-semibold"></p>
+        <Button onclick="uppercase()" class="btn btn-primary">Find</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">toLowerCase() Method</h2>
+        <label for="str" class="form-label fw-semibold">Enter any string.</label>
+        <input type="text" id="lowercase" class=" form-control">
+        <p id="lower" class=" fw-semibold"></p>
+        <Button onclick="lowercase()" class="btn btn-primary">Find</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">replace() Method</h2>
+        <h3>This is a string.</h3>
+        <label for="str" class="form-label fw-semibold">Enter the string word</label>
+        <input type="text" id="replace1" class=" form-control">
+        <label for="str" class="form-label fw-semibold">Enter the replace word</label>
+        <input type="text" id="replace2" class=" form-control">
+        <p id="replace" class=" fw-semibold"></p>
+        <Button onclick="replace()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">concat() Method</h2>
+        <label for="str" class="form-label fw-semibold">Enter First string</label>
+        <input type="text" id="concat1" class=" form-control">
+        <label for="str" class="form-label fw-semibold">Enter second string</label>
+        <input type="text" id="concat2" class=" form-control">
+        <p id="concat" class=" fw-semibold"></p>
+        <Button onclick="concat()" class="btn btn-primary">Concat</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">trim() Method</h2>
+        <h4>Trim() method is remove a whitespace before and after the string.</h4>
+        <label for="str" class="form-label fw-semibold">Enter any string.</label>
+        <input type="text" id="trim" class=" form-control">
+        <p id="trimed" class=" fw-semibold"></p>
+        <Button onclick="trim()" class="btn btn-primary">Find</Button>
+    </div>
+
+    <div class="container p-5 bg-danger-subtle mt-5">
+        <h2 class="p-2 text-center bg-secondary-subtle">includes() Method</h2>
+        <label for="str" class="form-label fw-semibold">Enter the string</label>
+        <input type="text" id="include_str" class=" form-control">
+        <label for="str" class="form-label fw-semibold">Enter search word of string</label>
+        <input type="text" id="include_word" class=" form-control">
+        <p id="include" class=" fw-semibold"></p>
+        <Button onclick="include()" class="btn btn-primary">Done</Button>
+    </div>
+
+    <script>
+        function str_length(){
+        let str=document.getElementById('str').value;
+        document.getElementById('str-length').innerHTML=str.length;}
+
+        function charAt(){
+            let str="This is a string.";
+            let str1=document.getElementById('str_charAt').value;
+            let count=str.charAt(str1);
+            document.getElementById('str_index').innerHTML=count;
+        }
+
+        function slice(){
+            let strs=document.getElementById('strs').value;
+            let str1=document.getElementById('str1').value;
+            let str2=document.getElementById('str2').value;
+            document.getElementById('str_position').innerHTML=strs.slice(str1,str2);
+        }
+
+        function uppercase(){
+            let str=document.getElementById('uppercase').value;
+            let u= document.getElementById('upper').innerHTML=str.toUpperCase();
+        }
+
+        function lowercase(){
+            let str=document.getElementById('lowercase').value;
+            let u= document.getElementById('lower').innerHTML=str.toLowerCase();
+        }
+
+        function replace(){
+            let str="This is a string.";
+            let str1=document.getElementById('replace1').value;
+            let str2=document.getElementById('replace2').value;
+            document.getElementById('replace').innerHTML=str.replace(str1,str2);
+        }
+
+        function concat(){
+            let str1=document.getElementById('concat1').value;
+            let str2=document.getElementById('concat2').value;
+            document.getElementById('concat').innerHTML=str1.concat(" ",str2);
+        }
+
+        function trim(){
+            let str1=document.getElementById('trim').value;
+            document.getElementById('trimed').innerHTML=str1.trim();
+        }
+
+        function include(){
+            let str1=document.getElementById('include_str').value;
+            let str2=document.getElementById('include_word').value;
+            document.getElementById('include').innerHTML= str1.includes(str2);
+        }
+    </script>
+</body>
+</html>
+

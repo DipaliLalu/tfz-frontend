@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press logger in js</title>
+</head>
+<body>
+    <input type="text" id="key-logger" placeholder="Enter text">
+    <span id="show"></span>
+    <script>
+        let keylogger=document.getElementById("key-logger");
+        keylogger.addEventListener("keydown",(e)=>{
+            console.log("key is",e.key);
+            document.getElementById("show").innerHTML="key is:"+e.key;
+        })
+    </script>
+</body>
+</html>
+

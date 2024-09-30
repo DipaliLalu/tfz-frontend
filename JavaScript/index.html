@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My all task list</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --margin-block: 30px;
+    }
+    body {
+      background-image: url(./images.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      background-attachment: fixed;
+    }
+    h2 {
+      font-size: 35px;
+      margin-block: var(--margin-block);
+    }
+    a {
+      text-decoration: none;
+      color: white;
+
+    }
+    hr {
+      border: 2px solid;
+      margin-block: 10px;
+      margin-inline: 60px;
+      margin-top: 35px;
+    }
+    .btn {
+      padding: 8px 30px;
+      border-radius: 5px;
+      border: 1px solid white;
+      background-color: black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-inline: 20px;
+    }
+    .btn:hover {
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 8px white;
+    }
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    @media screen and (max-width:479px) {
+      .flex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>JavaScript Basic (20-7-2024)</h2>
+    <div class="flex">
+      <a href="./Basic js/index.html" class="btn">Basic Program</a>
+    </div>
+    <hr>
+    <h2>JavaScript Variables (21-7-2024)</h2>
+    <div class="flex">
+      <a href="./variable.html" class="btn">Variables</a>
+    </div>
+    <hr>
+    <h2>JavaScript Operator (22-7-2024)</h2>
+    <div class="flex">
+      <a href="./js_operator.html" class="btn">Operator</a>
+    </div>
+    <hr>
+    <h2>JavaScript String (25-7-2024)</h2>
+    <div class="flex">
+      <a href="./string.html" class="btn">String</a>
+    </div>
+    <hr>
+    <h2>JavaScript Array (27-7-2024)</h2>
+    <div class="flex">
+      <a href="./array.html" class="btn">Array</a>
+    </div>
+    <hr>
+    <h2>jQuery</h2>
+    <div class="flex">
+      <a href="./jQuery/effect.html" class="btn">jQuery Effect</a>
+      <a href="./jQuery/Traversing.html" class="btn">jQuery Traversing</a>
+    </div>
+    <hr>
+    <h2>Tasks</h2>
+    <div class="flex">
+      <a href="./to_do_app/index.html" class="btn">ToDo App</a>
+      <a href="./calculator/index.html" class="btn">Calculator task</a>
+      <a href="./palindrome.html" class="btn">Palindrome Checker task</a>
+      <a href="./digitalClock/index.html" class="btn">Digital Clock task</a>
+      <a href="./tic-tac-toc/index.html" class="btn">Tic Tac Toc game task</a>
+      <a href="./event_practice/form-validation/index.html" class="btn">Form validation task</a>
+      <a href="./drag-and-drop/index.html" class="btn">Drag and Drop Image task</a>
+    </div>
+    <hr>
+  </div>
+</body>
+</html>
+

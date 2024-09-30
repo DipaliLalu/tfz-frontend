@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mutli tread in js</title>
+</head>
+
+<body>
+    <p id="result">count:</p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <script>
+        let w;
+        function startWorker() {
+            if (typeof (w) == "undefined") {
+                w = new Worker("web-worker.js");
+            }
+            w.onmessage = function (event) {
+                document.getElementById("result").innerHTML = event.data;
+            };
+        }
+
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+
+    </script>
+</body>
+</html>
+

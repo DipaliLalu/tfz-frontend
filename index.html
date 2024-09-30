@@ -3,22 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My all task list</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       
+      }
+      :root{
+        --margin-block:30px;
+      }
+        body{
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(./images.png);
+          color:white;
+          background-attachment: fixed;
+          text-align: center;
+          
+        }
+        h2{
+          font-size: 35px;
+          margin-block: var(--margin-block);
+        }
+        a{
+          text-decoration: none;
+          color:white;
+        
+        }
+        hr{
+          border: 2px solid ;
+          margin-block:10px;
+          margin-inline:60px;
+          margin-top: 35px;
+        }
+        .btn{
+         
+           padding: 8px 30px;
+          border-radius: 5px;
+          border: 1px solid white;
+          background-color: black;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+          margin-inline: 20px;
+        }
+        .btn:hover{
+          background-color: white;
+          color: black;
+          box-shadow: 0 0 8px white;
+        }
+        .flex {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
+        @media screen and (max-width:479px) {
+        
+          .flex{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+          }
+                   
+        }
+
+    </style>
 </head>
 <body>
-   <div class="container">
-    <p class="heading"> 
-        To For Zero
-    </p>
-    <div class="detail">
-    <details class="task-detail">
-        <summary>Task</summary>
-        <ul>
-            <li> <a href="accordion/index.html">Accordion</a></li>
-        </ul>
-    </details>
-</div>
-   </div>
+    <div class="container">
+     <h2>Form Task</h2>
+     <div class="flex">
+     <a href="./form/index.html" class="btn">Form task (24-4-2024)</a>
+     </div>
+     <hr>
+     <h2>Accordion Task</h2>
+     <div class="flex">
+     <a href="./accordion/index.html" class="btn">Accordion task (25-4-2024)</a>
+     </div>
+     <hr>
+     <h2>Table Task</h2>
+     <div class="flex">
+     <a href="./table/table-task1.html" class="btn">Table task-1 (29-4-2024)</a>
+     <a href="./table/table-task2.html" class="btn">Table task-2 (29-4-2024)</a>
+     <a href="./table/table-task3.html" class="btn">Table task-3 (29-4-2024)</a>
+     </div>
+     <hr>
+     <h2>Sign-up Page</h2>
+     <div class="flex">
+     <a href="./Sign-up page/index.html" class="btn">Sign-up design (13-5-2024)</a>
+     </div>
+     <hr>
+     <h2>Landing Page</h2>
+     <div class="flex">
+     <a href="./UsabilityHub Clone/index.html" class="btn">Landing Page design-1(15-5-2024)</a>
+     <a href="./Restaurant/index.html" class="btn">Landing Page design-2 (31-5-2024)</a>
+     </div>
+     <hr>
+     <h2>Grid Task</h2>
+     <div class="flex">
+     <a href="./grid-task/index.html" class="btn">Grid task (22-5-2024)</a>
+     <a href="./image-gallery/index.html" class="btn">Image Gallery (23-5-2024)</a>
+     </div>
+     <hr>
+     <h2>Bootstrap</h2>
+     <div class="flex">
+     <a href="./Bootstrap/index.html" class="btn">Bootstrap all work</a>
+     <a href="./Bootstrap-task/index.html" class="btn">Bootstrap task (6-7-2024)</a>
+     </div>
+     <hr>
+     <h2>JavaScript All Work</h2>
+     <div class="flex">
+     <a href="./JavaScript/index.html" class="btn">Js all work</a>
+     </div>
+     <hr>
+    </div>
 </body>
 </html>
